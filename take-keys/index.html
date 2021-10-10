@@ -7,27 +7,740 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Take Keys</title>
-	<meta name="description" content="Take Keys">
+	<title>
+		Take Keys
+	</title>
+	<meta name="description" content="">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="icon" href="images/favicon.svg">
 	<meta property="og:image" content="images/favicon.svg">
-	
-	<link rel="stylesheet" href="css/app.min.css?5">
+
+	<link rel="stylesheet" href="css/app.min.css?7">
 
 </head>
 
 <body class="">
 
+	<header>
+		<div class="topline py-4">
+			<div class="container-lg">
+				<div class="row align-items-center">
+					<div class="col-auto">
+						<a class="logo logo-footer" href="/">
+							<img src="images/icons/logo.svg" alt="Take Keys">
+						</a>
+					</div>
+					<div class="col-auto ms-auto d-lg-none">
+						<button class="navbar-toggler hamburger hamburger--spin" type="button" data-bs-toggle="collapse" data-bs-target="#topline-menu">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div>
+					<div class="w-100 d-lg-none"></div>
+					<div class="col collapse topline__mobile" id="topline-menu">
+						<div class="row align-items-center">
+							<div class="col-12 col-lg-auto mx-auto mt-3 mt-lg-0">
+								<ul class="topline__menu">
+									<li><a href="#">Как это работает</a></li>
+									<li><a href="#">Каталог</a></li>
+									<li><a href="#">Справочный центр</a></li>
+								</ul>
+							</div>
+							<div class="col-12 col-lg-auto">
+								<div class="row">
+									<div class="col-12 col-lg-auto">
+										<a href="#" class="btn btn-outline-dark topline__btn">Регистрация</a>
+									</div>
+									<div class="col-12 col-lg-auto">
+										<a href="#" class="btn btn-outline-dark topline__btn">Войти</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
 
+<div class="home-header ratio ratio-16x9" style="background-image: url('images/dist/home.jpg'); --bs-aspect-ratio: 47.64%">
+	<div class="home-header-content py-3 py-lg-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<h1 class="h1 mb-4">Найдите дом своей мечты</h1>
+					<div class="home-header__desc mx-auto">Take Keys объединяет объявления по недвижимости со всех площадок рунет, чтобы ты искал жильё в привычном тебе приложение</div>
+				</div>
+				<div class="col-12 col-lg">
+					<div class="home-header__item">
+						<i class="icon"><img src="images/icons/shield-dark.svg"></i>
+						<div class="home-header__item__text">
+							Без переплат риелторам
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg">
+					<div class="home-header__item">
+						<i class="icon"><img src="images/icons/shield-dark.svg"></i>
+						<div class="home-header__item__text">
+							Только собственники
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg">
+					<div class="home-header__item">
+						<i class="icon"><img src="images/icons/shield-dark.svg"></i>
+						<div class="home-header__item__text">
+							Проверка объектов через ЕГРН в 1 click
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mt-3 justify-content-center">
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/1.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Длительная аренда</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Студии</a></li>
+						<li><a class="link-dark" href="#">1-комнатные квартиры</a></li>
+						<li><a class="link-dark" href="#">2-комнатные квартиры</a></li>
+						<li><a class="link-dark" href="#">3-комнатные квартиры</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/2.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Посуточная аренда</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Квартиры</a></li>
+						<li><a class="link-dark" href="#">Дома, дачи, коттеджи</a></li>
+						<li><a class="link-dark" href="#">Комнаты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/3.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Купить квартиру</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Студии</a></li>
+						<li><a class="link-dark" href="#">1-комнатные квартиры</a></li>
+						<li><a class="link-dark" href="#">2-комнатные квартиры</a></li>
+						<li><a class="link-dark" href="#">Еще <img class="ms-2" src="images/icons/arrow-right-dark.svg" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/4.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Вторичное жилье</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Сталинка</a></li>
+						<li><a class="link-dark" href="#">Ленинка квартиры</a></li>
+						<li><a class="link-dark" href="#">Панельный дома</a></li>
+						<li><a class="link-dark" href="#">Еще <img class="ms-2" src="images/icons/arrow-right-dark.svg" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/5.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Новострой</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Студии</a></li>
+						<li><a class="link-dark" href="#">1-комнатные квартиры</a></li>
+						<li><a class="link-dark" href="#">2-комнатные квартиры</a></li>
+						<li><a class="link-dark" href="#">Еще <img class="ms-2" src="images/icons/arrow-right-dark.svg" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/6.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Гаражи и машиноместа</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Купить гараж</a></li>
+						<li><a class="link-dark" href="#">Купить машиноместо</a></li>
+						<li><a class="link-dark" href="#">Снять гараж</a></li>
+						<li><a class="link-dark" href="#">Снять машиноместо</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/7.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Коммерческая</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Снять офис</a></li>
+						<li><a class="link-dark" href="#">Снять ПСН</a></li>
+						<li><a class="link-dark" href="#">Снять торговую площадь</a></li>
+						<li><a class="link-dark" href="#">Купить</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/8.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Земеные участки</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Земпя промназначения</a></li>
+						<li><a class="link-dark" href="#">Земля сельхозназначения</a></li>
+						<li><a class="link-dark" href="#">Купить землю для поселения</a></li>
+						<li><a class="link-dark" href="#">Снять участок</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="catalog__item">
+				<div class="ratio ratio-16x9">
+					<div class="catalog__item__img" style="background-image: url('images/dist/home-catalog/9.png');"></div>
+				</div>
+				<div class="catalog__item__info">
+					<div class="catalog__item__title">Дома, дачи, коттеджи</div>
+					<div class="catalog__item__address">123 724 вариантов</div>
+					<ul class="catalog__item__list list-unstyled">
+						<li><a class="link-dark" href="#">Купить</a></li>
+						<li><a class="link-dark" href="#">Снять на длительный срок</a></li>
+						<li><a class="link-dark" href="#">Снять посуточно</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="h1 item__desc-title d-block mt-3 mt-lg-5">Рекомендуемое для Вас</div>
+	<div class="catalog pb-4">
+		<div class="row g-3">
+			
+			<div class="col-12 col-lg-4">
+	<div class="catalog__item">
+		<div class="catalog__item-slider">
+			<!-- Additional required wrapper -->
+<div class="swiper-wrapper">
+
+	<!-- Slides -->
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-3.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-3.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-1.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-1.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+
+</div>
+
+<div class="swiper-pagination-counter d-none mb-2">
+	<span class="current">1</span>/
+	<span class="total"></span>
+</div>
+
+<div class="swiper-pagination"></div>
+
+<div class="swiper-alt-clock">
+	<img class="me-2" src="images/icons/clock.svg">
+	<span>Сегодня, 12:03</span>
+</div>
+
+<div class="swiper-alt-photo">
+	<img class="me-2" src="images/icons/photo-white.svg">
+	<span class="total"></span>
+</div>
+
+<div class="item__tags">
+	<span class="btn-colored bg-danger">Лучшая цена</span>
+	<span class="btn-colored bg-primary">Новое</span>
+</div>
+		</div>
+		<div class="catalog__item__info">
+			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<div class="catalog__item__price">
+				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
+				<s class="catalog__item__price-old">150 000 ₽</s>
+			</div>
+			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__param d-none d-lg-flex">
+				<i class="icon"><img src="images/icons/home.svg"></i>1
+				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
+			</div>
+			<div class="row gx-0 justify-content-between mt-auto">
+				<div class="col-auto order-lg-2 ms-lg-auto">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/share.svg"></i>
+					</button>
+				</div>
+				<div class="col-auto order-lg-2">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/heart.svg"></i>
+					</button>
+				</div>
+				<div class="col-auto order-lg-2 d-lg-none">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/plus.svg"></i>
+					</button>
+				</div>
+				<div class="col-12 col-lg-auto order-lg-1">
+					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			<div class="col-12 col-lg-4">
+	<div class="catalog__item">
+		<div class="catalog__item-slider">
+			<!-- Additional required wrapper -->
+<div class="swiper-wrapper">
+
+	<!-- Slides -->
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-3.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-3.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-1.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-1.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+
+</div>
+
+<div class="swiper-pagination-counter d-none mb-2">
+	<span class="current">1</span>/
+	<span class="total"></span>
+</div>
+
+<div class="swiper-pagination"></div>
+
+<div class="swiper-alt-clock">
+	<img class="me-2" src="images/icons/clock.svg">
+	<span>Сегодня, 12:03</span>
+</div>
+
+<div class="swiper-alt-photo">
+	<img class="me-2" src="images/icons/photo-white.svg">
+	<span class="total"></span>
+</div>
+
+<div class="item__tags">
+	<span class="btn-colored bg-danger">Лучшая цена</span>
+	<span class="btn-colored bg-primary">Новое</span>
+</div>
+		</div>
+		<div class="catalog__item__info">
+			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<div class="catalog__item__price">
+				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
+				<s class="catalog__item__price-old">150 000 ₽</s>
+			</div>
+			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__param d-none d-lg-flex">
+				<i class="icon"><img src="images/icons/home.svg"></i>1
+				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
+			</div>
+			<div class="row gx-0 justify-content-between mt-auto">
+				<div class="col-auto order-lg-2 ms-lg-auto">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/share.svg"></i>
+					</button>
+				</div>
+				<div class="col-auto order-lg-2">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/heart.svg"></i>
+					</button>
+				</div>
+				<div class="col-auto order-lg-2 d-lg-none">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/plus.svg"></i>
+					</button>
+				</div>
+				<div class="col-12 col-lg-auto order-lg-1">
+					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			<div class="col-12 col-lg-4">
+	<div class="catalog__item">
+		<div class="catalog__item-slider">
+			<!-- Additional required wrapper -->
+<div class="swiper-wrapper">
+
+	<!-- Slides -->
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-3.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-3.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-1.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-1.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-2.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-4.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+	
+	<div class="swiper-slide catalog__item-slider__slide">
+	<div class="catalog__item-slider__blur-bg swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="catalog__item-slider__bg ratio swiper-lazy" data-background="images/dist/item-slide-5.jpg">
+	</div>
+	<div class="swiper-lazy-preloader"></div>
+</div>
+
+</div>
+
+<div class="swiper-pagination-counter d-none mb-2">
+	<span class="current">1</span>/
+	<span class="total"></span>
+</div>
+
+<div class="swiper-pagination"></div>
+
+<div class="swiper-alt-clock">
+	<img class="me-2" src="images/icons/clock.svg">
+	<span>Сегодня, 12:03</span>
+</div>
+
+<div class="swiper-alt-photo">
+	<img class="me-2" src="images/icons/photo-white.svg">
+	<span class="total"></span>
+</div>
+
+<div class="item__tags">
+	<span class="btn-colored bg-danger">Лучшая цена</span>
+	<span class="btn-colored bg-primary">Новое</span>
+</div>
+		</div>
+		<div class="catalog__item__info">
+			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<div class="catalog__item__price">
+				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
+				<s class="catalog__item__price-old">150 000 ₽</s>
+			</div>
+			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__param d-none d-lg-flex">
+				<i class="icon"><img src="images/icons/home.svg"></i>1
+				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
+			</div>
+			<div class="row gx-0 justify-content-between mt-auto">
+				<div class="col-auto order-lg-2 ms-lg-auto">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/share.svg"></i>
+					</button>
+				</div>
+				<div class="col-auto order-lg-2">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/heart.svg"></i>
+					</button>
+				</div>
+				<div class="col-auto order-lg-2 d-lg-none">
+					<button class="btn btn-outline-light btn-icon">
+						<i class="icon"><img src="images/icons/plus.svg"></i>
+					</button>
+				</div>
+				<div class="col-12 col-lg-auto order-lg-1">
+					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-auto ms-lg-auto order-lg-2">
+			<a href="#" class="btn btn-icon">
+				<div class="d-flex align-items-center">
+					Перейти в каталог<i class="icon ms-auto"><img src="images/icons/arrow-big-right.svg"></i>
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+	<div class="h1 item__desc-title d-block mt-3 mt-lg-5">Используйте больше инструментов для поиска жилья</div>
+	<div class="home-steps">
+		<div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 gy-3 justify-content-center">
+			<div class="col">
+				<div class="setting-item">
+					<div class="setting-item__icon">
+						<button class="btn btn-primary btn-icon btn-aura">
+							<i class="icon">1</i>
+						</button>
+					</div>
+					<div class="setting-item__title mt-4">
+						Экономьте время на поиске жилья
+					</div>
+					<div class="setting-item__desc mt-3">
+						Подключите услугу авто подбор подходящих вариантов и система автоматически выберет самые лучшие варианты по цене, местоположению, условиям и дате заезда. 
+					</div>
+					<div class="setting-item__btn mt-auto">
+						<a href="#" class="btn btn-outline-dark rounded-pill px-4 mt-3">Подробнее</a>
+					</div>
+				</div>
+			</div>
+	
+			<div class="col">
+				<div class="setting-item">
+					<div class="setting-item__icon">
+						<button class="btn btn-primary btn-icon btn-aura">
+							<i class="icon">2</i>
+						</button>
+					</div>
+					<div class="setting-item__title mt-4">
+						Узнавайте первыми о новых объявлениях
+					</div>
+					<div class="setting-item__desc mt-3">
+						Звоните собственникам уже через секунду после появления объекта. Мы уведомим на почту и в месседжер.
+					</div>
+					<div class="setting-item__btn mt-auto">
+						<a href="#" class="btn btn-outline-dark rounded-pill px-4 mt-3">Подробнее</a>
+					</div>
+				</div>
+			</div>
+	
+			<div class="col">
+				<div class="setting-item">
+					<div class="setting-item__icon">
+						<button class="btn btn-primary btn-icon btn-aura">
+							<i class="icon">3</i>
+						</button>
+					</div>
+					<div class="setting-item__title mt-4">
+						Экономьте время на поиске жилья
+					</div>
+					<div class="setting-item__desc mt-3">
+						Подключите услугу авто подбор подходящих вариантов и система автоматически выберет самые лучшие варианты по цене, местоположению, условиям и дате заезда. 
+					</div>
+					<div class="setting-item__btn mt-auto">
+						<a href="#" class="btn btn-outline-dark rounded-pill px-4 mt-3">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+</div>
 <div class="footer">
 	<div class="container pb-3">
 		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-4">
 			<div class="col">
 				<div class="logo-wrp">
-					<img class="logo-footer" src="images/icons/logo.svg" alt="Take Keys">
+					<a class="logo logo-footer" href="/"><img src="images/icons/logo.svg" alt="Take Keys"></a>
 					<a target="_blank" class="mail-link" href="mailto:suport@rentbox.online">suport@take-keys.com</a>
 				</div>
 			</div>
@@ -79,7 +792,7 @@
 	</div>
 </div>
 
-<script src="js/app.min.js?5"></script>
+<script src="js/app.min.js?7"></script>
 
 </body>
 

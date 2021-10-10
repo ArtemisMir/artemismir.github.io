@@ -1,0 +1,1358 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>
+		Попап окна
+	</title>
+	<meta name="description" content="">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.svg">
+	<meta property="og:image" content="images/favicon.svg">
+
+	<link rel="stylesheet" href="css/app.min.css?7">
+
+</head>
+
+<body class="">
+
+	<header>
+		<div class="topline py-4">
+			<div class="container-lg">
+				<div class="row align-items-center">
+					<div class="col-auto">
+						<a class="logo logo-footer" href="/">
+							<img src="images/icons/logo.svg" alt="Take Keys">
+						</a>
+					</div>
+					<div class="col-auto ms-auto d-lg-none">
+						<button class="navbar-toggler hamburger hamburger--spin" type="button" data-bs-toggle="collapse" data-bs-target="#topline-menu">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div>
+					<div class="w-100 d-lg-none"></div>
+					<div class="col collapse topline__mobile" id="topline-menu">
+						<div class="row align-items-center">
+							<div class="col-12 col-lg-auto mx-auto mt-3 mt-lg-0">
+								<ul class="topline__menu">
+									<li><a href="#">Как это работает</a></li>
+									<li><a href="#">Каталог</a></li>
+									<li><a href="#">Справочный центр</a></li>
+								</ul>
+							</div>
+							<div class="col-12 col-lg-auto">
+								<div class="row">
+									<div class="col-12 col-lg-auto">
+										<a href="#" class="btn btn-outline-dark topline__btn">Регистрация</a>
+									</div>
+									<div class="col-12 col-lg-auto">
+										<a href="#" class="btn btn-outline-dark topline__btn">Войти</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+<div class="container">
+
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-auth">Регистрация</button>
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		$('[data-bs-target="#auth__modal"]').click()
+
+		$('.auth__form-reg').submit(function (event) {
+			if (checkValidate(this)) {
+				document.querySelector('.auth__steps-reg').swiper.slideNext()
+			}
+			event.preventDefault()
+			event.stopPropagation()
+		})
+		$('.auth__form-signin').submit(function (event) {
+			if (checkValidate(this)) {
+				document.querySelector('.auth__steps-signin').swiper.slideNext()
+			}
+			event.preventDefault()
+			event.stopPropagation()
+		})
+
+		$('#auth__send-reg').submit(function (event) {
+
+			let loader = $('.auth.loading')
+
+			if (checkValidate(this)) {
+				loader.addClass('active')
+				$.ajax({
+					url: "url",
+					data: "data",
+					method: "POST"
+				})
+				.done(function(data) {
+					alert( "success" );
+				})
+				.fail(function() {
+					alert( "error" );
+				})
+				.always(function() {
+					// Таймер для демонстрации лоадера, его надо удалить.
+					setTimeout(() => {
+						loader.removeClass('active')  // В боевом режиме надо только это
+					}, 2000);
+				});
+			}
+			event.preventDefault()
+			event.stopPropagation()
+		})
+
+	})
+
+</script>
+
+<div class="modal fade main-modal" id="popup-auth" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+			<div class="row g-0 h-100 flex-lg-nowrap">
+				<div class="col-12 col-lg">
+					<div class="auth__img"
+						style="background-image: url('images/dist/registration.jpg'); background-position: 0 90%;">
+						<div class="accordion" id="auth__back-accordion">
+							<div class="auth__reg collapse" data-bs-parent="#auth__back-accordion">
+								<div class="auth__back auth__back-reg">
+									<svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.53033 9.53033C5.23744 9.82322 4.76256 9.82322 4.46967 9.53033L0.46967 5.53033C0.329018 5.38968 0.25 5.19891 0.25 5C0.25 4.80109 0.329018 4.61032 0.46967 4.46967L4.46967 0.46967C4.76256 0.176777 5.23744 0.176777 5.53033 0.46967C5.82322 0.762563 5.82322 1.23744 5.53033 1.53033L2.06066 5L5.53033 8.46967C5.82322 8.76256 5.82322 9.23744 5.53033 9.53033Z"
+											fill="white" />
+									</svg>
+								</div>
+							</div>
+							<div class="auth__signin collapse show" data-bs-parent="#auth__back-accordion">
+								<div class="auth__back auth__back-signin">
+									<svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.53033 9.53033C5.23744 9.82322 4.76256 9.82322 4.46967 9.53033L0.46967 5.53033C0.329018 5.38968 0.25 5.19891 0.25 5C0.25 4.80109 0.329018 4.61032 0.46967 4.46967L4.46967 0.46967C4.76256 0.176777 5.23744 0.176777 5.53033 0.46967C5.82322 0.762563 5.82322 1.23744 5.53033 1.53033L2.06066 5L5.53033 8.46967C5.82322 8.76256 5.82322 9.23744 5.53033 9.53033Z"
+											fill="white" />
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-auto">
+					
+					<div class="accordion auth loading h-100" id="auth-accordion">
+						<div class="auth__reg h-100 collapse" data-bs-parent="#auth-accordion">
+							<div class="auth__text h-100">
+								<div class="auth__steps-wrp flex-grow-1">
+									<div class="swiper auth__steps-reg">
+										<div class="swiper-wrapper">
+											<!-- Slides -->
+											<div class="swiper-slide">
+												<div class="" data-swiper-parallax="100%">
+													<div class="auth__title">Создать учетную запись, чтобы продолжить пользоваться сервисом</div>
+													<div class="auth__desc">Единая городская база недвижимости</div>
+												</div>
+												<div class="" data-swiper-parallax="30%" data-swiper-parallax-opacity="0">
+													<form class="auth__form-reg" novalidate>
+														<div class="mb-3">
+															<input form="auth__send-reg" type="email" name="email" placeholder="Ваш E-mail" class="form-control"
+																required>
+															<div class="invalid-feedback">Пожалуйста, введите корректный Email
+															</div>
+														</div>
+														<div class="row align-items-center">
+															<div class="col">Шаг 1/2</div>
+															<div class="col-auto">
+																<button class="btn btn-primary auth__btn" type="submit">
+																	<div class="d-flex align-items-center">
+																		<i class="svg-wrp me-3">
+																			<svg width="6" height="10" viewBox="0 0 6 10"
+																				fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path fill-rule="evenodd" clip-rule="evenodd"
+																					d="M0.46967 0.46967C0.762563 0.176777 1.23744 0.176777 1.53033 0.46967L5.53033 4.46967C5.67098 4.61032 5.75 4.80109 5.75 5C5.75 5.19891 5.67098 5.38968 5.53033 5.53033L1.53033 9.53033C1.23744 9.82322 0.762562 9.82322 0.469669 9.53033C0.176776 9.23744 0.176776 8.76256 0.469669 8.46967L3.93934 5L0.46967 1.53033C0.176777 1.23744 0.176777 0.762563 0.46967 0.46967Z"
+																					fill="#A3CC4A" />
+																			</svg>
+																		</i>
+																		Продолжить
+																	</div>
+																</button>
+															</div>
+														</div>
+													</form>
+													<div class="auth__soc">
+														<div class="auth__soc__title mb-3"><span>Продолжить используя:</span></div>
+														<div class="row row-cols-2 gx-3 gy-2">
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-vk.svg">Вконтакте</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-fb.svg">Facebook</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-ya.svg">Яндекс</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-apple.svg">Apple</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-mail.svg">Mail.ru</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-google.svg">Google</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="" data-swiper-parallax="100%">
+													<div class="auth__title">Создать учетную запись, чтобы продолжить пользоваться сервисом</div>
+													<div class="auth__desc">Единая городская база недвижимости</div>
+												</div>
+												<div class="" data-swiper-parallax="30%" data-swiper-parallax-opacity="0">
+													<form id="auth__send-reg" class="" novalidate>
+														<div class="mb-3">
+															<label class="form-label">Как вас представить заказчику?</label>
+															<input form="auth__send-reg" type="text" name="name" placeholder="ФИО" class="form-control"
+																autocomplete required>
+															<div class="invalid-feedback">Пожалуйста, введите пароль</div>
+														</div>
+														<div class="mb-3">
+															<input form="auth__send-reg" type="tel" name="phone" placeholder="Телефон"
+																class="form-control" required data-mask="+{7} (000) 000-00-00"
+																autocomplete="phone">
+															<div class="invalid-feedback">Пожалуйста, введите корректный номер
+																телефона</div>
+														</div>
+														<div class="mb-3">
+															<input form="auth__send-reg" type="password" name="password" placeholder="Пароль" class="form-control"
+																autocomplete="current-password" required>
+															<div class="invalid-feedback">Пожалуйста, введите пароль</div>
+														</div>
+														<div class="row align-items-center">
+															<div class="col">Шаг 2/2</div>
+															<div class="col-auto">
+																<button class="btn btn-dark auth__btn" type="submit">
+																	<div class="d-flex align-items-center">
+																		<i class="svg-wrp me-3">
+																			<svg width="6" height="10" viewBox="0 0 6 10"
+																				fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path fill-rule="evenodd" clip-rule="evenodd"
+																					d="M0.46967 0.46967C0.762563 0.176777 1.23744 0.176777 1.53033 0.46967L5.53033 4.46967C5.67098 4.61032 5.75 4.80109 5.75 5C5.75 5.19891 5.67098 5.38968 5.53033 5.53033L1.53033 9.53033C1.23744 9.82322 0.762562 9.82322 0.469669 9.53033C0.176776 9.23744 0.176776 8.76256 0.469669 8.46967L3.93934 5L0.46967 1.53033C0.176777 1.23744 0.176777 0.762563 0.46967 0.46967Z"
+																					fill="#151A40" />
+																			</svg>
+																		</i>
+																		Создать
+																	</div>
+																</button>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="auth__switch">
+									У вас есть аккаунт?
+									<span class="ms-3 link text-primary" href="#" data-bs-toggle="collapse" data-bs-target=".auth__signin">Войти</span>
+								</div>
+							</div>
+						</div>
+						<div class="auth__signin h-100 collapse show" data-bs-parent="#auth-accordion">
+							<div class="auth__text h-100">
+								<div class="auth__steps-wrp flex-grow-1">
+									<div class="swiper auth__steps-signin">
+										<div class="swiper-wrapper">
+											<!-- Slides -->
+											<div class="swiper-slide">
+												<div class="" data-swiper-parallax="100%">
+													<div class="auth__title">Войдите в учетную запись, чтобы продолжить пользоваться сервисом</div>
+													<div class="auth__desc">Единая городская база недвижимости</div>
+												</div>
+												<div class="" data-swiper-parallax="30%" data-swiper-parallax-opacity="0">
+													<form class="auth__form-signin" novalidate>
+														<div class="mb-3">
+															<input form="auth__send-signin" type="text" name="login" placeholder="E-mail или телефон" class="form-control"
+																required>
+															<div class="invalid-feedback">Пожалуйста, введите корректный Email или телефон
+															</div>
+														</div>
+														<div class="row align-items-center">
+															<div class="col">Шаг 1/2</div>
+															<div class="col-auto">
+																<button class="btn btn-primary auth__btn" type="submit">
+																	<div class="d-flex align-items-center">
+																		<i class="svg-wrp me-3">
+																			<svg width="6" height="10" viewBox="0 0 6 10"
+																				fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path fill-rule="evenodd" clip-rule="evenodd"
+																					d="M0.46967 0.46967C0.762563 0.176777 1.23744 0.176777 1.53033 0.46967L5.53033 4.46967C5.67098 4.61032 5.75 4.80109 5.75 5C5.75 5.19891 5.67098 5.38968 5.53033 5.53033L1.53033 9.53033C1.23744 9.82322 0.762562 9.82322 0.469669 9.53033C0.176776 9.23744 0.176776 8.76256 0.469669 8.46967L3.93934 5L0.46967 1.53033C0.176777 1.23744 0.176777 0.762563 0.46967 0.46967Z"
+																					fill="#A3CC4A" />
+																			</svg>
+																		</i>
+																		Продолжить
+																	</div>
+																</button>
+															</div>
+														</div>
+													</form>
+													<div class="auth__soc">
+														<div class="auth__soc__title mb-3"><span>Продолжить используя:</span></div>
+														<div class="row row-cols-2 gx-3 gy-2">
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-vk.svg">Вконтакте</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-fb.svg">Facebook</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-ya.svg">Яндекс</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-apple.svg">Apple</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-mail.svg">Mail.ru</button>
+															</div>
+															<div class="col">
+																<button class="btn auth__soc__btn"><img src="images/icons/soc-google.svg">Google</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="" data-swiper-parallax="100%">
+													<div class="auth__title">Войдите в учетную запись, чтобы продолжить пользоваться сервисом</div>
+													<div class="auth__desc">Единая городская база недвижимости</div>
+												</div>
+												<div class="" data-swiper-parallax="30%" data-swiper-parallax-opacity="0">
+													<form id="auth__send-signin" class="needs-validation" novalidate>
+														<div class="mb-3">
+															<input type="password" name="password" placeholder="Введите пароль"
+																class="form-control" required>
+															<div class="invalid-feedback">Введите пароль</div>
+														</div>
+														<div class="row align-items-center">
+															<div class="col">Шаг 2/2</div>
+															<div class="col-auto">
+																<button class="btn btn-dark auth__btn" type="submit">
+																	<div class="d-flex align-items-center">
+																		<i class="svg-wrp me-3">
+																			<svg width="6" height="10" viewBox="0 0 6 10"
+																				fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path fill-rule="evenodd" clip-rule="evenodd"
+																					d="M0.46967 0.46967C0.762563 0.176777 1.23744 0.176777 1.53033 0.46967L5.53033 4.46967C5.67098 4.61032 5.75 4.80109 5.75 5C5.75 5.19891 5.67098 5.38968 5.53033 5.53033L1.53033 9.53033C1.23744 9.82322 0.762562 9.82322 0.469669 9.53033C0.176776 9.23744 0.176776 8.76256 0.469669 8.46967L3.93934 5L0.46967 1.53033C0.176777 1.23744 0.176777 0.762563 0.46967 0.46967Z"
+																					fill="#151A40" />
+																			</svg>
+																		</i>
+																		Войти
+																	</div>
+																</button>
+															</div>
+														</div>
+														<div class="auth__terms form-check form-check-box mt-2">
+															<input class="form-check-input" type="checkbox" value="" name="terms" id="auth__terms-signin" checked required>
+															<label class="form-check-label" for="auth__terms-signin">
+																Нажимая на кнопку Создать вы подтверждаете согласие с <a href="#">условиями использования</a> Take-Keys и <a href="#">политикой</a> о <a href="#">данных пользователей</a>
+															</label>
+															<div class="invalid-feedback">Это обязательное поле</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="auth__switch">
+									У вас еще нет аккаунта?
+									<span class="ms-3 link text-primary" href="#" data-bs-toggle="collapse" data-bs-target=".auth__reg">Создать</span>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-autocall">Автодозвон</button>
+	
+<div class="modal fade main-modal" id="popup-autocall" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="popup__wrp" style="background: url('images/dist/popup-bg/robot.svg') no-repeat right 24px bottom 24px">
+				<div class="popup__content">
+					<div class="popup__title">Больше не нужно тратить время и деньги на прозвон объявлений.</div>
+					<div class="popup__text text-center">Мы создали умный алгоритм автоматического дозвона до авторов объявлений.</div>
+					<div class="popup__title">Как это работает?</div>
+					<div class="popup__text">
+						<p>В понравившемся объекте кликните кнопку "связаться" и наш робот моментально позвонит владельцу, отсеит посредников и уведомит вас по смс о результате звонка, а если автор объявления не возьмет трубку, то робот перезвонит через время еще раз и снова уведомит вас о результате.</p>
+						<p>Рекомендуем не рассчитывать на один вариант, а выбирать, сравнивать, как можно больше подходящих вариантов, чтобы в желаемый день вы смотрели не 
+							1 объект, а 3-4 и гарантированно заселились!</p>
+					</div>
+					<div class="popup__buttons">
+						<a class="btn btn-primary">Смотреть еще подходящие варианты</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-action="on" data-bs-toggle="modal" data-bs-target="#popup-notification" data-collapse=".notif-on">Включить уведомления</button>
+	<button type="button" class="btn btn-primary m-1" data-action="off" data-bs-toggle="modal" data-bs-target="#popup-notification" data-collapse=".notif-off">ВЫключить уведомления</button>
+	
+<div class="modal fade main-modal" id="popup-notification" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="popup__wrp" style="background: url('images/dist/popup-bg/notification.svg') no-repeat right 0 bottom 24px">
+				<div class="popup__content">
+					<div class="accordion" id="notif-switch">
+						<div class="notif-on collapse" data-parent="#notif-switch">
+							<div class="popup__title">Выберите где хотите получать уведомления о свежих, похожих объявлениях</div>
+							<p class="popup__text">
+								Хватит тратить время на ручной поиск лучшего варианта, включите автоподбор и система отправит все подходящие варианты по цене, местоположению, условиям, дате и срокам заселения.<br/>Автоматизируйте поиск - вы однозначно сохраните время, деньги и хорошее настроение.
+							</p>
+						</div>
+						<div class="notif-off collapse" data-parent="#notif-switch">
+							<div class="popup__title">Вы перестанете получать персонализированную подборку и уведомления</div>
+							<p class="popup__text text-center">
+								Нам очень жаль, что вы хотите отказаться получать уведомления о свежих, похожих объявлениях
+							</p>
+						</div>
+					</div>
+					<div class="popup__checkboxies">
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" id="notif-whatsapp" checked="">
+							<label class="form-check-label" for="notif-whatsapp">
+								<img src="images/icons/notif-whatsapp.svg" alt="">
+								WhatsApp
+							</label>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" id="notif-telegram">
+							<label class="form-check-label" for="notif-telegram">
+								<img src="images/icons/notif-telegram.svg" alt="">
+								Telegram
+							</label>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" id="notif-viber">
+							<label class="form-check-label" for="notif-viber">
+								<img src="images/icons/notif-viber.svg" alt="">
+								Viber
+							</label>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" id="notif-vk">
+							<label class="form-check-label" for="notif-vk">
+								<img src="images/icons/notif-vk.svg" alt="">
+								ВКонтакте
+							</label>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" id="notif-messenger">
+							<label class="form-check-label" for="notif-messenger">
+								<img src="images/icons/notif-messenger.svg" alt="">
+								Messenger
+							</label>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" id="notif-email">
+							<label class="form-check-label" for="notif-email">
+								<img src="images/icons/notif-email.svg" alt="">
+								E-mail
+							</label>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" id="notif-push">
+							<label class="form-check-label" for="notif-push">
+								<img src="images/icons/notif-push.svg" alt="">
+								Push-уведомления
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-booking">Онлайн-бронирование</button>
+	
+<div class="modal fade main-modal" id="popup-booking" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="popup__wrp" style="background: url('images/dist/popup-bg/house.svg') no-repeat right 24px bottom 24px">
+				<div class="popup__content">
+					<div class="popup__title">Онлайн-бронирование</div>
+					<div class="row gx-3">
+						<div class="col-auto">
+							<button class="btn btn-primary btn-icon btn-aura pe-none">
+								<i class="icon"><img src="images/icons/home-white.svg"></i>
+							</button>
+						</div>
+						<div class="col">
+							<div class="popup__subtitle">Квартира ждет своего жителя</div>
+							<div class="popup__text">После оплаты у владельца будет 24 часа, чтобы подтвердить бронь и встретиться с вами</div>
+						</div>
+					</div>
+					<div class="row gx-3">
+						<div class="col-auto">
+							<button class="btn btn-primary btn-icon btn-aura pe-none">
+								<i class="icon"><img src="images/icons/shield-white.svg"></i>
+							</button>
+						</div>
+						<div class="col">
+							<div class="popup__subtitle">Гарантия возврата денег</div>
+							<div class="popup__text">Мы заморозим на вашей карте 1 000 ₽, но вернем их в любом случае – даже если сделка состоиться</div>
+						</div>
+					</div>
+					<div class="row gx-3">
+						<div class="col-auto">
+							<button class="btn btn-primary btn-icon btn-aura pe-none">
+								<i class="icon"><img src="images/icons/rouble-white.svg"></i>
+							</button>
+						</div>
+						<div class="col">
+							<div class="popup__subtitle">Сумма не участвует в расчёте</div>
+							<div class="popup__text">Продавец не получит эти деньги – они нужны, только чтобы подтвердить серьёзность ваших намерений</div>
+						</div>
+					</div>
+					<div class="popup__buttons">
+						<a class="btn btn-dark px-5">Продолжить</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-start-1">Тариф старт</button>
+	<div class="modal fade main-modal" id="popup-tarif-start-1" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="popup__wrp" style="background: url('images/dist/popup-bg/tarif-start.svg') no-repeat center bottom 22.36%">
+				<div class="popup__content">
+					<div class="popup__title">Для Take-Keys безопасность пользователей на первом месте</div>
+					<div class="popup__text">По этому каждое объявление на сайте проходит специальную
+						проверку. Основным этапом проверки является выписка из ЕГРН, которая подтверждает
+						право собственности.<br />Такой уровень качества информации требует постоянной
+						работы, по этому услуги предоставляются на платной основе, но для новых
+						пользователей есть пробный, бесплатный тариф "Старт".
+					</div>
+					<div class="popup__buttons">
+						<a class="btn btn-dark px-5" data-bs-target="#popup-tarif-start-2" data-bs-toggle="modal" data-bs-dismiss="modal">Дальше</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-start-2">Тариф старт активировать</button>
+	<div class="modal fade main-modal" id="popup-tarif-start-2" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="popup__wrp" style="background: url('images/dist/popup-bg/rocket.svg') no-repeat right bottom">
+				<div class="popup__content">
+					<div class="popup__title">Тариф Бесплатный старт</div>
+					<div class="popup__text text-center">Прежде чем пользоваться платными услугами активируйте тариф "Старт" и попробуйте функционал бесплатно.</div>
+					<div class="popup__title text-start">В тариф включено:</div>
+					<div class="row gx-4 gy-2 row-cols-1 row-cols-md-2 mb-4">
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/shield-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Возможность связаться только с одним владельцем</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-light btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/shield-gray.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Гарантия заселения</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/24.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Автоматический подбор подходящих вариантов на 1 день</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-light btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/shield-gray.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Стаховка от залога</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/chat-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Виртуальный помощник 24/7</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-light btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/rouble-gray.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Торг уместен</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-light btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/calendar-gray.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Бронирование</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-light btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/paper-gray.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Образцы договоров найма</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup__buttons">
+						<a class="btn btn-primary px-5">Активировать тариф</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-max-1">Тариф Максимальный</button>
+	
+<div class="modal fade main-modal" id="popup-tarif-max-1" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="popup__wrp">
+				<div class="popup__content">
+					<div class="popup__title">На тарифе бесплатный "Старт" лимит связи с владельцами исчерпан</div>
+					<div class="popup__text text-center">Чтобы связываться с собственниками без ограничений перейтите на тариф "Максимальный".</div>
+					<div class="row gx-4 gy-2 row-cols-1 row-cols-md-2 mb-4">
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/activity-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Автоматический подбор подходящих вариантов</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/call-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Безграничный доступ и связь с владельцами</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/paper-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Образцы договоров найма</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/shield-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Гарантия заселения</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/rouble-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Торг уместен</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row gx-3 align-items-center">
+								<div class="col-auto">
+									<button class="btn btn-primary btn-icon btn-aura pe-none">
+										<i class="icon"><img src="images/icons/operator-white.svg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<div class="fs-14">Поддержка 24/7</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup__buttons">
+						<p class="fs-14 text-center">В отличие от риелторов мы не берем бешеные 50-100%,<br/> работаем дистанционно и до полного заселения.</p>
+						<a class="btn btn-dark px-5" data-bs-target="#popup-tarif-max-2" data-bs-toggle="modal" data-bs-dismiss="modal">Подключить</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-max-2">Переход к оплате</button>
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+
+		$('#tarif-max__form').submit(function (event) {
+			if (this.checkValidity()) {
+				Modal.getOrCreateInstance($('#popup-tarif-max-2')).hide()
+				Modal.getOrCreateInstance($('#popup-tarif-paymethod')).show()
+			}
+			$(this).addClass('was-validated')
+
+			event.preventDefault()
+			event.stopPropagation()
+
+		})
+
+	})
+</script>
+<div class="modal fade main-modal" id="popup-tarif-max-2" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="popup__wrp">
+				<form id="tarif-max__form" class="popup__content needs-validation" novalidate>
+					<!-- <div class="popup__title">Оплатите тариф и пользуйтесь сервисом без ограничений до полного заселения</div> -->
+					<!-- <div class="popup__title text-primary">Уважаемый Иван</div> -->
+					<div class="popup__subtitle">Выберите дату в которую желаете заселиться, активируйте тариф "Найдётся всё" и получите подборку подходящих вариантов, 98% пользователей заселяются в желаемый день.</div>
+					<!-- <div class="popup__subtitle">Выберите дату в которую вы желаете заселиться:</div> -->
+
+					<div class="mb-3">
+						<input type="date" name="date" placeholder="19.10.2021"
+							class="form-control">
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-auto">
+							<div class="form-check form-check-box mb-2">
+								<input class="form-check-input" type="checkbox" value="" name="date-checkbox-1" id="tarif-max__checkbox-1" checked>
+								<label class="form-check-label fs-14" for="tarif-max__checkbox-1">
+									Как можно быстрее
+								</label>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="form-check form-check-box mb-2">
+								<input class="form-check-input" type="checkbox" value="" name="date-checkbox-2" id="tarif-max__checkbox-2">
+								<label class="form-check-label fs-14" for="tarif-max__checkbox-2">
+									Сегодня
+								</label>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="form-check form-check-box mb-2">
+								<input class="form-check-input" type="checkbox" value="" name="date-checkbox-3" id="tarif-max__checkbox-3">
+								<label class="form-check-label fs-14" for="tarif-max__checkbox-3">
+									Завтра
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="popup__text small">Уважаемый "Name" понимаем, что вы с нами еще не работали, и знаем, что в сфере недвижимости много недобросовестных участников рынка.
+						Поэтому, мы проверяем квартиры через ЕГРН, за счёт чего Ваше заселение в квартиру, выбранную на нашем сайте, будет безопасным. А чтобы заслужить ваше доверие, мы сначала предоставляем наши услуги (https://take-keys.com/praic) по поиску квартиры, а потом уже берем основную оплату.
+						В отличие от остальных мы работаем дистанционно и только до полного заселения, плюс вместо 100% от стоимости аренды, сборы за услуги сервиса фиксированные всего 99 руб на старте и 5791₽ по факту предоставления услуги.</div>
+
+					<div class="popup__buttons">
+						<button type="submit" class="btn btn-primary px-5 mb-3">Выбрать способ оплаты</button>
+					
+						<div class="form-check form-check-box mt-4 tarif-max__terms">
+							<input class="form-check-input" type="checkbox" value="" name="terms" id="tarif-max__terms" checked required>
+							<div class="invalid-feedback text-primary">
+								<div class="d-flex align-items-center">
+									<img src="images/icons/arrow-down-green.svg">Чтобы продолжить пользоваться сервисом, необходимо согласиться с условиями и порядком оплаты услуг
+								</div>
+							</div>
+							<label class="form-check-label text-dark fs-10" for="tarif-max__terms">
+								Подтверждаю, что уведомлен и согласен с условиями и порядком оплаты услуг, а так же обязуюсь оплатить тариф "Максимальный" стоимостью 7 990 рублей автоматическим платежом в выбранный день в независимости от факта заселения с банковской карты привязанной к сервису после первой оплаты. Гарантии.
+							</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-paymethod">Способ оплаты</button>
+	<div class="modal fade main-modal" id="popup-tarif-paymethod" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="popup__wrp" style="background-color: #151A40;">
+				<div class="row gy-4 py-5 popup__buttons-pay h-100 align-items-center justify-content-center">
+					<div class="col-12 col-lg-auto">
+						<button class="btn btn-white" data-bs-target="#popup-tarif-paycard" data-bs-toggle="modal" data-bs-dismiss="modal">Оплатить картой</button>
+					</div>
+					<div class="col-12 col-lg-auto">
+						<button class="btn btn-white"><img src="images/icons/apple-pay.svg"></button>
+					</div>
+					<div class="col-12 col-lg-auto">
+						<button class="btn btn-white"><img src="images/icons/google-pay.svg"></button>
+					</div>
+				</div>
+			</div>
+			<div class="auth__back popup-tarif-max__back" data-bs-target="#popup-tarif-max-2" data-bs-toggle="modal" data-bs-dismiss="modal">
+				<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.53033 9.53033C5.23744 9.82322 4.76256 9.82322 4.46967 9.53033L0.46967 5.53033C0.329018 5.38968 0.25 5.19891 0.25 5C0.25 4.80109 0.329018 4.61032 0.46967 4.46967L4.46967 0.46967C4.76256 0.176777 5.23744 0.176777 5.53033 0.46967C5.82322 0.762563 5.82322 1.23744 5.53033 1.53033L2.06066 5L5.53033 8.46967C5.82322 8.76256 5.82322 9.23744 5.53033 9.53033Z" fill="white"></path>
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-paycard">Оплата картой</button>
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+
+		$('#bank-card-form').submit(function (event) {
+			if (this.checkValidity()) {
+				Modal.getOrCreateInstance($('#popup-tarif-paycard')).hide()
+				Modal.getOrCreateInstance($('#popup-tarif-pay-fail')).show()
+			}
+			
+			event.preventDefault()
+			event.stopPropagation()
+		})
+
+	})
+</script>
+<div class="modal fade main-modal" id="popup-tarif-paycard" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="popup__wrp">
+				<div class="popup__content">
+					<div class="popup__text text-center"><img src="images/icons/lock-green.svg" alt="Безопасоне соединение"><span class="ms-2 align-middle">Безопасное соединение</span></div>
+					<div class="popup__title">Оплата за активацию тарифа "Максимальный"</div>
+					<form action="" id="bank-card-form" class="needs-validation" novalidate>
+						<div class="bank-card mx-auto">
+							<div class="bank-card__front">
+								<div class="bank-card__input">
+									<div class="row g-3">
+										<div class="col-12">
+											<input type="text" name="bank-card-number" class="form-control bank-card__number" placeholder="Номер карты" data-mask="0000 0000 0000 0000" minlength="19" required>
+										</div>
+										<div class="col-6">
+											<input type="text" name="bank-card-date" class="form-control bank-card__expiration" placeholder="ММ / ГГ" data-mask-date minlength="5" required>
+										</div>
+										<div class="col-6">
+											<input type="text" name="bank-card-cvc" class="form-control bank-card__cvc" placeholder="CVC" minlength="3" data-mask="000" required>
+										</div>
+										<div class="col-12">
+											<div class="popup-tarif-paycard__email collapse">
+												<input type="text" name="bank-card-email" class="form-control bank-card__email mb-2" placeholder="E-mail">
+											</div>
+											<div class="form-check form-check-box">
+												<input class="form-check-input" type="checkbox" value="" id="popup-tarif-paycard__email">
+												<label class="form-check-label fs-14" for="popup-tarif-paycard__email" data-collapse=".popup-tarif-paycard__email" data-collapse-duration="200" data-collapse-toggle>Получить квитанцию на E-mail</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bank-card__back">
+							</div>
+						</div>
+						
+						<div class="popup-tarif-paycard__button mt-3">
+							<button class="btn btn-primary px-5" type="submit" form="bank-card-form">Оплатить 99 руб.</button>
+							<img class="mt-4 d-block mw-100 mx-auto" src="images/dist/bank-cards.svg" alt="Банки">
+						</div>
+						<div class="popup__text text-start mt-4">
+							Платёжи обрабатывает защищённый сервис. Данные карты зашифрованы, у нас нет к ним доступа.<br/>Добавляя карту вы соглашаетесь с <a href="#" class="link-dark">офертой</a>.<br/>Если вы столкнулись с проблемой, обратитесь в <a href="#" class="link-dark">службу поддержки</a>.
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="auth__back popup-tarif-max__back" data-bs-target="#popup-tarif-max-2" data-bs-toggle="modal" data-bs-dismiss="modal">
+				<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.53033 9.53033C5.23744 9.82322 4.76256 9.82322 4.46967 9.53033L0.46967 5.53033C0.329018 5.38968 0.25 5.19891 0.25 5C0.25 4.80109 0.329018 4.61032 0.46967 4.46967L4.46967 0.46967C4.76256 0.176777 5.23744 0.176777 5.53033 0.46967C5.82322 0.762563 5.82322 1.23744 5.53033 1.53033L2.06066 5L5.53033 8.46967C5.82322 8.76256 5.82322 9.23744 5.53033 9.53033Z" fill="white"></path>
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-pay-fail">Платеж отклонен</button>
+	<div class="modal fade main-modal" id="popup-tarif-pay-fail" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="popup__wrp" style="background-color: #151A40; background-image: url('images/dist/popup-bg/pay-fail.svg'); background-repeat: no-repeat; background-position: center bottom 182px">
+				<div class="popup__content align-items-center">
+
+					<button class="btn btn-white btn-icon btn-aura pe-none pay-result-icon">
+						<i class="icon"><img src="images/icons/close-dark.svg"></i>
+					</button>
+					<div class="popup__title text-white">Платёж отклонен</div>
+
+					<div class="popup__buttons ms-auto ms-lg-0 ml-lg-auto">
+						<button class="btn btn-white px-3 ms-auto" data-bs-target="#popup-tarif-pay-success" data-bs-toggle="modal" data-bs-dismiss="modal">Повторить оплату</button>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn text-white mb-4 px-4 position-absolute start-0 bottom-0">Служба поддержки</a>
+		</div>
+	</div>
+</div>
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-tarif-pay-success">Успешная оплата</button>
+	<div class="modal fade main-modal" id="popup-tarif-pay-success" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="popup__wrp" style="background-color: #A3CC4A; background-image: url('images/dist/popup-bg/pay-success.svg'); background-repeat: no-repeat; background-position: center bottom 128px">
+				<div class="popup__content align-items-center">
+
+					<button class="btn btn-white btn-icon btn-aura pe-none pay-result-icon">
+						<i class="icon"><img src="images/icons/check-green.svg"></i>
+					</button>
+					<div class="popup__title text-white">Оплата прошла успешно</div>
+
+					<div class="popup__buttons">
+						<button class="btn btn-white px-3 text-primary" data-bs-target="#popup-owner-message" data-bs-toggle="modal" data-bs-dismiss="modal">Связаться с владельцем</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-owner-message">Связь с владельцем</button>
+	
+<div class="modal fade main-modal" id="popup-owner-message" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="popup__wrp" style="background: url('images/dist/popup-bg/message.svg') no-repeat center center">
+				<div class="popup__content">
+					<div class="popup__title">Автор объявления выбрал способ связи через сообщения</div>
+					<div class="popup__text text-center">Некоторым людям не всегда удобно принимать звонки в рабочее или личное время, а написать смс можно без труда</div>
+				
+					<div class="popup__buttons">
+						<button class="btn btn-primary px-4" data-bs-target="#popup-owner-questions" data-bs-toggle="modal" data-bs-dismiss="modal">Отправить заявку</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	<button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#popup-owner-questions">Вопросы</button>
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+
+		$('#tarif-max__form').submit(function (event) {
+			if (this.checkValidity()) {
+				document.querySelector('#popup-tarif-max .modal-swiper').swiper.slideNext()
+			}
+			$(this).addClass('was-validated')
+
+			event.preventDefault()
+			event.stopPropagation()
+
+		})
+
+	})
+</script>
+<div class="modal fade main-modal main-modal-steps" id="popup-owner-questions" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="popup__wrp">
+				<div class="popup__content">
+					<div class="popup__title">Для более конкретного общения с владельцем ответьте на несколько вопросов</div>
+					<!-- Slider main container -->
+					<div class="modal-swiper" data-swiper-speed="500">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="slider-content" style="background: none" data-swiper-parallax-opacity="0.0" data-swiper-parallax="50%">
+									<div class="popup__subtitle mb-4">Какой вид сделки Вы хотите предложить владельцу?</div>
+
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-1" id="owner-questions-1" checked>
+										<label class="form-check-label" for="owner-questions-1">
+											Длительная аренда
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-1" id="owner-questions-2">
+										<label class="form-check-label" for="owner-questions-2">
+											Посуточная аренда
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-1" id="owner-questions-3">
+										<label class="form-check-label" for="owner-questions-3">
+											Аренда с выкупом
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-1" id="owner-questions-4">
+										<label class="form-check-label" for="owner-questions-4">
+											Покупка наличными
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-1" id="owner-questions-5">
+										<label class="form-check-label" for="owner-questions-5">
+											Покупка в ипотеку
+										</label>
+									</div>
+
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slider-content" style="background: none" data-swiper-parallax-opacity="0.0" data-swiper-parallax="50%">
+									<div class="popup__subtitle">Срок аренды?</div>
+
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-2" id="owner-questions-6" checked>
+										<label class="form-check-label" for="owner-questions-6">
+											До 1 мес.
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-2" id="owner-questions-7">
+										<label class="form-check-label" for="owner-questions-7">
+											От 1 до 3-х мес.
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-2" id="owner-questions-8">
+										<label class="form-check-label" for="owner-questions-8">
+											От 3-х до 6 мес.
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-2" id="owner-questions-9">
+										<label class="form-check-label" for="owner-questions-9">
+											От 6 до 12 мес.
+										</label>
+									</div>
+									<div class="form-check mb-3">
+										<input class="form-check-input" type="radio" name="questions-2" id="owner-questions-10">
+										<label class="form-check-label" for="owner-questions-10">
+											От 12+ мес.
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slider-content" style="background: none" data-swiper-parallax-opacity="0.0" data-swiper-parallax="50%">
+									<div class="popup__subtitle">С кем будете проживать?</div>
+
+									<div class="form-check form-check-box mb-3">
+										<input class="form-check-input" type="checkbox" name="questions-3" id="owner-questions-11" checked>
+										<label class="form-check-label" for="owner-questions-11">
+											С детьми
+										</label>
+									</div>
+									<div class="form-check form-check-box mb-3">
+										<input class="form-check-input" type="checkbox" name="questions-3" id="owner-questions-12">
+										<label class="form-check-label" for="owner-questions-12">
+											С животными
+										</label>
+									</div>
+									<div class="form-check form-check-box mb-3">
+										<input class="form-check-input" type="checkbox" name="questions-3" id="owner-questions-13">
+										<label class="form-check-label" for="owner-questions-13">
+											С компанией
+										</label>
+									</div>
+									<div class="form-check form-check-box mb-3">
+										<input class="form-check-input" type="checkbox" name="questions-3" id="owner-questions-14">
+										<label class="form-check-label" for="owner-questions-14">
+											Один
+										</label>
+									</div>
+									<div class="form-check form-check-box mb-3">
+										<input class="form-check-input" type="checkbox" name="questions-3" id="owner-questions-15">
+										<label class="form-check-label" for="owner-questions-15">
+											Еще не знаю
+										</label>
+									</div>
+
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slider-content" style="background: none" data-swiper-parallax-opacity="0.0" data-swiper-parallax="50%">
+									<div class="popup__subtitle">Национальность</div>
+
+									<div class="btn-group-vertical select-list">
+										<input type="radio" class="btn-check" name="questions-4" id="owner-questions-16" autocomplete="off" checked>
+										<label class="btn btn-outline-light" for="owner-questions-16">Россия</label>
+										<input type="radio" class="btn-check" name="questions-4" id="owner-questions-17" autocomplete="off">
+										<label class="btn btn-outline-light" for="owner-questions-17">Беларусь</label>
+										<input type="radio" class="btn-check" name="questions-4" id="owner-questions-18" autocomplete="off">
+										<label class="btn btn-outline-light" for="owner-questions-18">Украина</label>
+										<input type="radio" class="btn-check" name="questions-4" id="owner-questions-19" autocomplete="off">
+										<label class="btn btn-outline-light" for="owner-questions-19">Грузия</label>
+										<input type="radio" class="btn-check" name="questions-4" id="owner-questions-20" autocomplete="off">
+										<label class="btn btn-outline-light" for="owner-questions-20">Другая</label>
+									</div>
+
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slider-content" style="background: none" data-swiper-parallax-opacity="0.0" data-swiper-parallax="50%">
+									<div class="popup__subtitle">Предложение по цене</div>
+									<div class="popup__text">Предлагая большую сумму, вы значительно выделяетесь среди других соискателей</div>
+									<div class="popup__text fw-semibold">Цена, ₽</div>
+
+									<input type="text" class="js-range-slider" name="questions-5" value=""
+										data-type="int"
+										data-min="500"
+										data-max="200000"
+										data-from="10000"
+										data-to="50000"
+										data-grid="true"
+										data-step="500"
+										data-postfix=" ₽"
+									/>
+
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slider-content" style="background: none" data-swiper-parallax-opacity="0.0" data-swiper-parallax="50%">
+									<div class="popup__subtitle">В какой день вам удобно встретиться?</div>
+
+									<div class="mb-3">
+										<input type="date" name="questions-9" placeholder="19.10.2021"
+											class="form-control">
+										<div class="invalid-feedback"></div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<div class="form-check form-check-box mb-2">
+												<input class="form-check-input" type="checkbox" value="" name="questions-6" id="owner-questions-21" checked>
+												<label class="form-check-label fs-14" for="owner-questions-21">
+													Как можно быстрее
+												</label>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="form-check form-check-box mb-2">
+												<input class="form-check-input" type="checkbox" value="" name="questions-7" id="owner-questions-22">
+												<label class="form-check-label fs-14" for="owner-questions-22">
+													Сегодня
+												</label>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="form-check form-check-box mb-2">
+												<input class="form-check-input" type="checkbox" value="" name="questions-8" id="owner-questions-23">
+												<label class="form-check-label fs-14" for="owner-questions-23">
+													Завтра
+												</label>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="popup__subtitle mt-5">Укажите время встречи</div>
+									<div class="mb-3">
+										<input type="time" name="questions-10" placeholder="9:00"
+											class="form-control">
+										<div class="invalid-feedback"></div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<div class="form-check form-check-box mb-2">
+												<input class="form-check-input" type="checkbox" value="" name="questions-11" id="owner-questions-24" checked>
+												<label class="form-check-label fs-14" for="owner-questions-24">
+													В любое время
+												</label>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="form-check form-check-box mb-2">
+												<input class="form-check-input" type="checkbox" value="" name="questions-12" id="owner-questions-25">
+												<label class="form-check-label fs-14" for="owner-questions-25">
+													До 22:00
+												</label>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="form-check form-check-box mb-2">
+												<input class="form-check-input" type="checkbox" value="" name="questions-13" id="owner-questions-26">
+												<label class="form-check-label fs-14" for="owner-questions-26">
+													После 8:00
+												</label>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="swiper-scrollbar"><div class="swiper-scrollbar-drag"></div></div>
+					</div>
+					<div class="popup__buttons position-relative">
+						<button class="btn btn-light px-4 px-lg-5 popup-owner-questions__next">Дальше</button>
+						<button class="btn btn-primary px-4 px-lg-5 popup-owner-questions__done">Готово</button>
+						<button class="btn px-0 px-lg-4 position-absolute start-0 bottom-0 popup-owner-questions__back">Назад</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+</div>
+<div class="footer">
+	<div class="container pb-3">
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-4">
+			<div class="col">
+				<div class="logo-wrp">
+					<a class="logo logo-footer" href="/"><img src="images/icons/logo.svg" alt="Take Keys"></a>
+					<a target="_blank" class="mail-link" href="mailto:suport@rentbox.online">suport@take-keys.com</a>
+				</div>
+			</div>
+			<div class="col">
+				<h5>Арендодателям</h5>
+				<ul class="list-unstyled">
+					<li><a class="foot-link" href="#">Снять</a></li>
+					<li><a class="foot-link" href="#">Купить</a></li>
+					<li><a class="foot-link" href="#">Тарифы</a></li>
+					<li><a class="foot-link" href="#">Документы</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<h5>Собственникам</h5>
+				<ul class="list-unstyled">
+					<li><a class="foot-link" href="#">Сдать</a></li>
+					<li><a class="foot-link" href="#">Продать</a></li>
+					<li><a class="foot-link" href="#">Документы</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<h5>Take Keys</h5>
+				<ul class="list-unstyled">
+					<li><a class="foot-link" href="#">О сервисе</a></li>
+					<li><a class="foot-link" href="#">Контакты</a></li>
+					<li><a class="foot-link" href="#">Правила сервиса</a></li>
+					<li><a class="foot-link" href="#">Помощь</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-auto">
+					<div class="soc">
+						<a href="#" class="soc-link"><img src="images/icons/facebook.svg"></a>
+						<a href="#" class="soc-link"><img src="images/icons/youtube.svg"></a>
+						<a href="#" class="soc-link"><img src="images/icons/instagram.svg"></a>
+						<a href="#" class="soc-link"><img src="images/icons/telegram.svg"></a>
+						<a href="#" class="soc-link"><img src="images/icons/vk.svg"></a>
+					</div>
+				</div>
+				<div class="col text-center fs-12">
+					Политика конфиденциальности
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/app.min.js?7"></script>
+
+</body>
+
+</html>
