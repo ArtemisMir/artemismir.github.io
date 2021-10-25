@@ -18,14 +18,14 @@
 	<link rel="icon" href="images/favicon.svg">
 	<meta property="og:image" content="images/favicon.svg">
 
-	<link rel="stylesheet" href="css/app.min.css?7">
+	<link rel="stylesheet" href="css/app.min.css?8">
 
 </head>
 
 <body class="">
 
 	<header>
-		<div class="topline py-4">
+		<div class="topline py-2 py-lg-3">
 			<div class="container-lg">
 				<div class="row align-items-center">
 					<div class="col-auto">
@@ -53,10 +53,10 @@
 							<div class="col-12 col-lg-auto">
 								<div class="row">
 									<div class="col-12 col-lg-auto">
-										<a href="#" class="btn btn-outline-dark topline__btn">Регистрация</a>
+										<a href="#" class="btn btn-primary topline__btn">Регистрация</a>
 									</div>
 									<div class="col-12 col-lg-auto">
-										<a href="#" class="btn btn-outline-dark topline__btn">Войти</a>
+										<a href="#" class="btn btn-dark topline__btn">Войти</a>
 									</div>
 								</div>
 							</div>
@@ -67,6 +67,206 @@
 		</div>
 	</header>
 	<div class="content">
+
+<div class="container mb-4 mt-3">
+<form class="filter btn-group">
+	<div class="btn-group filter__item">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
+			<div class="d-flex align-items-center">
+				<div class="flex-grow-1">
+					<div class="fs-14 fw-semibold">Местоположение</div>
+					<div class="filter__item__name">Москва</div>
+					<input type="hidden" name="filter-address" value="Москва"/>
+					<input type="hidden" name="geo_lon"/>
+					<input type="hidden" name="geo_lat"/>
+				</div>
+				<div class="ms-3"><span class="btn filter-my-location"><img src="images/icons/location.svg"></span></div>
+			</div>
+		</button>
+		<ul class="dropdown-menu filter__item__list">
+			<li><input type="text" class="form-control filter__item__location address-autocomplete" placeholder="Введите адрес..."/></li>
+			<li>
+				<div class="py-2 px-3">
+					<div class="fs-14 fw-semibold mb-1">Радиус поиска:</div>
+						<input type="text" class="js-range-filter-radius js-range-slider" name="filter-radius" value=""
+						data-min="0.5"
+						data-max="20"
+						data-from="5"
+						data-grid="true"
+						data-step="0.5"
+						data-postfix=" км"
+							/>
+				</div>
+			</li>
+			<div class="address-autocomplete__list">
+			</div>
+		</ul>
+	</div>
+	<!-- <div class="btn-group filter__item">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
+			<div class="d-flex align-items-center">
+				<div class="flex-grow-1">
+					<div class="fs-14 fw-semibold">Категория</div>
+					<div class="filter__item__name">Аренда</div>
+				</div>
+				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
+			</div>
+		</button>
+		<div class="dropdown-menu filter__item__list">
+			<div class="btn-group-vertical select-list">
+				<input type="radio" class="btn-check" name="filter-category" id="filter-value-1" autocomplete="off" value="Аренда" checked="">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-1">Аренда</label>
+
+				<input type="radio" class="btn-check" name="filter-category" id="filter-value-2" value="Покупка" autocomplete="off">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-2">Покупка</label>
+			</div>
+		</div>
+	</div> -->
+	<div class="btn-group filter__item">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
+			<div class="d-flex align-items-center">
+				<div class="flex-grow-1">
+					<div class="fs-14 fw-semibold">Тип жилья</div>
+					<div class="filter__item__name">Вся недвижимость</div>
+				</div>
+				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
+			</div>
+		</button>
+		<div class="dropdown-menu filter__item__list">
+			<div class="btn-group-vertical select-list">
+				<input type="radio" class="btn-check" name="filter-type" id="filter-value-3" autocomplete="off" value="Вся недвижимость" checked="">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-3">Вся недвижимость</label>
+
+				<input type="radio" class="btn-check" name="filter-type" id="filter-value-4" autocomplete="off" value="Комната">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-4">Комната</label>
+
+				<input type="radio" class="btn-check" name="filter-type" id="filter-value-5" autocomplete="off" value="Квартира">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-5">Квартира</label>
+
+				<input type="radio" class="btn-check" name="filter-type" id="filter-value-6" autocomplete="off" value="Студия">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-6">Студия</label>
+
+				<input type="radio" class="btn-check" name="filter-type" id="filter-value-7" autocomplete="off" value="Дом">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-7">Дом</label>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="btn-group filter__item">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+			<div class="d-flex align-items-center">
+				<div class="flex-grow-1">
+					<div class="fs-14 fw-semibold">Цена</div>
+					<div class="filter__item__name"><span class="text-nowrap filter__price-value">Любая</span></div>
+				</div>
+				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
+			</div>
+		</button>
+		<div class="dropdown-menu filter__item__list">
+			
+			<div class="filter__price-range">
+				<input type="text" class="js-range-filter" name="filter-price" value=""
+				data-type="int"
+				data-min="500"
+				data-max="200000"
+				data-from="500"
+				data-to="200000"
+				data-grid="true"
+				data-step="500"
+				data-postfix=" ₽"
+				/>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="btn-group filter__item">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
+			<div class="d-flex align-items-center">
+				<div class="flex-grow-1">
+					<div class="fs-14 fw-semibold">Количество комнат</div>
+					<div class="filter__item__name">Любое</div>
+				</div>
+				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
+			</div>
+		</button>
+		<div class="dropdown-menu filter__item__list">
+			<div class="btn-group-vertical select-list">
+				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-13" autocomplete="off" value="Любое" checked="">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-13">Любое</label>
+
+				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-9" autocomplete="off" value="1">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-9">1</label>
+
+				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-10" autocomplete="off" value="2">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-10">2</label>
+
+				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-11" autocomplete="off" value="3">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-11">3</label>
+
+				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-12" autocomplete="off" value="4">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-12">4</label>
+
+				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-12" autocomplete="off" value="5">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-12">5</label>
+
+				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-12" autocomplete="off" value="6">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-12">6+</label>
+			</div>
+		</div>
+	</div>
+	<div class="filter__item border d-flex align-items-center p-3">
+		<button type="button" class="btn filter__addictional"><img src="images/icons/filter.svg"></button>
+		<button type="submit" class="ms-auto btn btn-primary rounded-pill px-4">Найти</button>
+	</div>
+</form>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	
+	$('.filter').submit(function (e) { 
+		e.preventDefault();
+		filterSend()
+	});
+
+	$('.filter-my-location').click(function (e) { 
+		e.preventDefault();
+		e.stopPropagation()
+	});
+
+	$('.filter input').change(function (e) { 
+		e.preventDefault();
+		filterSend()
+	});
+
+	function filterSend() {
+		let form = $('form.filter')
+		$.ajax({
+			type: 'POST',
+			url: 'https://take-keys.ru/api/filter/',
+			data: form.serialize(),
+		}).done(function (data) {
+			
+		})
+	}
+	
+	$('body').on('click', '.filter__item__val', function () {
+		$(this).parents('.filter__item').find('.filter__item__name').html($(this).html())
+	})
+
+	$('.filter__item__list [type="radio"]:checked').each(function () { 
+		$(this).parents('.filter__item').find('.filter__item__name').html($(this).val())
+	})
+
+	$('body').on('click', '.address-autocomplete__list .filter__item__val', function () {
+		const parent = $(this).parents('.filter__item')
+		parent.find('[name="filter-address"]').val($(this).html())
+		parent.find('[name="geo_lon"]').val($(this).attr('data-geo_lon'))
+		parent.find('[name="geo_lat"]').val($(this).attr('data-geo_lat'))
+	})
+})
+</script>
+</div>
 
 <div class="container">
 	<h1 class="h1 item__title my-2 my-lg-0">Заголовок категории</h1>
