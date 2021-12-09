@@ -71,11 +71,11 @@
 <div class="container mb-4 mt-3">
 <form class="filter btn-group">
 	<div class="btn-group filter__item">
-		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
+		<button type="button" class="btn btn-outline-light filter__item__btn" onclick="$('.filter__item__location').focus()" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 			<div class="d-flex align-items-center">
 				<div class="flex-grow-1">
-					<div class="fs-14 fw-semibold">Местоположение</div>
-					<div class="filter__item__name">Москва</div>
+					<!-- <div class="fs-14 fw-semibold">Местоположение</div> -->
+					<div class="filter__item__name">Местоположение</div>
 					<input type="hidden" name="filter-address" value="Москва"/>
 					<input type="hidden" name="geo_lon"/>
 					<input type="hidden" name="geo_lat"/>
@@ -83,70 +83,68 @@
 				<div class="ms-3"><span class="btn filter-my-location"><img src="images/icons/location.svg"></span></div>
 			</div>
 		</button>
-		<ul class="dropdown-menu filter__item__list">
-			<li><input type="text" class="form-control filter__item__location address-autocomplete" placeholder="Введите адрес..."/></li>
-			<li>
-				<div class="py-2 px-3">
-					<div class="fs-14 fw-semibold mb-1">Радиус поиска:</div>
-						<input type="text" class="js-range-filter-radius js-range-slider" name="filter-radius" value=""
-						data-min="0.5"
-						data-max="20"
-						data-from="5"
-						data-grid="true"
-						data-step="0.5"
-						data-postfix=" км"
-							/>
-				</div>
-			</li>
-			<div class="address-autocomplete__list">
+		<div class="dropdown-menu filter__item__list">
+			<div>
+				<button class="btn btn-primary w-100" type="submit">Найти</button>
 			</div>
-		</ul>
+			<div><input type="text" class="form-control filter__item__location address-autocomplete border-primary" placeholder="Введите адрес..."/></div>
+			<div class="address-autocomplete__list"></div>
+		</div>
 	</div>
-	<!-- <div class="btn-group filter__item">
-		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
+	<div class="btn-group filter__item">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 			<div class="d-flex align-items-center">
 				<div class="flex-grow-1">
-					<div class="fs-14 fw-semibold">Категория</div>
-					<div class="filter__item__name">Аренда</div>
+					<div class="fs-14 fw-semibold">Радиус поиска</div>
+					<div class="filter__item__name filter__radius-value">5км</div>
 				</div>
-				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
+				<div class="ms-3"><img class="filter__item__arrow" src="images/icons/arrow-down.svg"></div>
 			</div>
 		</button>
-		<div class="dropdown-menu filter__item__list">
-			<div class="btn-group-vertical select-list">
-				<input type="radio" class="btn-check" name="filter-category" id="filter-value-1" autocomplete="off" value="Аренда" checked="">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-1">Аренда</label>
-
-				<input type="radio" class="btn-check" name="filter-category" id="filter-value-2" value="Покупка" autocomplete="off">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-2">Покупка</label>
+		<div class="dropdown-menu filter__item__list w-100">
+			<div>
+				<button class="btn btn-primary w-100" type="submit">Найти</button>
+			</div>
+			<div class="p-3">
+					<input type="text" class="js-range-filter-radius" name="filter-radius" value=""
+					data-min="0.5"
+					data-max="20"
+					data-from="5"
+					data-grid="true"
+					data-step="0.5"
+					data-postfix=" км"
+						/>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<div class="btn-group filter__item">
-		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 			<div class="d-flex align-items-center">
 				<div class="flex-grow-1">
-					<div class="fs-14 fw-semibold">Тип жилья</div>
-					<div class="filter__item__name">Вся недвижимость</div>
+					<!-- <div class="fs-14 fw-semibold">Тип жилья</div> -->
+					<div class="filter__item__name">Тип жилья</div>
 				</div>
-				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
+				<div class="ms-3"><img class="filter__item__arrow" src="images/icons/arrow-down.svg"></div>
 			</div>
 		</button>
 		<div class="dropdown-menu filter__item__list">
+			<div>
+				<button class="btn btn-primary w-100" type="submit">Найти</button>
+			</div>
 			<div class="btn-group-vertical select-list">
-				<input type="radio" class="btn-check" name="filter-type" id="filter-value-3" autocomplete="off" value="Вся недвижимость" checked="">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-3">Вся недвижимость</label>
+				<input type="checkbox" class="btn-check" name="filter-type[0]" id="filter-value-3" autocomplete="off" checked="">
+				<label class="btn btn-outline-light filter__item__val text-nowrap" for="filter-value-3">Вся недвижимость</label>
 
-				<input type="radio" class="btn-check" name="filter-type" id="filter-value-4" autocomplete="off" value="Комната">
+				<input type="checkbox" class="btn-check" name="filter-type[4]" id="filter-value-4" autocomplete="off">
 				<label class="btn btn-outline-light filter__item__val" for="filter-value-4">Комната</label>
 
-				<input type="radio" class="btn-check" name="filter-type" id="filter-value-5" autocomplete="off" value="Квартира">
+				<input type="checkbox" class="btn-check" name="filter-type[2]" id="filter-value-5" autocomplete="off">
 				<label class="btn btn-outline-light filter__item__val" for="filter-value-5">Квартира</label>
 
-				<input type="radio" class="btn-check" name="filter-type" id="filter-value-6" autocomplete="off" value="Студия">
+				<input type="checkbox" class="btn-check" name="filter-type[3]" id="filter-value-6" autocomplete="off">
 				<label class="btn btn-outline-light filter__item__val" for="filter-value-6">Студия</label>
 
-				<input type="radio" class="btn-check" name="filter-type" id="filter-value-7" autocomplete="off" value="Дом">
+				<input type="checkbox" class="btn-check" name="filter-type[1]" id="filter-value-7" autocomplete="off">
 				<label class="btn btn-outline-light filter__item__val" for="filter-value-7">Дом</label>
 
 			</div>
@@ -160,13 +158,16 @@
 					<div class="fs-14 fw-semibold">Цена</div>
 					<div class="filter__item__name"><span class="text-nowrap filter__price-value">Любая</span></div>
 				</div>
-				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
+				<div class="ms-3"><img class="filter__item__arrow" src="images/icons/arrow-down.svg"></div>
 			</div>
 		</button>
 		<div class="dropdown-menu filter__item__list">
+			<div>
+				<button class="btn btn-primary w-100" type="submit">Найти</button>
+			</div>
 			
 			<div class="filter__price-range">
-				<input type="text" class="js-range-filter" name="filter-price" value=""
+				<input type="text" class="js-range-filter-price" name="filter-price" value=""
 				data-type="int"
 				data-min="500"
 				data-max="200000"
@@ -182,49 +183,93 @@
 	</div>
 
 	<div class="btn-group filter__item">
+		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+			<div class="d-flex align-items-center">
+				<div class="flex-grow-1">
+					<!-- <div class="fs-14 fw-semibold">Количество комнат</div> -->
+					<div class="filter__item__name">Количество комнат</div>
+				</div>
+				<div class="ms-3"><img class="filter__item__arrow" src="images/icons/arrow-down.svg"></div>
+			</div>
+		</button>
+		<div class="dropdown-menu filter__item__list">
+			<div>
+				<button class="btn btn-primary w-100" type="submit">Найти</button>
+			</div>
+			<div class="btn-group-vertical select-list">
+				<input type="checkbox" class="btn-check" name="filter-rooms[0]" id="filter-value-13" autocomplete="off" checked="">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-13">Любое</label>
+
+				<input type="checkbox" class="btn-check" name="filter-rooms[1]" id="filter-value-9" autocomplete="off">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-9">1</label>
+
+				<input type="checkbox" class="btn-check" name="filter-rooms[2]" id="filter-value-10" autocomplete="off">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-10">2</label>
+
+				<input type="checkbox" class="btn-check" name="filter-rooms[3]" id="filter-value-11" autocomplete="off">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-11">3</label>
+
+				<input type="checkbox" class="btn-check" name="filter-rooms[4]" id="filter-value-12" autocomplete="off">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-12">4</label>
+
+				<input type="checkbox" class="btn-check" name="filter-rooms[5]" id="filter-value-13" autocomplete="off">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-13">5</label>
+
+				<input type="checkbox" class="btn-check" name="filter-rooms[6]" id="filter-value-14" autocomplete="off">
+				<label class="btn btn-outline-light filter__item__val" for="filter-value-14">6+</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="btn-group filter__item">
 		<button type="button" class="btn btn-outline-light filter__item__btn" data-bs-toggle="dropdown">
 			<div class="d-flex align-items-center">
 				<div class="flex-grow-1">
-					<div class="fs-14 fw-semibold">Количество комнат</div>
-					<div class="filter__item__name">Любое</div>
+					<div class="fs-14 fw-semibold">Актуальность</div>
+					<div class="filter__item__subname">За все время</div>
 				</div>
 				<div class="ms-3"><img src="images/icons/arrow-down.svg"></div>
 			</div>
 		</button>
 		<div class="dropdown-menu filter__item__list">
+
 			<div class="btn-group-vertical select-list">
-				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-13" autocomplete="off" value="Любое" checked="">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-13">Любое</label>
+				<input type="radio" class="btn-check" name="filter-actuality" id="filter-actuality-20" autocomplete="off" value="all" checked="">
+				<label class="btn btn-outline-light filter__item__val" for="filter-actuality-20">За все время</label>
 
-				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-9" autocomplete="off" value="1">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-9">1</label>
+				<input type="radio" class="btn-check" name="filter-actuality" id="filter-actuality-2" autocomplete="off" value="24h">
+				<label class="btn btn-outline-light filter__item__val" for="filter-actuality-2">24 часа</label>
 
-				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-10" autocomplete="off" value="2">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-10">2</label>
+				<input type="radio" class="btn-check" name="filter-actuality" id="filter-actuality-3" autocomplete="off" value="2d">
+				<label class="btn btn-outline-light filter__item__val" for="filter-actuality-3">2 дня</label>
 
-				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-11" autocomplete="off" value="3">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-11">3</label>
+				<input type="radio" class="btn-check" name="filter-actuality" id="filter-actuality-4" autocomplete="off" value="3d">
+				<label class="btn btn-outline-light filter__item__val" for="filter-actuality-4">3 дня</label>
 
-				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-12" autocomplete="off" value="4">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-12">4</label>
+				<input type="radio" class="btn-check" name="filter-actuality" id="filter-actuality-5" autocomplete="off" value="week">
+				<label class="btn btn-outline-light filter__item__val" for="filter-actuality-5">Неделя</label>
+				
+				<input type="radio" class="btn-check" name="filter-actuality" id="filter-actuality-1" autocomplete="off" value="2week">
+				<label class="btn btn-outline-light filter__item__val" for="filter-actuality-1">2 недели</label>
 
-				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-12" autocomplete="off" value="5">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-12">5</label>
+				<input type="radio" class="btn-check" name="filter-actuality" id="filter-actuality-6" autocomplete="off" value="mounth">
+				<label class="btn btn-outline-light filter__item__val" for="filter-actuality-6">Месяц</label>
 
-				<input type="radio" class="btn-check" name="filter-rooms" id="filter-value-12" autocomplete="off" value="6">
-				<label class="btn btn-outline-light filter__item__val" for="filter-value-12">6+</label>
 			</div>
 		</div>
 	</div>
-	<div class="filter__item border d-flex align-items-center p-3">
-		<button type="button" class="btn filter__addictional"><img src="images/icons/filter.svg"></button>
-		<button type="submit" class="ms-auto btn btn-primary rounded-pill px-4">Найти</button>
+
+
+	<div class="btn-group filter__item border d-flex align-items-center p-3 ps-lg-0 flex-grow-0">
+		<button type="button" class="btn filter__addictional flex-grow-0"><img src="images/icons/filter.svg"></button>
+		<button type="submit" class="ms-auto btn btn-primary rounded-pill px-4 flex-grow-0">Найти</button>
 	</div>
 </form>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 	
-	$('.filter').submit(function (e) { 
+	$('.filter').submit(function (e) {
+		Dropdown.getInstance($('.filter__item__btn.show')).hide()
 		e.preventDefault();
 		filterSend()
 	});
@@ -251,15 +296,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	
 	$('body').on('click', '.filter__item__val', function () {
-		$(this).parents('.filter__item').find('.filter__item__name').html($(this).html())
+		$(this).parents('.filter__item').find('.filter__item__subname').html($(this).html())
 	})
 
 	$('.filter__item__list [type="radio"]:checked').each(function () { 
-		$(this).parents('.filter__item').find('.filter__item__name').html($(this).val())
+		$(this).parents('.filter__item').find('.filter__item__subname').html($(this).next('label').html())
 	})
 
 	$('body').on('click', '.address-autocomplete__list .filter__item__val', function () {
 		const parent = $(this).parents('.filter__item')
+		//parent.find('.filter__item__subname').html($(this).html())
+		parent.find('.filter__item__location').val($(this).html())
 		parent.find('[name="filter-address"]').val($(this).html())
 		parent.find('[name="geo_lon"]').val($(this).attr('data-geo_lon'))
 		parent.find('[name="geo_lat"]').val($(this).attr('data-geo_lat'))
@@ -304,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	<div class="catalog__item">
 		<div class="row">
 			<div class="col-12 col-lg-5">
-				<div class="catalog__item-slider h-100">
+				<a href="#" class="catalog__item-slider h-100">
 					<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -397,18 +444,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-				</div>
+				</a>
 			</div>
 			<div class="col-12 col-lg-7">
 				<div class="catalog__item__info h-100">
-					<div class="catalog__item__title">
+					<a href="#" class="catalog__item__title">
 						Аренда квартиры на длительный срок в новострое
-					</div>
+					</a>
 					<div class="catalog__item__price">
 						<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 						<s class="catalog__item__price-old">150 000 ₽</s>
 					</div>
 					<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+					<div class="catalog__item__metro row">
+						<div class="col-12 order-lg-2">
+							<div class="row g-0">
+								<div class="col-auto item__metro">
+									<img class="me-2" src="images/icons/metro.svg">Арбатская
+								</div>
+								<div class="col-auto item__metro">
+									<img class="me-2" src="images/icons/metro-off.svg">Академическая
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="catalog__item__desc d-none d-lg-block">
 						Уникальные апартаменты с панорамными видами в знаковом комплексе премиум-класса Neva Towers. Функциональные апартаменты с современной отделкой, уютным интерьером, полностью укомплектованы бытовой техникой.
 					</div>
@@ -431,7 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
 										<i class="icon"><img src="images/icons/heart.svg"></i>
 									</button>
 								</div>
-								<div class="col-auto order-lg-2 d-lg-none">
+								<div class="col-auto order-lg-2">
 									<button class="btn btn-outline-light btn-icon">
 										<i class="icon"><img src="images/icons/plus.svg"></i>
 									</button>
@@ -439,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							</div>
 						</div>
 						<div class="col-12 col-lg-auto order-lg-1">
-							<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+							<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 						</div>
 					</div>
 				</div>
@@ -451,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	<div class="catalog__item">
 		<div class="row">
 			<div class="col-12 col-lg-5">
-				<div class="catalog__item-slider h-100">
+				<a href="#" class="catalog__item-slider h-100">
 					<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -544,18 +603,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-				</div>
+				</a>
 			</div>
 			<div class="col-12 col-lg-7">
 				<div class="catalog__item__info h-100">
-					<div class="catalog__item__title">
+					<a href="#" class="catalog__item__title">
 						Аренда квартиры на длительный срок в новострое
-					</div>
+					</a>
 					<div class="catalog__item__price">
 						<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 						<s class="catalog__item__price-old">150 000 ₽</s>
 					</div>
 					<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+					<div class="catalog__item__metro row">
+						<div class="col-12 order-lg-2">
+							<div class="row g-0">
+								<div class="col-auto item__metro">
+									<img class="me-2" src="images/icons/metro.svg">Арбатская
+								</div>
+								<div class="col-auto item__metro">
+									<img class="me-2" src="images/icons/metro-off.svg">Академическая
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="catalog__item__desc d-none d-lg-block">
 						Уникальные апартаменты с панорамными видами в знаковом комплексе премиум-класса Neva Towers. Функциональные апартаменты с современной отделкой, уютным интерьером, полностью укомплектованы бытовой техникой.
 					</div>
@@ -578,7 +649,7 @@ document.addEventListener('DOMContentLoaded', () => {
 										<i class="icon"><img src="images/icons/heart.svg"></i>
 									</button>
 								</div>
-								<div class="col-auto order-lg-2 d-lg-none">
+								<div class="col-auto order-lg-2">
 									<button class="btn btn-outline-light btn-icon">
 										<i class="icon"><img src="images/icons/plus.svg"></i>
 									</button>
@@ -586,7 +657,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							</div>
 						</div>
 						<div class="col-12 col-lg-auto order-lg-1">
-							<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+							<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 						</div>
 					</div>
 				</div>
@@ -598,7 +669,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	<div class="catalog__item">
 		<div class="row">
 			<div class="col-12 col-lg-5">
-				<div class="catalog__item-slider h-100">
+				<a href="#" class="catalog__item-slider h-100">
 					<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -691,18 +762,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-				</div>
+				</a>
 			</div>
 			<div class="col-12 col-lg-7">
 				<div class="catalog__item__info h-100">
-					<div class="catalog__item__title">
+					<a href="#" class="catalog__item__title">
 						Аренда квартиры на длительный срок в новострое
-					</div>
+					</a>
 					<div class="catalog__item__price">
 						<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 						<s class="catalog__item__price-old">150 000 ₽</s>
 					</div>
 					<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+					<div class="catalog__item__metro row">
+						<div class="col-12 order-lg-2">
+							<div class="row g-0">
+								<div class="col-auto item__metro">
+									<img class="me-2" src="images/icons/metro.svg">Арбатская
+								</div>
+								<div class="col-auto item__metro">
+									<img class="me-2" src="images/icons/metro-off.svg">Академическая
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="catalog__item__desc d-none d-lg-block">
 						Уникальные апартаменты с панорамными видами в знаковом комплексе премиум-класса Neva Towers. Функциональные апартаменты с современной отделкой, уютным интерьером, полностью укомплектованы бытовой техникой.
 					</div>
@@ -725,7 +808,7 @@ document.addEventListener('DOMContentLoaded', () => {
 										<i class="icon"><img src="images/icons/heart.svg"></i>
 									</button>
 								</div>
-								<div class="col-auto order-lg-2 d-lg-none">
+								<div class="col-auto order-lg-2">
 									<button class="btn btn-outline-light btn-icon">
 										<i class="icon"><img src="images/icons/plus.svg"></i>
 									</button>
@@ -733,7 +816,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							</div>
 						</div>
 						<div class="col-12 col-lg-auto order-lg-1">
-							<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+							<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 						</div>
 					</div>
 				</div>
@@ -748,7 +831,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -841,14 +924,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -864,13 +959,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -878,7 +973,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -971,14 +1066,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -994,13 +1101,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1008,7 +1115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -1101,14 +1208,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -1124,13 +1243,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1138,7 +1257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -1231,14 +1350,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -1254,13 +1385,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1268,7 +1399,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -1361,14 +1492,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -1384,13 +1527,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1398,7 +1541,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -1491,14 +1634,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -1514,13 +1669,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1528,7 +1683,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -1621,14 +1776,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -1644,13 +1811,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1658,7 +1825,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -1751,14 +1918,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -1774,13 +1953,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1788,7 +1967,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -1881,14 +2060,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -1904,13 +2095,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -1918,7 +2109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -2011,14 +2202,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -2034,13 +2237,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -2048,7 +2251,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -2141,14 +2344,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -2164,13 +2379,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -2178,7 +2393,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -2271,14 +2486,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -2294,13 +2521,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -2308,7 +2535,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -2401,14 +2628,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -2424,13 +2663,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -2438,7 +2677,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -2531,14 +2770,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -2554,13 +2805,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
@@ -2568,7 +2819,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 			<div class="col">
 	<div class="catalog__item">
-		<div class="catalog__item-slider">
+		<a href="#" class="catalog__item-slider">
 			<!-- Additional required wrapper -->
 <div class="swiper-wrapper">
 
@@ -2661,14 +2912,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	<span class="btn-colored bg-danger">Лучшая цена</span>
 	<span class="btn-colored bg-primary">Новое</span>
 </div>
-		</div>
+		</a>
 		<div class="catalog__item__info">
-			<div class="catalog__item__title">Аренда квартиры на длительный срок в новострое</div>
+			<a href="#" class="catalog__item__title">Аренда квартиры на длительный срок в новострое</a>
 			<div class="catalog__item__price">
 				<span class="catalog__item__price-new">110 000 ₽/мес.</span>
 				<s class="catalog__item__price-old">150 000 ₽</s>
 			</div>
 			<div class="catalog__item__address">Москва, улица Большая Полянка, 28</div>
+			<div class="catalog__item__metro row">
+				<div class="col-12 order-lg-2">
+					<div class="row g-0">
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro.svg">Арбатская
+						</div>
+						<div class="col-auto item__metro">
+							<img class="me-2" src="images/icons/metro-off.svg">Академическая
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="catalog__item__param d-none d-lg-flex">
 				<i class="icon"><img src="images/icons/home.svg"></i>1
 				<i class="ms-4 icon"><img src="images/icons/box.svg"></i>44 м²
@@ -2684,13 +2947,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						<i class="icon"><img src="images/icons/heart.svg"></i>
 					</button>
 				</div>
-				<div class="col-auto order-lg-2 d-lg-none">
+				<div class="col-auto order-lg-2">
 					<button class="btn btn-outline-light btn-icon">
 						<i class="icon"><img src="images/icons/plus.svg"></i>
 					</button>
 				</div>
 				<div class="col-12 col-lg-auto order-lg-1">
-					<a href="#" class="btn btn-outline-dark catalog__item__btn-show">Смотреть</a>
+					<a href="#" class="btn btn-primary catalog__item__btn-show">Смотреть</a>
 				</div>
 			</div>
 		</div>
