@@ -17,4 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		$('.navbar').toggleClass('active')
 	});
 
+	// var app = new Vue({
+	// 	el: '#app',
+	// 	data: {
+	// 		menuOpen: false
+	// 	}
+	// })
+
 })
