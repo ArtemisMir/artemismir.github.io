@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/swiper-js/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/bootstrap-select/css/bootstrap-select.min.css">
 
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
@@ -63,14 +64,17 @@
 							</svg>
 						</button>
 					</div>
+					<div class="col-lg-auto d-none d-lg-block order-lg-5"><button class="button btn-lang-en">EN</button></div>
+					<div class="col-lg-auto d-none d-lg-block order-lg-5"><button class="button btn-lang-de">DE</button></div>
 					<div class="w-100 d-lg-none"></div>
 					<div class="col-lg-auto ms-lg-auto order-lg-1">
 						<ul class="menu">
+							<li class="menu__item d-lg-none"><span class="menu__link"><button class="button btn-lang-en me-3">EN</button><button class="button btn-lang-en">DE</button></span></li>
 							<li class="menu__item"><a class="menu__link" href="#">Startseite</a></li>
 							<li class="menu__item"><a class="menu__link" href="uber.html">Über AVENO</a></li>
 							<li class="menu__item"><a class="menu__link" href="aktuelles.html">Aktuelles</a></li>
 							<li class="menu__item"><a class="menu__link" href="sortiment.html">Sortiment</a></li>
-							<li class="menu__item"><a class="menu__link" href="#">Produkte</a></li>
+							<li class="menu__item"><a class="menu__link" href="catalog.html">Produkte</a></li>
 							<li class="menu__item"><a class="menu__link" href="kontakt.html">Kontakt</a></li>
 						</ul>
 					</div>
@@ -79,7 +83,7 @@
 		</div>
 
 		<div class="header-wrp">
-			<div class="header ratio header-oil" style="background-image: url(images/bg-sortiment.png); --bs-aspect-ratio: 38.05%;">
+			<div class="header ratio header-oil" style="background-image: url(images/home-header.png); --bs-aspect-ratio: 38.05%;">
 				<div class="header__overlay">
 					<div class="container">
 						<div class="header__overlay__color" style="width: 78%;"></div>
@@ -91,7 +95,7 @@
 						<div class="row align-items-end">
 
 							<div class="w-100"></div>
-							<div class="col mb-4 mb-xxl-5">
+							<div class="col-lg-7 mb-4 mb-xxl-5">
 								<h1 class="header__title head-text">Unsere <img class="logo_in__title" src="images/logo.png"
 										alt="Aveno logo"> sortiment</h1>
 							</div>
@@ -138,33 +142,33 @@
 			</div>
 
 			<div class="overflow-hidden">
-				<div class="product_slider__wrp">
-					<div class="swiper product_slider">
+				<div class="top_product__slider__wrp">
+					<div class="swiper top_product__slider">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
 							<div class="swiper-slide">
-								<div class="product_slider__item">
-									<div class="product_slider__item__border">
-										<div class="product_slider__item__img" style="background-image: url(images/1l.png);"></div>
+								<div class="top_product__slider__item">
+									<div class="top_product__slider__item__border">
+										<div class="top_product__slider__item__img" style="background-image: url(images/1l.png);"></div>
 									</div>
-									<div class="product_slider__item__title mb-2">1l</div>
+									<div class="top_product__slider__item__title mb-2">1l</div>
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="product_slider__item">
-									<div class="product_slider__item__border">
-										<div class="product_slider__item__img" style="background-image: url(images/4l.png);"></div>
+								<div class="top_product__slider__item">
+									<div class="top_product__slider__item__border">
+										<div class="top_product__slider__item__img" style="background-image: url(images/4l.png);"></div>
 									</div>
-									<div class="product_slider__item__title mb-2">4l</div>
+									<div class="top_product__slider__item__title mb-2">4l</div>
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="product_slider__item">
-									<div class="product_slider__item__border">
-										<div class="product_slider__item__img" style="background-image: url(images/10l.png);"></div>
+								<div class="top_product__slider__item">
+									<div class="top_product__slider__item__border">
+										<div class="top_product__slider__item__img" style="background-image: url(images/10l.png);"></div>
 									</div>
-									<div class="product_slider__item__title mb-2">10l</div>
+									<div class="top_product__slider__item__title mb-2">10l</div>
 								</div>
 							</div>
 
@@ -385,7 +389,7 @@
 		</section>
 
 
-		<div class="bg-image ratio" style="background-image: url(images/bg-light-in-dark.png);  --bs-aspect-ratio: 46.67%;">
+		<div class="bg-image ratio" style="background-image: url(images/bg-light-in-dark.png);  --bs-aspect-ratio: 46.67%; min-height: 400px;">
 			<div class="angle-down angle-down-in"></div>
 		</div>
 
@@ -426,6 +430,7 @@
 
 	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 	<script src="libs/swiper-js/swiper-bundle.min.js"></script>
+	<script src="libs/bootstrap-select/js/bootstrap-select.min.js"></script>
 
 	<script src="js/common.js"></script>
 

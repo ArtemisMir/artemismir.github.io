@@ -63,14 +63,17 @@
 							</svg>
 						</button>
 					</div>
+					<div class="col-lg-auto d-none d-lg-block order-lg-5"><button class="button btn-lang-en">EN</button></div>
+					<div class="col-lg-auto d-none d-lg-block order-lg-5"><button class="button btn-lang-de">DE</button></div>
 					<div class="w-100 d-lg-none"></div>
 					<div class="col-lg-auto ms-lg-auto order-lg-1">
 						<ul class="menu">
+							<li class="menu__item d-lg-none"><span class="menu__link"><button class="button btn-lang-en me-3">EN</button><button class="button btn-lang-en">DE</button></span></li>
 							<li class="menu__item"><a class="menu__link" href="#">Startseite</a></li>
 							<li class="menu__item"><a class="menu__link" href="uber.html">Über AVENO</a></li>
 							<li class="menu__item"><a class="menu__link" href="aktuelles.html">Aktuelles</a></li>
 							<li class="menu__item"><a class="menu__link" href="sortiment.html">Sortiment</a></li>
-							<li class="menu__item"><a class="menu__link" href="#">Produkte</a></li>
+							<li class="menu__item"><a class="menu__link" href="catalog.html">Produkte</a></li>
 							<li class="menu__item"><a class="menu__link" href="kontakt.html">Kontakt</a></li>
 						</ul>
 					</div>
@@ -92,7 +95,7 @@
 						<div class="row align-items-end">
 
 							<div class="w-100"></div>
-							<div class="col mb-4 mb-xxl-5">
+							<div class="col-lg-7 mb-4 mb-xxl-5">
 								<h1 class="header__title head-text">Aktuelles</h1>
 							</div>
 							<div class="w-100"></div>
@@ -138,7 +141,11 @@
 					<div class="row">
 						<div class="col-lg-5">
 							<a href="aktuelles-page.html" class="actual__item__image ratio"
-								style="background-image: url(images/actual.png); --bs-aspect-ratio: 68.58%;"></a>
+								style="background-image: url(images/actual.png); --bs-aspect-ratio: 68.58%;">
+								<div class="tile-hover">
+									<bu class="tile-hover-btn btn-increase"></bu>
+								</div>
+							</a>
 						</div>
 						<div class="col-lg-7">
 							<div class="actual__item__content p-4 px-lg-0">
@@ -165,7 +172,11 @@
 					<div class="row">
 						<div class="col-lg-5">
 							<a href="aktuelles-page.html" class="actual__item__image ratio"
-								style="background-image: url(images/actual.png); --bs-aspect-ratio: 68.58%;"></a>
+								style="background-image: url(images/actual.png); --bs-aspect-ratio: 68.58%;">
+								<div class="tile-hover">
+									<span class="tile-hover-btn btn-increase"></span>
+								</div>
+							</a>
 						</div>
 						<div class="col-lg-7">
 							<div class="actual__item__content p-4 px-lg-0">
@@ -192,7 +203,11 @@
 					<div class="row">
 						<div class="col-lg-5">
 							<a href="aktuelles-page.html" class="actual__item__image ratio"
-								style="background-image: url(images/actual.png); --bs-aspect-ratio: 68.58%;"></a>
+								style="background-image: url(images/actual.png); --bs-aspect-ratio: 68.58%;">
+								<div class="tile-hover">
+									<span class="tile-hover-btn btn-increase"></span>
+								</div>
+							</a>
 						</div>
 						<div class="col-lg-7">
 							<div class="actual__item__content p-4 px-lg-0">
@@ -252,7 +267,7 @@
 						</div>
 						<input class="contact__right__form__field field mb-3" type="text" name="email" placeholder="E-Mail Adresse">
 						<div class="contact__right__form__text">Bitte lesen Sie unsere Datenschutzerklärung</div>
-						<button class="mt-4 contact__right__form__sibmit button button-primary"
+						<button class="mt-4 contact__right__form__submit button button-primary"
 							type="submit"><span>ABONNIEREN</span></button>
 					</form>
 				</div>
