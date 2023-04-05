@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache"> <!-- !!!!!!! -->
+	
+	<meta charset="utf-8">
+	<title>Интернет-магазин отопления и водоснабжения «Дюйм24»</title>
+	<meta name="description" content="Купить товары для отопления и водоснабжения в Москве оптом и в розницу.">
+	<meta name="viewport" content="width=1200, initial-scale=1, maximum-scale=1">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#004b8d">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#004b8d">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#004b8d">
+
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favblue192.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favblue16.png">
+
+	<!-- <meta property="og:image" content="images/dest/preview.jpg"> -->
+	<link rel="stylesheet" href="css/main.min.css?3">
+
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg fixed--top navbar-dark bg-primary navbar-top">
+			<div class="container-fluid">
+				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse text-white" id="topNavBar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fal fa-plus me-2"></i>Новый заказ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="orders.html"><i class="fal fa-shopping-cart me-2"></i>Заказы</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="catalog.html"><i class="fal fa-boxes-alt me-2"></i>Товары</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="clients.html"><i class="fal fa-users me-2"></i>Клиенты</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tasks.html"><i class="fal fa-tasks me-2"></i>Задачи<span class="ms-2 badge rounded-pill bg-warning text-dark">3</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fal fa-phone me-2"></i>Звонки</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fal fa-tachometer-alt-fast me-2"></i>Dashboard</a>
+						</li>
+						<li class="nav-item flex-grow-0">
+							<!-- <a class="nav-link" href="#"><i class="fal fa-tachometer-alt-fast me-2"></i>Отойти</a> -->
+							<div class="nav-link">
+								<label class="good-check fs-4">
+									<input type="checkbox" name="region" onchange="$('html').toggleClass('user-sleep-mode');">
+									<span class="good-check-box good-check-box-shadow text-danger"></span>
+									<span class="good-check-name fs-6">Отойти</span>
+								</label>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">
+								<span class="position-relative"><i class="fal fa-snooze me-2 user-sleep-mode-icon"></i>Василий Васильков</span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end">
+								<li><a class="dropdown-item" href="#"><i class="fal fa-sign-out me-2"></i>Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="calls collapse">
+		<div class="py-4 px-5 bg-light border-bottom border-3 position-relative">
+			<div class="row align-items-center justify-content-between">
+
+				<div class="col-auto">
+					<h2 class="h3 text-primary mb-0 text-nowrap">Николаев Николай Николаевич</h2>
+				</div>
+				<div class="col-auto">
+					<div class="accordion" id="accordion-call-answer-123">
+						<div class="call-talking-123 collapse collapse-no-animation" data-bs-parent="#accordion-call-answer-123">
+							<span class="display-4 text-muted">Разговор...</span>
+						</div>
+						<div class="collapse show collapse-no-animation" data-bs-parent="#accordion-call-answer-123">
+							<button class="btn btn-lg btn-success px-5 animation-call fw-bold" type="button" data-bs-toggle="collapse" data-bs-target=".call-talking-123"><i class="fa fa-phone me-2 animation-shake"></i><span data-timer-up="0">00:00</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="col-auto">
+					<div class="accordion" id="accordion-call-missed-123">
+						<div class="call-talking-123 collapse collapse-no-animation" data-bs-parent="#accordion-call-missed-123"></div>
+						<div class="collapse show collapse-no-animation" data-bs-parent="#accordion-call-missed-123">
+							<button class="btn btn-lg btn-outline-secondary" type="button">Не могу принять</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-auto">
+					<button class="btn btn-lg btn-primary px-5" type="button" data-bs-toggle="collapse" data-bs-target=".call-123"><i class="fal fa-chevron-up"></i></button>
+				</div>
+			</div>
+			<div class="collapse show call-123">
+				<table class="table mt-3 table-label">
+					<tbody>
+						<tr>
+							<td width="1%">Телефон</td>
+							<td>+7 916 000 12 34</td>
+						</tr>
+						<tr>
+							<td>Заказы не закрытые</td>
+							<td>
+								<a class="link" href="#">3344</a>
+								<a class="link" href="#">3355</a>
+								<a class="link" href="#">3366</a>
+								<button type="button" class="btn btn-sm btn-outline-primary lh-sm ms-2" title="Новый заказ"><i class="fal fa-plus"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>Менеджер</td>
+							<td>Виталий Э.</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="text-primary fs-4 fw-500 mb-2">
+					Задачи
+					<button type="button" class="btn btn-sm btn-outline-primary lh-sm ms-1" title="Новая задача"><i class="fal fa-plus"></i></button></div>
+				<table class="table tasks bg-light lh-sm">
+					<thead>
+						<tr>
+							<th class="text-nowrap">Дата создания <a class="sort-button" href="#"><i class="fa fa-sort-down"></i></a></th>
+							<th class="text-nowrap">Дата исполнения <a class="sort-button" href="#"><i class="fa fa-sort-down"></i></a></th>
+							<th>Название</th>
+							<th>Статус</th>
+							<th>Заказы</th>
+							<th>Клиенты</th>
+							<th>Ответственный</th>
+							<th>Постановщик</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01.11.2022<br>9:00</td>
+							<td>01.12.2022<br>18:00</td>
+							<td>Позвонить, заменить отсутствующее в наличии муфты. </td>
+							<td width="1%">
+								<div class="dropdown lh-base">
+									<button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fa fa-circle me-2"></i>Новая
+									</button>
+									<ul class="dropdown-menu">
+										<li><button class="dropdown-item" type="button"><i class="fa fa-hourglass-half me-2 text-warning"></i>В обработке</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-check-circle me-2 text-success"></i>Выполнено</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fal fa-snowflake me-2 text-info"></i>Пауза</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-times-circle me-2 text-danger"></i>Отмена</button></li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<a href="#">3344</a>
+							</td>
+							<td>
+								<a href="#">ООО "Прораб-24"</a>
+							</td>
+							<td>Никола Николай</td>
+							<td>Сергей Гордеев</td>
+						</tr>
+						<tr>
+							<td>01.11.2022<br>9:00</td>
+							<td>01.12.2022<br>18:00</td>
+							<td>Позвонить</td>
+							<td width="1%">
+								<div class="dropdown lh-base">
+									<button class="btn btn-success btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fa fa-check-circle me-2"></i>Выполнено
+									</button>
+									<ul class="dropdown-menu">
+										<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-primary"></i>Новая</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-hourglass-half me-2 text-warning"></i>В обработке</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fal fa-snowflake me-2 text-info"></i>Пауза</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-times-circle me-2 text-danger"></i>Отмена</button></li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<a href="#">3344</a>,
+								<a href="#">786732365</a>,
+								<a href="#">432</a>
+							</td>
+							<td>
+								<a href="#">+7 916 134-23-23</a>
+							</td>
+							<td>Никола Николай</td>
+							<td>Сергей Гордеев</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="content">
+		
+		<!-- START Динамическая часть -->
+
+
+<!-- END Динамическая часть -->
+</div>
+	<footer class="footer">
+	</footer>
+
+	<div class="top" title="Наверх"><i class="fas fa-chevron-up"></i></div>
+
+	<script src="js/app.min.js?1"></script>
+
+	<div class="dev-panel p-4 border border-3 bg-light d-flex flex-column">
+		<button class="btn btn-sm btn-success mb-2 dev-call-start" data-bs-toggle="collapse" data-bs-target=".calls">Имитировать звонок</button>
+		<button class="btn btn-sm btn-primary dev-call-more" >Еще звонок звонок</button>
+	</div>
+	<style>
+		.dev-panel {
+			position: fixed;
+			opacity: 0.3;
+			bottom: 0;
+			left: 0;
+			transition: 0.15s;
+			z-index: 3000
+		}
+		.dev-panel:hover {
+			opacity: 1;
+		}
+	</style>
+</body>
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache"> <!-- !!!!!!! -->
+	
+	<meta charset="utf-8">
+	<title>Интернет-магазин отопления и водоснабжения «Дюйм24»</title>
+	<meta name="description" content="Купить товары для отопления и водоснабжения в Москве оптом и в розницу.">
+	<meta name="viewport" content="width=1200, initial-scale=1, maximum-scale=1">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#004b8d">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#004b8d">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#004b8d">
+
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favblue192.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favblue16.png">
+
+	<!-- <meta property="og:image" content="images/dest/preview.jpg"> -->
+	<link rel="stylesheet" href="css/main.min.css?3">
+
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg fixed--top navbar-dark bg-primary navbar-top">
+			<div class="container-fluid">
+				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse text-white" id="topNavBar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fal fa-plus me-2"></i>Новый заказ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="orders.html"><i class="fal fa-shopping-cart me-2"></i>Заказы</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="catalog.html"><i class="fal fa-boxes-alt me-2"></i>Товары</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="clients.html"><i class="fal fa-users me-2"></i>Клиенты</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tasks.html"><i class="fal fa-tasks me-2"></i>Задачи<span class="ms-2 badge rounded-pill bg-warning text-dark">3</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fal fa-phone me-2"></i>Звонки</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fal fa-tachometer-alt-fast me-2"></i>Dashboard</a>
+						</li>
+						<li class="nav-item flex-grow-0">
+							<!-- <a class="nav-link" href="#"><i class="fal fa-tachometer-alt-fast me-2"></i>Отойти</a> -->
+							<div class="nav-link">
+								<label class="good-check fs-4">
+									<input type="checkbox" name="region" onchange="$('html').toggleClass('user-sleep-mode');">
+									<span class="good-check-box good-check-box-shadow text-danger"></span>
+									<span class="good-check-name fs-6">Отойти</span>
+								</label>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">
+								<span class="position-relative"><i class="fal fa-snooze me-2 user-sleep-mode-icon"></i>Василий Васильков</span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end">
+								<li><a class="dropdown-item" href="#"><i class="fal fa-sign-out me-2"></i>Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="calls collapse">
+		<div class="py-4 px-5 bg-light border-bottom border-3 position-relative">
+			<div class="row align-items-center justify-content-between">
+
+				<div class="col-auto">
+					<h2 class="h3 text-primary mb-0 text-nowrap">Николаев Николай Николаевич</h2>
+				</div>
+				<div class="col-auto">
+					<div class="accordion" id="accordion-call-answer-123">
+						<div class="call-talking-123 collapse collapse-no-animation" data-bs-parent="#accordion-call-answer-123">
+							<span class="display-4 text-muted">Разговор...</span>
+						</div>
+						<div class="collapse show collapse-no-animation" data-bs-parent="#accordion-call-answer-123">
+							<button class="btn btn-lg btn-success px-5 animation-call fw-bold" type="button" data-bs-toggle="collapse" data-bs-target=".call-talking-123"><i class="fa fa-phone me-2 animation-shake"></i><span data-timer-up="0">00:00</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="col-auto">
+					<div class="accordion" id="accordion-call-missed-123">
+						<div class="call-talking-123 collapse collapse-no-animation" data-bs-parent="#accordion-call-missed-123"></div>
+						<div class="collapse show collapse-no-animation" data-bs-parent="#accordion-call-missed-123">
+							<button class="btn btn-lg btn-outline-secondary" type="button">Не могу принять</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-auto">
+					<button class="btn btn-lg btn-primary px-5" type="button" data-bs-toggle="collapse" data-bs-target=".call-123"><i class="fal fa-chevron-up"></i></button>
+				</div>
+			</div>
+			<div class="collapse show call-123">
+				<table class="table mt-3 table-label">
+					<tbody>
+						<tr>
+							<td width="1%">Телефон</td>
+							<td>+7 916 000 12 34</td>
+						</tr>
+						<tr>
+							<td>Заказы не закрытые</td>
+							<td>
+								<a class="link" href="#">3344</a>
+								<a class="link" href="#">3355</a>
+								<a class="link" href="#">3366</a>
+								<button type="button" class="btn btn-sm btn-outline-primary lh-sm ms-2" title="Новый заказ"><i class="fal fa-plus"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>Менеджер</td>
+							<td>Виталий Э.</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="text-primary fs-4 fw-500 mb-2">
+					Задачи
+					<button type="button" class="btn btn-sm btn-outline-primary lh-sm ms-1" title="Новая задача"><i class="fal fa-plus"></i></button></div>
+				<table class="table tasks bg-light lh-sm">
+					<thead>
+						<tr>
+							<th class="text-nowrap">Дата создания <a class="sort-button" href="#"><i class="fa fa-sort-down"></i></a></th>
+							<th class="text-nowrap">Дата исполнения <a class="sort-button" href="#"><i class="fa fa-sort-down"></i></a></th>
+							<th>Название</th>
+							<th>Статус</th>
+							<th>Заказы</th>
+							<th>Клиенты</th>
+							<th>Ответственный</th>
+							<th>Постановщик</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01.11.2022<br>9:00</td>
+							<td>01.12.2022<br>18:00</td>
+							<td>Позвонить, заменить отсутствующее в наличии муфты. </td>
+							<td width="1%">
+								<div class="dropdown lh-base">
+									<button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fa fa-circle me-2"></i>Новая
+									</button>
+									<ul class="dropdown-menu">
+										<li><button class="dropdown-item" type="button"><i class="fa fa-hourglass-half me-2 text-warning"></i>В обработке</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-check-circle me-2 text-success"></i>Выполнено</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fal fa-snowflake me-2 text-info"></i>Пауза</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-times-circle me-2 text-danger"></i>Отмена</button></li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<a href="#">3344</a>
+							</td>
+							<td>
+								<a href="#">ООО "Прораб-24"</a>
+							</td>
+							<td>Никола Николай</td>
+							<td>Сергей Гордеев</td>
+						</tr>
+						<tr>
+							<td>01.11.2022<br>9:00</td>
+							<td>01.12.2022<br>18:00</td>
+							<td>Позвонить</td>
+							<td width="1%">
+								<div class="dropdown lh-base">
+									<button class="btn btn-success btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fa fa-check-circle me-2"></i>Выполнено
+									</button>
+									<ul class="dropdown-menu">
+										<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-primary"></i>Новая</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-hourglass-half me-2 text-warning"></i>В обработке</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fal fa-snowflake me-2 text-info"></i>Пауза</button></li>
+										<li><button class="dropdown-item" type="button"><i class="fa fa-times-circle me-2 text-danger"></i>Отмена</button></li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<a href="#">3344</a>,
+								<a href="#">786732365</a>,
+								<a href="#">432</a>
+							</td>
+							<td>
+								<a href="#">+7 916 134-23-23</a>
+							</td>
+							<td>Никола Николай</td>
+							<td>Сергей Гордеев</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="content">
+		
+		<!-- START Динамическая часть -->
+
+<div class="container">
+	<h1 class="h2 float-header">Заказы</h1>
+	<form class="row gx-3 mb-2 align-items-center">
+		<div class="col-lg-auto">
+			<div class="row g-0">
+				<div class="col-lg-auto">
+					<select class="form-select mb-3" name="period" data-toggle="collapse-change">
+						<option value="all" data-target="#target-period-all" selected>За все время</option>
+						<option value="week" data-target="#target-period-week">Неделя</option>
+						<option value="month" data-target="#target-period-month">Месяц</option>
+						<option value="quarter" data-target="#target-period-quarter">Квартал</option>
+						<option value="year" data-target="#target-period-year">Год</option>
+						<option value="free" data-target="#target-period-free">Произвольный</option>
+					</select>
+				</div>
+				<div class="col-lg-auto">
+					<div id="accordion-period" class="accordion">
+						<div id="target-period-all" class="collapse collapse-no-animation" data-bs-parent="#accordion-period"></div>
+						<div id="target-period-week" class="collapse collapse-no-animation mb-3 ms-0 ms-lg-3" data-bs-parent="#accordion-period">
+							<input type="number" name="period-week-number" class="form-control" min="1" max="53" placeholder="от 1 до 53">
+						</div>
+						<div id="target-period-month" class="collapse collapse-no-animation mb-3 ms-0 ms-lg-3" data-bs-parent="#accordion-period">
+							<select class="form-select" name="period-month">
+								<option value="1">Январь</option>
+								<option value="2">Февраль</option>
+								<option value="3">Март</option>
+								<option value="4">Апрель</option>
+								<option value="5">Май</option>
+								<option value="6">Июнь</option>
+								<option value="7">Июль</option>
+								<option value="8">Август</option>
+								<option value="9">Сентябрь</option>
+								<option value="10">Октябрь</option>
+								<option value="11">Ноябрь</option>
+								<option value="12">Декабрь</option>
+							</select>
+						</div>
+						<div id="target-period-quarter" class="collapse collapse-no-animation mb-3 ms-0 ms-lg-3" data-bs-parent="#accordion-period">
+							<input type="number" name="period-quarter-number" class="form-control" min="1" max="4" placeholder="от 1 до 4">
+						</div>
+						<div id="target-period-year" class="collapse collapse-no-animation mb-3 ms-0 ms-lg-3" data-bs-parent="#accordion-period">
+							<select class="form-select" name="period-year">
+								<option value="2020" selected="">2020</option>
+								<option value="2019">2019</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+							</select>
+						</div>
+						<div id="target-period-free" class="collapse collapse-no-animation mb-3 ms-0 ms-lg-3" data-bs-parent="#accordion-period">
+							<div class="row gx-3 datepick-wrp">
+								<div class="col-12">
+									<input class="form-control datepick mr-2" name="period-free-from" type="text" placeholder="от...">
+								</div>
+								<div class="col-12">
+									<input class="form-control datepick" name="period-free-to" type="text" placeholder="до..." >
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-auto col-lg-3">
+			<div class="dropdown mb-3">
+				<button class="btn btn-outline-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Статус
+				</button>
+				<ul class="dropdown-menu drop-not-hide">
+					<li>
+						<label class="dropdown-item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="filter-order-status[]" value="1">
+								<i class="fa fa-circle me-2 text-success"></i>Подтвержден
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="dropdown-item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="filter-order-status[]" value="2">
+								<i class="fa fa-circle me-2 text-primary"></i>Сохранен
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="dropdown-item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="filter-order-status[]" value="3">
+								<i class="fa fa-circle me-2 text-info"></i>Подтвержден и оплачен
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="dropdown-item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="filter-order-status[]" value="4">
+								<i class="fa fa-circle me-2 text-warning"></i>В обработке
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="dropdown-item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="filter-order-status[]" value="5">
+								<i class="fal fa-circle me-2"></i>Отгружен
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="dropdown-item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="filter-order-status[]" value="6">
+								<i class="fa fa-circle me-2 text-dark"></i>Отменен
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="dropdown-item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="filter-order-status[]" value="7">
+								<i class="fa fa-circle me-2 text-danger"></i>Не подтвержден
+							</div>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-lg-auto mb-3">
+			<div class="form-check mb-0">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+				<label class="form-check-label" for="flexCheckDefault">
+					Только физ.лица
+				</label>
+			</div>
+		</div>
+
+		<div class="col">
+			<input type="text" class="form-control w-100 mb-3" placeholder="Поиск по тексту...">
+		</div>
+		<div class="col-lg-3">
+			<button class="btn btn-primary mb-3 w-100"><i class="fal fa-search me-2"></i>Поиск</button>
+		</div>
+
+	</form>
+
+	<div class="order-list">
+
+		<div class="row g-0 order-item mb-4">
+			<div class="col-12 col-md-8 col-xl-3 order-item-column">
+				<div class="text-nowrap flex-grow-0">11.22.33 12:34</div>
+				<div class="order-item-manager flex-grow-0">
+					<div class="dropdown">
+						<button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Алексей А.
+						</button>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button">Иванов Иван</button></li>
+							<li><button class="dropdown-item" type="button">Витальев Виталий</button></li>
+							<li><button class="dropdown-item" type="button">Андреев Андрей</button></li>
+							<li><button class="dropdown-item" type="button">Иванов Иван</button></li>
+							<li><button class="dropdown-item" type="button">Витальев Виталий</button></li>
+							<li><button class="dropdown-item" type="button">Андреев Андрей</button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="order-item-status bg-success">
+					<div class="dropdown">
+						<button class="btn btn-success btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Подтвержден
+						</button>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-success"></i>Подтвержден</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-primary"></i>Сохранен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-info"></i>Подтвержден и оплачен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-warning"></i>В обработке</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fal fa-circle me-2"></i>Отгружен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-dark"></i>Отменен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-danger"></i>Не подтвержден</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-3 order-item-column">
+				<div><a class="link fw-bold" href="#">#38655</a></div>
+				<div>Наличными при получении</div>
+				<div><span class="rub text-nowrap fw-bold copy-click">17 714,80</span></div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-5 order-item-column">
+				<div>Курьер</div>
+				<div><span class="text-danger">ЗА МКАД</span></div>
+				<div class="small copy-click overflow-auto">114124, г.Москва, улица Строителей, 17к2 , п. 1, этаж 3, кв. 9,</div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-4 order-item-column">
+				<div>Алексеев Алексей Алексеевич</div>
+				<div class="text-nowrap copy-click">+7 (915) 169-79-17</div>
+				<div class="copy-click text-break">aleksej.avx@mail.ru</div>
+			</div>
+			<div class="col-24 col-md-8 col-xl-4 order-item-column small lh-sm">
+				<div class="overflow-auto">Доставка 13 февраля, с 11 до 17 часов</div>
+			</div>
+			<div class="w-100 d-md-none"></div>
+			<div class="col-24 col-md-8 col-xl order-item-column">
+				<div class="small lh-sm text-start overflow-auto">
+					<table class="order-item-products">
+						<tbody>
+							<tr>
+								<td><span>12</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr class="text-danger">
+								<td><span>33/22</span></td>
+								<td><span>23234</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr class="text-danger">
+								<td><span>3/0</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>21</span></td>
+								<td><span>34223</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row g-0 order-item mb-4">
+			<div class="col-12 col-md-8 col-xl-3 order-item-column">
+				<div class="text-nowrap flex-grow-0">11.22.33 12:34</div>
+				<div class="order-item-manager flex-grow-0">
+					<div class="dropdown">
+						<button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<span class="text-muted">(2)</span> Алексей А.
+						</button>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button">Иванов Иван</button></li>
+							<li><button class="dropdown-item" type="button">Витальев Виталий</button></li>
+							<li><button class="dropdown-item" type="button">Андреев Андрей</button></li>
+							<li><button class="dropdown-item" type="button">Иванов Иван</button></li>
+							<li><button class="dropdown-item" type="button">Витальев Виталий</button></li>
+							<li><button class="dropdown-item" type="button">Андреев Андрей</button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="order-item-status bg-primary">
+					<div class="dropdown">
+						<button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Сохранен
+						</button>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-success"></i>Подтвержден</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-primary"></i>Сохранен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-info"></i>Подтвержден и оплачен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-warning"></i>В обработке</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fal fa-circle me-2"></i>Отгружен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-dark"></i>Отменен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-danger"></i>Не подтвержден</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-3 order-item-column">
+				<div><a class="link fw-bold" href="#">#38655</a></div>
+				<div>Карта</div>
+				<div><span class="rub text-nowrap fw-bold copy-click">17 714,80</span></div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-5 order-item-column">
+				<div>Курьер</div>
+				<!-- <div><span class="text-danger">ЗА МКАД</span></div> -->
+				<div class="small copy-click overflow-auto">114124, г.Москва, улица Строителей, 17к2 , п. 1, этаж 3, кв. 9,</div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-4 order-item-column">
+				<div>Алексеев Алексей Алексеевич</div>
+				<div class="text-nowrap copy-click">+7 (915) 169-79-17</div>
+				<div class="copy-click text-break">aleksej.avx@mail.ru</div>
+			</div>
+			<div class="col-24 col-md-8 col-xl-4 order-item-column small lh-sm">
+				<div class="overflow-auto">Доставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 часов</div>
+			</div>
+			<div class="w-100 d-md-none"></div>
+			<div class="col-24 col-md-8 col-xl order-item-column">
+				<div class="small lh-sm text-start overflow-auto">
+					<table class="order-item-products">
+						<tbody>
+							<tr>
+								<td><span>12</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>33</span></td>
+								<td><span>89890</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr class="text-primary">
+								<td><span>3/3</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>21</span></td>
+								<td><span>879798</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>12</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>33</span></td>
+								<td><span>89890</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr class="text-primary">
+								<td><span>3/3</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>21</span></td>
+								<td><span>879798</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>12</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>33</span></td>
+								<td><span>89890</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr class="text-primary">
+								<td><span>3/3</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>21</span></td>
+								<td><span>879798</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>12</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row g-0 order-item mb-4">
+			<div class="col-12 col-md-8 col-xl-3 order-item-column">
+				<div class="text-nowrap flex-grow-0">11.22.33 12:34</div>
+				<div class="order-item-manager flex-grow-0">
+					<div class="dropdown">
+						<button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Алексей А.
+						</button>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button">Иванов Иван</button></li>
+							<li><button class="dropdown-item" type="button">Витальев Виталий</button></li>
+							<li><button class="dropdown-item" type="button">Андреев Андрей</button></li>
+							<li><button class="dropdown-item" type="button">Иванов Иван</button></li>
+							<li><button class="dropdown-item" type="button">Витальев Виталий</button></li>
+							<li><button class="dropdown-item" type="button">Андреев Андрей</button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="order-item-status bg-danger">
+					<div class="dropdown">
+						<button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Не подтвержден
+						</button>
+						<ul class="dropdown-menu">
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-success"></i>Подтвержден</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-primary"></i>Сохранен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-info"></i>Подтвержден и оплачен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-warning"></i>В обработке</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fal fa-circle me-2"></i>Отгружен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-dark"></i>Отменен</button></li>
+							<li><button class="dropdown-item" type="button"><i class="fa fa-circle me-2 text-danger"></i>Не подтвержден</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-3 order-item-column">
+				<div><a class="link fw-bold" href="#">#38655</a></div>
+				<div>Карта</div>
+				<div><span class="rub text-nowrap fw-bold copy-click">17 714,80</span></div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-5 order-item-column">
+				<div>Курьер</div>
+				<div><span class="text-danger">ЗА МКАД</span></div>
+				<div class="small copy-click overflow-auto">114124, г.Москва, улица Строителей, 17к2 , п. 1, этаж 3, кв. 9,</div>
+			</div>
+			<div class="col-12 col-md-8 col-xl-4 order-item-column">
+				<div>Алексеев Алексей Алексеевич</div>
+				<div class="text-nowrap copy-click">+7 (915) 169-79-17</div>
+				<div class="copy-click text-break">aleksej.avx@mail.ru</div>
+			</div>
+			<div class="col-24 col-md-8 col-xl-4 order-item-column small lh-sm">
+				<div class="overflow-auto">Доставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 чДоставка 13 февраля, с 11 до 17 часов Доставка 13 февраля, с 11 до 17 ч</div>
+			</div>
+			<div class="w-100 d-md-none"></div>
+			<div class="col-24 col-md-8 col-xl order-item-column">
+				<div class="small lh-sm text-start overflow-auto">
+					<table class="order-item-products">
+						<tbody>
+							<tr>
+								<td><span>2</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>3</span></td>
+								<td><span>EFXT015062SU</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>3</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>2</span></td>
+								<td><span>EFXT015062SU</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>1</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>3</span></td>
+								<td><span>EFXT015062SU</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>3</span></td>
+								<td><span>22332</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+							<tr>
+								<td><span>1</span></td>
+								<td><span>EFXT015062SU</span></td>
+								<td><div class="scrollable">Узел НН угловой с шаровыми кранами, накидные гайки для радиатора REHAU с нижней подводкой</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="btn btn-primary w-100 mt-4">Показать еще</div>
+	</div>
+	
+</div>
+<!-- END Динамическая часть -->
+</div>
+	<footer class="footer">
+	</footer>
+
+	<div class="top" title="Наверх"><i class="fas fa-chevron-up"></i></div>
+
+	<script src="js/app.min.js?1"></script>
+
+	<div class="dev-panel p-4 border border-3 bg-light d-flex flex-column">
+		<button class="btn btn-sm btn-success mb-2 dev-call-start" data-bs-toggle="collapse" data-bs-target=".calls">Имитировать звонок</button>
+		<button class="btn btn-sm btn-primary dev-call-more" >Еще звонок звонок</button>
+	</div>
+	<style>
+		.dev-panel {
+			position: fixed;
+			opacity: 0.3;
+			bottom: 0;
+			left: 0;
+			transition: 0.15s;
+			z-index: 3000
+		}
+		.dev-panel:hover {
+			opacity: 1;
+		}
+	</style>
+</body>
+</html>
