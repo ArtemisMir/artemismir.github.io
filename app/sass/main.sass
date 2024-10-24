@@ -1,7 +1,7 @@
 @import config
 
 header
-	background-color: $accent //color-level($accent, -1) -12 до 12
+	background-color: #004b8d
 	z-index: 50
 	position: relative
 	a
@@ -20,14 +20,7 @@ ul, li
 	list-style: none
 th
 	font-weight: 500
-a
-	transition: color .1s
-#my-page
-	min-height: 100vh
-	display: flex
-	flex-direction: column
-.content
-	flex-grow: 1
+
 .font-500
 	font-weight: 500
 .no-scroll
@@ -44,33 +37,12 @@ a
 	border-color: #dae0e5
 .btn-outline-success:hover
 	color: #fff
-.flatpickr-calendar
-	user-select: none
-.text-dashed
-	border-bottom: 1px dashed
-.translate-x-middle
-	transform: translateX(-50%) !important
-.translate-y-middle
-	transform: translateY(-50%) !important
-.form-range
-	&:-ms-fill-lower, &:-moz-range-track
-		background-color: $accent !important
-
-.main-slider
-	.carousel
-		&-item
-			height: 100%
-		&-inner
-			height: calc(100vh - 104px)
-
 .top-line
 	padding: 10px
 	&:after
 		display: table
 		clear: both
 		content: ""
-	+media-breakpoint-down(lg)
-		height: 53px
 
 	.menu-button
 		position: absolute
@@ -133,13 +105,13 @@ a
 		display: none
 		position: absolute
 		background-color: #fff
-		width: calc(100% - 68px)
+		width: calc(100% - 70px)
 		padding-top: 7px
 		top: calc(100% - 7px)
 		z-index: 1
-		border: 1px solid $accent
-		border-bottom-right-radius: $bdr-rad
-		border-bottom-left-radius: $bdr-rad
+		border: 1px solid $gray-400
+		border-bottom-right-radius: $border-radius
+		border-bottom-left-radius: $border-radius
 		overflow: hidden
 		a
 			display: block
@@ -148,22 +120,6 @@ a
 			color: darken($accent, 5%)
 			&:hover
 				background-color: lighten($accent2, 25%)
-	+media-breakpoint-down(lg)
-		display: none
-		position: fixed
-		margin-left: 0
-		top: 0
-		left: 0
-		width: 100%
-		background-color: $accent
-		padding: 10px
-		z-index: 60
-		&.active
-			display: block
-		&-clean
-			right: 43px
-		&-result
-			width: calc(100% - 42px)
 
 .top-buttons
 	position: absolute
@@ -208,12 +164,6 @@ a
 			color: #fff
 			&:hover
 				border: none
-	+media-breakpoint-down(lg)
-		padding: 0 17px
-		line-height: 52px
-		right: 52px
-	+media-breakpoint-down(md)
-		right: 0
 
 .cart
 	&-button
@@ -239,17 +189,6 @@ a
 		&.animate
 			animation: .9s shake 1
 
-	+media-breakpoint-down(lg)
-		&-button
-			width: 52px
-			min-width: auto
-			padding: 0
-			font-size: 0
-			background-position: center center
-			background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2Ij48dGl0bGU+aWNvbnMtY2FydDwvdGl0bGU+PHBvbHlnb24gcG9pbnRzPSIxMiA4IDE0IDEzIDE4IDEzIDIwIDggMTIgOCIgZmlsbD0iIzAwNGI4ZCIvPjxwb2x5Z29uIHBvaW50cz0iMjEuNTQgMTYuOTkgMTAuNzIgMTYuOTkgNi4yNCA2LjAxIDEgNi4wMSAxIDQuMDQgNy41NCA0LjA0IDEyLjAyIDE1LjAyIDIwLjI0IDE1LjAyIDIzLjE5IDguMjYgMjUgOS4wMiAyMS41NCAxNi45OSIgZmlsbD0iIzAwNGI4ZCIvPjxjaXJjbGUgY3g9IjEzIiBjeT0iMjAiIHI9IjIiIGZpbGw9IiMwMDRiOGQiLz48Y2lyY2xlIGN4PSIxOSIgY3k9IjIwIiByPSIyIiBmaWxsPSIjMDA0YjhkIi8+PC9zdmc+)
-			&:empty
-				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIxNy42OCIgdmlld0JveD0iMCAwIDI0IDE3LjY4Ij48dGl0bGU+aWNvbi1iYXNrZXQ8L3RpdGxlPjxwb2x5Z29uIHBvaW50cz0iMjAuNjggMTIuODEgOS44NiAxMi44MSA1LjI1IDEuOTYgMCAxLjk2IDAgMCA2LjU1IDAgMTEuMTYgMTAuODUgMTkuMzggMTAuODUgMjIuMTkgNC4yMSAyNCA0Ljk4IDIwLjY4IDEyLjgxIiBmaWxsPSIjMDA0YjhkIi8+PGNpcmNsZSBjeD0iMTIuMzciIGN5PSIxNS45OSIgcj0iMS42OSIgZmlsbD0iIzAwNGI4ZCIvPjxjaXJjbGUgY3g9IjE4LjUzIiBjeT0iMTUuOTkiIHI9IjEuNjkiIGZpbGw9IiMwMDRiOGQiLz48L3N2Zz4=)
-
 .cart-ico
 	width: 2em
 	height: 1.7em
@@ -269,7 +208,7 @@ a
 	display: flex
 	align-items: stretch
 	bottom: 0
-	z-index: $zindex-fixed
+	z-index: 30
 	width: 100%
 	height: 53px
 	background-color: darken($accent, 2%)
@@ -309,7 +248,6 @@ a
 	line-height: 1
 	font-style: normal
 	margin-left: 0.2em
-	color: $gray-600
 
 .cd-nav
 	width: 100%
@@ -344,16 +282,13 @@ a
 		padding: 8px 1em 12px
 		display: inline-block
 		position: relative
-		border-top-right-radius: $bdr-rad
-		border-top-left-radius: $bdr-rad
+		border-top-right-radius: $border-radius
+		border-top-left-radius: $border-radius
 		//transition: all .15s ease
 		&:hover
 			background-color: darken($accent,5%)
 			&:after, &:before
 				background-color: $link-hover-color
-		+media-breakpoint-down(xl)
-			padding-left: .5rem
-			padding-right: .5rem
 
 		&.active
 			background-color: #fff
@@ -406,21 +341,14 @@ a
 	left: 100%
 	border-left: 1px solid lighten($accent2, 25%)
 	height: 100%
-	+media-breakpoint-down(lg)
-		border-left: 0
 
 .active+.cd-nav-menu
 	display: block
-	+media-breakpoint-down(lg)
-		display: none
 
 .go-back
 	display: none
 	.fa
 		margin-right: 10px
-	+media-breakpoint-down(lg)
-		display: block
-		width: 100% !important
 
 .cd-nav-menu.brands
 	li
@@ -433,69 +361,9 @@ a
 
 
 .cd-nav-menu.lk
-	max-width: 300px
+	max-width: 200px
 	li
 		border-bottom: 1px solid #e8e8e8
-
-.cd-nav
-	+media-breakpoint-down(lg)
-		a
-			line-height: 2.5
-		&>ul>li
-			display: block
-		.has-children .cd-nav-link
-			&:after, &:before
-				right: 0.5em
-				top: 50%
-				content: ""
-				position: absolute
-				background-color: #e8e8e8
-				width: .63em
-				height: .125em
-				transition: transform-origin .15s ease
-				transform: rotate(-45deg)
-				transform-origin: 9px 50%
-			&:before
-				transform: rotate(45deg)
-			&.active, &:hover
-				&:after, &:before
-					background-color: $accent
-		.cd-nav-link
-			display: block
-			position: relative
-			padding: 0.4em 1em
-			color: darken($accent, 5%)
-			border-radius: 0
-			&.active, &:hover
-				background-color: lighten($accent2, 25%)
-
-		&-menu
-			.cd-nav-menu
-				left: 0
-				height: auto
-			&.lk
-				max-width: 100%
-		ul
-			display: none
-			position: fixed
-			top: 0
-			left: 0
-			bottom: 53px
-			width: 50%
-			min-width: 320px
-			height: auto
-			border-right: 2px solid lighten($accent2, 25%)
-			background-color: #fff
-			overflow-y: auto
-			z-index: 2
-			li
-				border-bottom: 1px solid #e8e8e8
-			&.active
-				display: block
-
-	+media-breakpoint-down(sm)
-		ul
-			width: 100%
 
 .h2
 	margin: 30px 0
@@ -515,7 +383,7 @@ section.catalog
 		font-size: 20px
 		text-align: left
 		position: relative
-		a, span
+		a
 			display: block
 			&:before
 				content: ""
@@ -529,9 +397,9 @@ section.catalog
 				content: ""
 				display: table
 				clear: both
-			// &:hover
-			// 	text-shadow: 0 0 0 black
-			// 	color: darken($accent, 7%)
+			&:hover
+				text-shadow: 0 0 0 black
+				color: darken($accent, 7%)
 	li
 		margin-bottom: 5px
 		a
@@ -716,9 +584,7 @@ section.text
 		text-decoration: none
 		margin: 0 2px 4px
 		color: #fff
-		border-radius: $bdr-rad
-		+media-breakpoint-down(sm)
-			max-width: 100%
+		border-radius: $border-radius
 		i
 			position: absolute
 			width: 38px
@@ -792,7 +658,7 @@ section.text
 			text-align: center
 			display: inline-block
 			border: 1px solid #999
-			border-radius: $bdr-rad
+			border-radius: $border-radius
 			margin-right: 5px
 			transition: all .15s
 			&:hover
@@ -806,11 +672,6 @@ section.text
 				color: #1da1f2
 			&.fa-youtube:hover
 				color: #f00
-
-	+media-breakpoint-down(lg)
-		padding-bottom: 65px
-		&-menu
-			padding-left: 30px
 
 .top
 	border: 3px solid $accent2
@@ -831,8 +692,6 @@ section.text
 		right: 15px
 	i
 		line-height: 44px
-	+media-breakpoint-down(lg)
-		bottom: 65px
 
 .overlay
 	background-color: darken($accent, 20%)
@@ -848,13 +707,8 @@ section.text
 
 .breadcrumb
 	background-color: $gray-100
-	border-radius: 0
-	+media-breakpoint-down(lg)
-		max-width: 100%
-		flex-wrap: nowrap
-		overflow-x: scroll
-		&-item
-			white-space: nowrap
+	border-top-left-radius: 0
+	border-top-right-radius: 0
 
 .catalog-page
 	.h1
@@ -867,8 +721,6 @@ section.text
 		color: $accent
 	.btn
 		margin-bottom: 5px
-		+media-breakpoint-down(sm)
-			width: 100%
 
 .mode-view .btn-outline-primary
 	border: 1px solid #ced4da
@@ -879,9 +731,6 @@ section.text
 	.filter-open
 		flex-grow: 1
 		margin-left: 7px
-	+media-breakpoint-down(md)
-		.dropdown-toggle::after
-			display: none
 
 .search-input
 	position: relative
@@ -904,21 +753,16 @@ section.text
 	position: relative
 	margin-bottom: 7px
 	padding: 15px 20px
-	//border: 1px solid #ced4da
-	border-radius: $bdr-rad
+	border: 1px solid #ced4da
+	border-radius: $border-radius
 	transition: .1s ease-out
-	box-shadow: 0px 1px 2px 0px rgba(60,64,67,0.3), 0px 1px 3px 1px rgba(60,64,67,0.15)
-	//&:hover
-		//box-shadow: 0px 2px 3px 0px rgba(60,64,67,0.3), 0px 6px 10px 4px rgba(60,64,67,0.15)
+
 	&-image
 		display: block
-		margin: auto
 		max-width: 120px
 		text-align: center
-	&-title
-		margin-bottom: 1rem
-		a
-			transition: color .1s ease
+	&-title a
+		transition: color .1s ease
 	&-code, &-brand, &-number
 		font-size: 14px
 		color: #777
@@ -943,10 +787,13 @@ section.text
 					position: absolute
 					height: 2px
 					width: 100%
-					background-color: var(--bs-dark)
+					background-color: var(--bs-red)
 					left: 0
 					top: 50%
-					transform: rotate(-6deg)
+					transform: rotate(-12deg)
+			.badge
+				position: relative
+				bottom: 2px
 	&-ed
 		text-align: right
 		margin-bottom: 0
@@ -964,9 +811,6 @@ section.text
 		font-size: 14px
 		line-height: 1.5
 		color: #555
-		margin-bottom: 0
-		+media-breakpoint-down(lg)
-			margin-top: 30px
 	&-buttons
 		.btn
 			padding: 9px 1px
@@ -978,7 +822,7 @@ section.text
 		&.btn
 			padding: 0 1px
 		&:hover
-			color: $accent2 !important
+			color: $accent2
 		&:focus, &:active
 			box-shadow: none !important
 		.active
@@ -992,8 +836,9 @@ section.text
 		i
 			font-size: 18px
 
+		margin-right: 15px
 		&.active
-			color: var(--bs-red) !important
+			color: var(--bs-red)
 
 	&-counter
 		width: 130px
@@ -1047,18 +892,9 @@ section.text
 			padding: 0.2em
 	&-item
 		position: relative
-		border-radius: $bdr-rad
+		border-radius: $border-radius
 		margin: 1px 0
 		padding: .1em .1em .1em 0
-		+media-breakpoint-down(md)
-			padding-bottom: .5em
-			padding-right: .5em
-			&:after
-				content: ""
-				position: absolute
-				bottom: -1px
-				width: 100%
-				border-bottom: 1px solid $gray-400
 
 	&-title
 		margin: 0 0 0 .5em
@@ -1080,8 +916,6 @@ section.text
 		&:after
 			color: #999
 			font-weight: normal
-		+media-breakpoint-down(md)
-			text-align: left
 	&-code
 		line-height: 32px
 		margin: 0 0 0 .5em
@@ -1097,24 +931,13 @@ section.text
 .product-table, .catalog-items
 	.product-data
 		&.in-cart
-			box-shadow: 0 0 2px 2px lighten($accent, 7%)
+			box-shadow: 0 0 2px 2px $accent2
 		&:hover
 			.buy
 				background-color: $accent
 				color: #fff
 				&:hover
 					color: lighten($accent2, 15%)
-.catalog-table
-	.product-data
-		&.in-cart
-			box-shadow: none
-		&:hover
-			.buy
-				background-color: $accent
-				color: #fff
-				&:hover
-					color: lighten($accent2, 15%)
-
 .product-data
 	&.in-cart
 		.in-cart-button
@@ -1125,21 +948,15 @@ section.text
 		.product-counter
 			display: inline-block
 
-.column-list
-	columns: 14em auto
-	user-select: none
-	>*
-		display: block
-		margin-bottom: 7px
-.modal-list-search
-	max-width: 320px
-	margin: auto
-.specialization-list.column-list
-	columns: 10em auto
 .good
 	&-checkbox
-		padding-left: 1.5em
+		display: inline-block
+		font-size: 15px
+		line-height: 1.4
+		padding: 5px 0
+		padding-left: 23px
 		transition: .15s
+		margin: 0
 		user-select: none
 		position: relative
 		cursor: pointer
@@ -1150,28 +967,21 @@ section.text
 				border-color: lighten($accent, 5%)
 				&:before
 					color: lighten($accent, 5%)
-					font-size: 0.9em
+					font-size: 12px
 					content: fa-content($fa-var-check)
 					position: relative
-					left: 0px
-					bottom: calc(50% - 0.5em + 1px)
-
+					left: 1px
+					bottom: 1px
 		&-box
 			@extend %fa-icon
 			@extend .fas
-			height: 1em
-			width: 1em
+			height: 16px
+			width: 16px
 			position: absolute
 			border: 1px solid #999
-			background-color: #fff
-			border-radius: $bdr-rad/2
+			border-radius: $border-radius/2
 			left: 0
-			top: calc(50% - 0.5em)
-
-		&-name
-			display: block
-			margin-left: 0.5em
-
+			top: 7px
 .pretty.p-icon input:checked~.state label:before
 	border-color: $accent
 
@@ -1180,13 +990,12 @@ section.text
 	display: block
 	background-color: $gray-100
 	padding-top: 10px
-	border-radius: $bdr-rad
+	border-radius: $border-radius
 	position: relative
 	.h5
 		border-bottom: 1px solid #e5e8e8
 		margin: 0 20px 5px
 		padding-bottom: 10px
-		text-align: center
 	&-header
 		color: lighten($accent, 5%)
 		position: relative
@@ -1211,9 +1020,7 @@ section.text
 
 	.good-checkbox
 		display: block
-		padding: 4px 0 4px 40px
-		+media-breakpoint-down(lg)
-			padding-right: 50px
+		padding-left: 40px
 		&:hover
 			background-color: lighten($accent2, 35%)
 		&-box
@@ -1245,7 +1052,7 @@ section.text
 			width: auto
 			margin: 0
 			font-size: 14px
-			z-index: 20
+			z-index: 1
 			transition: color .1s ease-in-out, background-color .1s ease-in-out, top .15s ease-out
 			&:hover, &:focus, &:active
 				box-shadow: none
@@ -1262,39 +1069,6 @@ section.text
 				right: 100%
 				top: calc(50% - .6em)
 				transition: border-color .1s ease-in-out
-			+media-breakpoint-down(lg)
-				display: none !important
-
-	+media-breakpoint-down(lg)
-		padding: 54px 0
-		border-radius: 0
-		display: none
-		position: fixed
-		top: 0
-		right: 0 //-75%
-		z-index: 1050
-		width: 100%
-		overflow-y: auto
-		height: 100%
-		&.active
-			display: block
-		.h5
-			position: fixed
-			top: 0
-			right: 0
-			padding-top: 10px
-			width: 100%
-			margin: 0
-			background-color: $gray-100
-			z-index: 1
-		&-buttons
-			flex-wrap: nowrap
-			position: fixed
-			bottom: 0
-			background-color: $gray-100
-			padding-left: .4em
-		.btn
-			margin: .4rem .4rem .4rem 0
 
 img
 	max-width: 100%
@@ -1304,7 +1078,7 @@ img
 	color: darken($accent, 5%)
 	&:hover
 		color: darken($accent, 5%)
-		background-color: $gray-100
+		background-color: lighten($accent2, 25%)
 .page-link:hover
 	color: $accent
 
@@ -1341,10 +1115,6 @@ img
 			font-size: 17px
 		&-counter
 			display: inline-block
-		&-image
-			margin: 0
-			+media-breakpoint-down(sm)
-				margin-bottom: 15px
 		&-delete
 			position: absolute
 			font-size: 14px
@@ -1400,15 +1170,13 @@ img
 				height: 4px
 
 .spoiler
-	&-lg
-		height: 300px
-		.spoiler-open
-			background: linear-gradient(0, #fff 35px, transparent 50%)
-	height: 145px
+	height: 130px
 	overflow: hidden
 	position: relative
-	&-open
+	.spoiler-open
 		display: flex
+	&-open
+		display: none
 		justify-content: center
 		align-items: flex-end
 		position: absolute
@@ -1416,7 +1184,7 @@ img
 		right: 0
 		left: 0
 		height: 100%
-		background: linear-gradient(0, #fff 35px, transparent 70%)
+		background: linear-gradient(0, #fff 35px, transparent 80%)
 		z-index: 10
 		span
 			border-bottom: 1px dashed
@@ -1442,22 +1210,6 @@ img
 .product-review-link
 	user-select: none
 	vertical-align: middle
-
-
-.rate
-	&-wrp
-		line-height: 1
-	&-select
-		direction: rtl
-		text-align: left
-		input
-			display: none
-			&:checked~label
-				color: $accent2
-		label
-			cursor: pointer
-			color: $gray-400
-			font-size: 24px
 
 .rate, .fullness
 	margin-right: 5px
@@ -1486,6 +1238,7 @@ img
 				margin-right: 15px
 			&-review
 				margin-bottom: 20px
+				display: none
 			&-price
 				font-size: 32px
 				font-weight: normal
@@ -1501,13 +1254,12 @@ img
 				color: $textcolor
 				line-height: 1.65
 				margin-bottom: 0
-			&-logo
-				max-width: 70px
-				display: inline-block
 			&-code
 				font-size: 1rem
 
 		&-offer
+			.buy
+				width: 200px
 			&.in-cart
 				box-shadow: none
 			.product-buttons
@@ -1527,10 +1279,6 @@ img
 		.spoiler
 			padding-left: 0
 			padding-right: 0
-		+media-breakpoint-down(md)
-			&-image
-				margin-bottom: 40px
-
 	&-added
 		display: none
 		font-weight: 500
@@ -1548,6 +1296,10 @@ img
 	&-data.in-cart .product-added
 		display: inline
 
+	&-buttons
+		&-special
+			margin-top: 15px
+
 	&-related
 		margin-top: 15px
 		.h2
@@ -1555,28 +1307,6 @@ img
 		.search-input
 			margin-top: 15px
 			margin-bottom: 15px
-
-	&-availability
-		&-name
-			display: inline
-			font-weight: 500
-			flex-grow: 1
-			span
-				border-bottom: 1px solid
-		&-count
-			display: inline
-			font-weight: 500
-			width: 124px
-		&>*
-			cursor: pointer
-			transition: all .15s
-		&:hover
-			&>*
-				color: #fff
-				background-color: $accent
-				border-color: darken($accent, 5%)
-				span
-					border-color: transparent
 
 
 	&-navigation
@@ -1597,13 +1327,13 @@ img
 				margin-right: 0
 			&:first-child
 				margin-left: 0
-			+media-breakpoint-down(md)
-				width: 100%
-				box-shadow: inset 0px -1px $gray-300
-				margin: 0
-				padding: 15px 2px
+	&-description
+		&.spoiler
+			height: 300px
 
 	&-characteristics
+		&.spoiler
+			height: 300px
 		dt, dd
 			margin-bottom: .7em
 			padding-right: 10px
@@ -1632,11 +1362,16 @@ img
 			margin-bottom: 20px
 
 	&-oneclick
+		margin-top: 30px
+		max-width: 265px
+		margin-left: auto
 		.buy-oneclick
 			width: 100%
-			.btns
+			.btn
+				background-color: lighten($accent2, 5%)
 				font-weight: 500
 		&-title
+			//color: $accent
 			text-align: center
 			font-weight: 500
 		&-more
@@ -1646,28 +1381,20 @@ img
 			&:not(.collapsed)
 				i
 					transform: rotate(180deg)
+		.input-group
+			&-text
+				min-width: 42px
+				i
+					margin: auto
+		.form-control:valid
+			border-color: $gray-400
 
-+media-breakpoint-down(sm)
-	.product
-		padding: 15px
-
-+media-breakpoint-down(md)			
-	.catalog-items
-		.product
-			&-image
-				margin-bottom: 15px
-			&-buttons
-				margin-top: 15px
-			&-table .product-buttons
-				margin-top: 0
-			.spoiler
-				height: 180px
-
-
-.input-group-icon
-	min-width: 42px
-	i
-		margin: auto
+.table-docs
+	&-item
+		border-top: 1px solid $gray-300
+		padding: .5em 0
+	&-format
+		font-size: 24px
 
 .bg-light-gray
 	background-color: lighten($gray-200, 4%)
@@ -1687,25 +1414,13 @@ img
 	td, th
 		background-color: lighten($gray-200, 4%)
 		padding: .25rem .5rem
-		&:nth-child(even)
+		&:nth-child(odd)
 			background-color: lighten($gray-200, 1%)
 		&:last-child
 			width: .1%
 	&-title
-		max-width: 0
-		width: 40%
+		text-indent: 7%
 		text-align: left
-		border-bottom: 1px solid transparent
-		a:hover
-			color: $accent
-			border-bottom: 1px solid $accent
-		+media-breakpoint-down(lg)
-			text-indent: 0
-	&-code
-		overflow: hidden
-		text-overflow: ellipsis
-		white-space: nowrap
-
 
 	.btn
 		padding: 3px 9px
@@ -1723,11 +1438,8 @@ img
 	color: $accent
 	border-bottom: 1px solid $accent
 	text-decoration: none
-	cursor: pointer
-	transition: all .1s
-	&:hover
-		color: $link-hover-color
-		text-decoration: $link-hover-decoration
+	transition: .15
+	&:hover 
 		border-color: transparent
 		
 .fa-file
@@ -1740,49 +1452,26 @@ img
 	&-image
 		color: $gray-700
 
-.btn-group > .btn-check:checked + .btn, .btn-outline-primary:hover
-	.fa-file
-		&-word
-			color: lighten($blue-500, 10%)
 
 .fotorama
-	&__video-close, &__fullscreen-icon, &__arr--next, &__arr--prev
-		&:before
-			color: lighten($accent, 5%) ///color-level($accent, -3)
-	&__thumb-border
-		border-color: lighten($accent, 5%)
-
-	&__thumb-border, &__thumb
-		border-radius: 6px
-
-.fullscreen .fotorama
-	&__video-close, &__fullscreen-icon, &__arr--next, &__arr--prev
-		&:before
-			color: $accent2
-.fotorama
-	&__wrap
-		margin: auto
 	&__stage
 		min-height: 300px
+	&__thumb-border
+		border-color: lighten($accent, 7%)
 	&__video-close
 		@extend %fa-icon
 		@extend .fas
 		text-align: center
-		font-size: 28px
-		height: 28px
-		width: 28px
+		font-size: 32px
 		&:before
 			content: fa-content($fa-var-times)
+			color: lighten($accent2, 7%)
 
 	&__video-play
 		@extend %fa-icon
 		@extend .far
 		text-align: center
-		font-size: 80px
-		width: 80px
-		height: 80px
-		transform: translateX(-50%) translateY(-50%)!important
-		margin: 0
+		font-size: 96px
 		&:before
 			content: fa-content($fa-var-play-circle)
 			color: $accent2
@@ -1793,15 +1482,15 @@ img
 
 	&__fullscreen-icon
 		text-align: center
-		height: 36px
-		width: 36px
+		height: 32px
+		width: 32px
 		top: 7px
 		right: 7px
 		@extend %fa-icon
 		@extend .fas
 		&::before
-			font-size: 28px
-			line-height: 36px
+			font-size: 32px
+			color: lighten($accent2, 7%)
 			content: fa-content($fa-var-expand-alt)
 		
 	&--fullscreen .fotorama__fullscreen-icon
@@ -1816,8 +1505,9 @@ img
 			@extend %fa-icon
 			@extend .fas
 			&::before
-				font-size: 30px
+				font-size: 36px
 				line-height: 48px
+				color: lighten($accent2, 7%)
 		&--next
 			&::before
 				content: fa-content($fa-var-chevron-right)
@@ -1828,7 +1518,7 @@ img
 .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play
 	background: none
 .fotorama--fullscreen .fotorama__nav, .fotorama--fullscreen .fotorama__stage
-	background-color: #222
+	background-color: #333
 
 .popover
 	z-index: 29
@@ -1897,7 +1587,7 @@ img
 		display: flex
 		flex-wrap: nowrap
 		align-items: center
-		border-radius: $bdr-rad
+		border-radius: $border-radius
 		color: $accent
 		background-color: $gray-100
 		transition: .20s
@@ -1918,8 +1608,6 @@ img
 		margin-left: 15px
 	.rub
 		font-weight: 500
-		&:after
-			color: $accent
 
 .lk-montazh
 	.person-info
@@ -1928,19 +1616,13 @@ img
 .person
 	&-logo
 		max-width: 72px
-		+media-breakpoint-down(md)
-			max-width: 54px
 	&-status
 		font-size: 16px
 	&-info
 		width: 100%
 		td
-			padding-top: 2px
-			padding-bottom: 2px
-			+media-breakpoint-down(sm)
-				display: block
-				width: auto !important
-
+			padding-top: 4px
+			padding-bottom: 4px
 		td:first-child
 			color: $accent
 			width: 1%
@@ -2027,14 +1709,13 @@ img
 				display: block
 			.data-edit-activate, .data-edit-info
 				display: none
-	+media-breakpoint-down(lg)
-		margin-top: 30px
+
 
 .gallery-popup
 	&-item
 		display: block
 		position: relative
-		border-radius: $bdr-rad
+		border-radius: $border-radius
 		overflow: hidden
 		box-shadow: 0px 1px 2px 0px rgba(60,64,67,0.5), 0px 1px 3px 1px rgba(60,64,67,0.35)
 		&:hover
@@ -2056,12 +1737,12 @@ img
 		top: 0
 	&-delete
 		right: 0
-		border-bottom-left-radius: $bdr-rad
+		border-bottom-left-radius: $border-radius
 		&:hover
 			color: var(--bs-red)
 	&-edit
 		left: 0
-		border-bottom-right-radius: $bdr-rad
+		border-bottom-right-radius: $border-radius
 		padding: 5px 11px
 		&:hover
 			color: var(--bs-blue)
@@ -2071,7 +1752,7 @@ img
 	width: 100%
 	background-color: $gray-200
 	cursor: pointer
-	border-radius: $bdr-rad
+	border-radius: $border-radius
 	display: flex
 	flex-direction: column
 	justify-content: center
@@ -2087,11 +1768,10 @@ img
 	.fa
 		font-size: 36px
 
-.box-shadow
-	box-shadow: 0px 1px 4px 0px rgba(60,64,67,0.3), 0px 1px 3px 1px rgba(60,64,67,0.15)
-
 .montazh-order
 	&-item 
+		.card
+			box-shadow: 0px 1px 2px 0px rgba(60,64,67,0.3), 0px 1px 3px 1px rgba(60,64,67,0.15)
 		.spoiler
 			height: 6em
 	&-open
@@ -2105,6 +1785,15 @@ img
 			margin-left: 5px
 			width: 16px
 			height: 16px
+.region
+	&-search
+		max-width: 320px
+		margin: auto
+	&-list
+		columns: 14em auto
+		user-select: none
+		.good-checkbox
+			min-width: 14em
 
 #region-list
 	.close
@@ -2187,497 +1876,10 @@ textarea
 	margin: auto
 
 .collapse-no-animation.collapsing
-	transition: none !important
-	visibility: hidden
-	height: 0 !important
+    transition: none
 
 .export-form input
 	max-width: 320px
-
-.calculations
-	&-form
-		[type=number]
-			min-width: 120px
-	&-table
-		width: auto
-		vertical-align: middle
-		td, th
-			padding: 0.5rem 1rem
-			border-right: 1px solid $gray-300
-			&:last-child
-				border-right-width: 0
-		.text-right
-			white-space: nowrap
-		.btd > *
-			border-top: 1px solid $gray-800
-		.btg > *
-			border-top: 1px solid $gray-300
-
-.btn-loading
-	.spinner-border
-		position: relative
-		bottom: 2px
-	&:not([disabled])
-		.spinner-border
-			display: none
-
-.img-opacity
-	img
-		transition: opacity .15s
-	&:hover img
-		opacity: 0.9
-
-.montazhnik-list
-	img
-		max-height: 250px
-
-.catalog-first-item
-	position: relative
-	display: flex
-	flex-direction: column
-	justify-content: space-evenly
-	align-items: stretch
-	text-align: center
-	overflow: hidden
-	border-radius: $bdr-rad
-	height: 100%
-	transition: .15s
-	box-shadow: 0px 1px 2px 0px rgba(60,64,67,0.3), 0px 1px 3px 1px rgba(60,64,67,0.15)
-	&:hover
-		box-shadow: 0px 2px 3px 0px rgba(60,64,67,0.3), 0px 6px 10px 4px rgba(60,64,67,0.15)
-	img
-		max-height: 250px
-
-.mfp-iframe-maxh .mfp-content
-	min-height: 100%
-
-.video-container 
-	position: relative
-	padding-bottom: 56.25% /* 16:9 */
-	height: 0
-
-.video-container iframe
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-
-.send-success
-	display: none
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	text-transform: uppercase
-	font-weight: 700
-	z-index: 1
-	color: $accent
-	&.active
-		display: flex
-	span
-		margin: auto
-
-	& ~ *
-		transition: all .5s ease
-
-	&.active
-		& ~ *
-			opacity: .5
-			filter: blur(2px)
-.btn-close
-	background-clip: inherit
-
-.slick-slide
-	outline: none
-.slick-track, #home-slider
-	max-height: 500px
-	height: 50vh
-.home-slider-item
-	height: 100%
-	display: flex
-	align-items: center
-	outline: none
-	img
-		width: 100%
-		margin: auto
-		text-align: center
-		outline: none
-
-.slider-image-dots
-	&>*
-		width: 38px
-		height: 38px
-		border: 3px solid $accent
-		border-radius: 10em
-		cursor: pointer
-		margin: 0 3px
-		&.active
-			opacity: 0.9
-			border-color: $accent2
-.modal-instock
-	.modal-dialog
-		height: calc(100% - 3.5rem)
-		+media-breakpoint-down(sm)
-			height: calc(100% - 1rem)
-	.modal-content
-		height: 100%
-		overflow: hidden
-	.modal-body
-		+media-breakpoint-down(lg)
-			overflow-y: auto
-
-.placemark
-	&-wrp
-		position: absolute
-		overflow-y: auto
-		max-height: 100%
-		+media-breakpoint-down(lg)
-			position: static
-	&-item
-		cursor: pointer
-		small
-			display: block
-		&.active
-			background-color: color-level($accent, -11)
-
-.map-instock
-	height: 100%
-	width: 100%
-.map-address, .map-samovivoz
-	width: 100%
-	height: 400px
-	max-height: 70vh
-
-.hover-opacity:hover
-	cursor: pointer
-	opacity: 0.85
-
-.progress-counter
-	display: flex
-	align-items: center
-	direction: rtl
-	&-line
-		height: 1px
-		flex-grow: 1
-		background-color: $gray-400
-	.btn
-		min-width: 2rem
-		height: 2rem
-		z-index: 2
-		background-color: $gray-200
-		color: $gray-600
-		pointer-events: none
-	.active
-		border-color: $accent
-		color: $accent
-	.active ~ *
-		background-color: $accent
-		color: #fff
-		pointer-events: auto
-	&-text
-		.btn
-			padding-left: 1rem
-			padding-right: 1rem
-		+media-breakpoint-down(sm)
-			flex-direction: column-reverse
-			.progress-counter-line
-				height: 12px
-				width: 1px
-			.btn
-				width: 100%
-
-.btn-important
-	min-width: 280px
-	max-width: 100%
-	display: block
-	letter-spacing: 1px
-	font-weight: 500
-	+media-breakpoint-down(md)
-		width: 100%
-
-.login
-	margin: 0 auto
-	width: 100%
-	max-width: 320px
-	&-wrp
-		display: flex
-		min-height: calc(100vh - 278px)
-	&-code
-		display: flex
-		>*
-			flex-grow: 1
-			margin: 0 .5em
-			&:first-child
-				margin-left: 0
-			&:last-child
-				margin-right: 0
-		input
-			text-align: center
-		&.is-invalid
-			input
-				border-color: #dc3545
-				&:focus
-					box-shadow: 0 0 0 0.25rem rgba(220,53,69,.25)
-	&-new-code
-		&-timer
-			display: none
-		&.active
-			.login-new-code-timer
-				display: inline
-			.login-new-code-link
-				display: none
-
-	&-submit
-		.lock
-			display: none
-		&.is-invalid
-			pointer-events: none
-			opacity: 0.85
-			.lock
-				display: inline
-			.unlock
-				display: none
-
-
-.animate.vibrate
-	animation: .6s vibrate 1
-
-.bonus-points
-	width: 7rem !important
-	text-align: center
-.cart2-sum
-	+media-breakpoint-up(md)
-		font-size: 1.25rem
-.cart2-info
-	+media-breakpoint-up(lg)
-		& > *
-			border-right: 1px solid $gray-400
-			&:last-child
-				border-right: none
-
-.range-fill
-	top: 0
-	height: .5rem
-	width: 0%
-	background-color: $accent
-	position: absolute
-	border-top-left-radius: 1rem
-	border-bottom-left-radius: 1rem
-	margin: .7rem 0
-	transition: $form-range-thumb-transition
-	pointer-events: none
-
-.cart-block
-	box-shadow: $box-shadow
-	border-radius: $border-radius
-	background-color: $gray-100
-	padding: 1rem
-	+media-breakpoint-up(md)
-		padding: 1.5rem
-
-.fs-1-25
-	font-size: 1.25rem
-
-.btn-check:checked + .btn-outline-primary
-	box-shadow: 0 0 0 0.25rem rgba(0, 75, 141, 0.5)
-
-.delivery-datatime
-	.btn
-		height: 100%
-		width: 100%
-		min-width: 120px
-		min-height: 67px
-		span
-			color: $gray-600
-	.btn-check
-		&:checked, &:hover
-			&+ .btn
-				span
-					color: #fff
-.client-type, .opt-type, .delivery-choice, .counterparty-type
-	+media-breakpoint-down(md)
-		width: 100%
-	.btn
-		padding-right: 0.25rem
-		padding-left: 0.25rem
-		+media-breakpoint-up(md)
-			padding-left: 2rem
-			padding-right: 2rem
-
-.payment
-	&-item
-		display: flex
-		flex-direction: column
-		justify-content: center
-		width: 160px
-		height: 200px
-		height: 100%
-
-	&-icon
-		display: block
-		position: relative
-		i
-			font-size: 2.5rem
-
-.loading
-	position: relative
-	&:before, &:after
-		opacity: 0
-		content: ""
-		position: absolute
-		pointer-events: none
-		transition: opacity .35s ease
-		z-index: 10
-	&.active
-		&:before, &:after
-			opacity: 1
-			pointer-events: auto
-	&:before
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background-color: rgba(#fff, .6)
-	&:after
-		top: 50%
-		left: 50%
-		width: 2rem
-		height: 2rem
-		margin-top: -1rem
-		margin-left: -1rem
-		color: $accent
-		vertical-align: text-bottom
-		border: .25em solid currentColor
-		border-right-color: transparent
-		border-radius: 50%
-		animation: spinner-border .75s linear infinite
-
-.counterparty-step-2.loading:after
-	top: 60px
-
-.order-success-invoice.loading.active
-	min-height: 150px
-	overflow: hidden
-	&:before
-		content: attr(data-loading-content)
-		padding-top: 1.5rem
-		font-size: 1.3rem
-		text-align: center
-		background-color: #f8f9fa
-	&:after
-		top: 60%
-	>*
-		display: none
-
-.w-100-320
-	width: 100%
-	max-width: 320px
-
-.list-style
-	padding-left: 2em
-	margin-bottom: 1rem
-.list-style-disc li
-	list-style: disc
-.list-style-circle	li
-	list-style: circle
-
-.table-person
-	td:first-child
-		color: #004b8d
-		white-space: nowrap
-		font-weight: 500
-		+media-breakpoint-up(md)
-			padding-right: 2em
-	+media-breakpoint-down(md)
-		td
-			display: block
-			width: auto
-			&:first-child
-				border: none
-				padding-bottom: 0
-
-
-.table-compare
-	position: relative
-	table
-		//width: 100%
-		table-layout: fixed
-	.syncscroll
-		overflow: auto
-
-	th, td
-		background-color: #fff
-		width: 280px
-		min-width: 280px
-		padding: 0.7em
-		vertical-align: top
-		line-height: 1.35
-		transition: background-color .15s
-		+media-breakpoint-down(md)
-			width: 220px
-			min-width: 220px
-
-		&:first-child
-			position: absolute
-			left: 0
-			width: 200px
-			background-color: transparent
-			pointer-events: none
-
-	&-header
-		position: sticky
-		top: -1px
-		z-index: 1
-		th:not(:first-child)
-			padding-top: 0.4em
-			border-bottom: 2px solid $gray-300
-	&-body
-		tr:hover td:not(:first-child)
-			background-color: darken($gray-100, 1%)
-		td:not(:first-child)
-			padding-top: 2em
-			border-bottom: 1px solid $gray-300
-	&-img
-		max-width: 100px
-	&-name
-		font-size: 0.93em
-	&-parameter
-		color: $gray-600
-		text-transform: uppercase
-		font-size: 0.85em
-	&-buttons
-		position: absolute
-		top: 0
-		right: 0
-	.product-data
-		position: relative
-
-	.product-compare, .product-favorite
-		color: $gray-500
-		padding: 4px 4px
-
-.text-500
-	color: $gray-500
-
-.hidescroll
-	scrollbar-width: none
-	&::-webkit-scrollbar
-		display: none
-
-
-*::-webkit-scrollbar-track
-	background-color: rgba(150, 150, 150, 0.2)
-*::-webkit-scrollbar
-	width: 8px
-	height: 8px
-*::-webkit-scrollbar-thumb
-	background-color: gray
-
-*
-	scrollbar-color: gray rgba(150, 150, 150, 0.2)
-	scrollbar-width: thin
 
 @keyframes shake
 	0%, 50%, 100% 
@@ -2696,35 +1898,6 @@ textarea
 		transform: scale(1.2)
 	100%
 		transform: scale(1)
+		
 
-@keyframes vibrate
-	10%, 90%
-		transform: translate3d(-1px, 0, 0)
-	20%, 80%
-		transform: translate3d(2px, 0, 0)
-	30%, 50%, 70%
-		transform: translate3d(-4px, 0, 0)
-	40%, 60%
-		transform: translate3d(4px, 0, 0)
-
-
-
-@media only screen and (max-width : 360px)
-	.top-line .logo
-		padding-top: 19px
-		font-size: .61em
-		margin-top: 4px
-
-@media only screen and (min-width: 1920px)
-	.custom-1920-row
-		position: relative
-	.custom-1920-left
-		position: absolute
-		right: 100%
-		max-width: calc((100vw - 1300px - var(--bs-gutter-x)) / 2)
-	.custom-1920-center
-		width: 100%
-
-+media-breakpoint-up(lg)
-	.datepick-wrp
-		width: 300px
+@import "media" // Всегда в конце

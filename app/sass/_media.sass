@@ -1,0 +1,253 @@
+@media only screen and (max-width : 1199px)
+	.cd-nav .cd-nav-link
+		padding-right: .5em
+		padding-left: .5em
+
+@media only screen and (max-width : 991px)
+	.top-line
+		height: 53px
+	.search
+		display: none
+		position: fixed
+		margin-left: 0
+		top: 0
+		left: 0
+		width: 100%
+		background-color: $accent
+		padding: 10px
+		z-index: 60
+		&.active
+			display: block
+		&-clean
+			right: 43px
+		&-result
+			width: calc(100% - 42px)
+	
+	.go-back
+		display: block
+		width: 100% !important
+
+	.active+.cd-nav-menu
+		display: none
+	.cd-nav-menu .cd-nav-menu
+		border-left: 0
+	.cd-nav
+		a
+			line-height: 2.5
+		&>ul>li
+			display: block
+		.has-children .cd-nav-link
+			&:after, &:before
+				right: 0.5em
+				top: 50%
+				content: ""
+				position: absolute
+				background-color: #e8e8e8
+				width: .63em
+				height: .125em
+				transition: transform-origin .15s ease
+				transform: rotate(-45deg)
+				transform-origin: 9px 50%
+			&:before
+				transform: rotate(45deg)
+			&.active, &:hover
+				&:after, &:before
+					background-color: $accent
+		.cd-nav-link
+			display: block
+			position: relative
+			padding: 0.4em 1em
+			color: darken($accent, 5%)
+			border-radius: 0
+			&.active, &:hover
+				background-color: lighten($accent2, 25%)
+
+		&-menu
+			.cd-nav-menu
+				left: 0
+				height: auto
+			&.lk
+				max-width: 100%
+		ul
+			display: none
+			position: fixed
+			top: 0
+			left: 0
+			bottom: 53px
+			width: 50%
+			min-width: 320px
+			height: auto
+			border-right: 2px solid lighten($accent2, 25%)
+			background-color: #fff
+			overflow-y: auto
+			z-index: 2
+			li
+				border-bottom: 1px solid #e8e8e8
+			&.active
+				display: block
+
+	.breadcrumb
+		max-width: 100%
+		flex-wrap: nowrap
+		overflow-x: scroll
+		&-item
+			white-space: nowrap
+	.filter
+		padding: 54px 0
+		border-radius: 0
+		display: none
+		position: fixed
+		top: 0
+		right: 0 //-75%
+		z-index: 1050
+		width: 100%
+		overflow-y: auto
+		height: 100%
+		&.active
+			display: block
+		&-item
+			padding-left: 10px
+		.h5
+			position: fixed
+			top: 0
+			right: 0
+			padding-top: 10px
+			width: 100%
+			margin: 0
+			background-color: $gray-100
+			z-index: 1
+		&-buttons
+			flex-wrap: nowrap
+			position: fixed
+			bottom: 0
+			background-color: $gray-100
+			padding-left: .4em
+		.btn
+			margin: .4rem .4rem .4rem 0
+	.contacts
+		padding: 0 17px
+		line-height: 52px
+		right: 52px
+
+	.cart
+		&-button
+			width: 52px
+			min-width: auto
+			padding: 0
+			font-size: 0
+			background-position: center center
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2Ij48dGl0bGU+aWNvbnMtY2FydDwvdGl0bGU+PHBvbHlnb24gcG9pbnRzPSIxMiA4IDE0IDEzIDE4IDEzIDIwIDggMTIgOCIgZmlsbD0iIzAwNGI4ZCIvPjxwb2x5Z29uIHBvaW50cz0iMjEuNTQgMTYuOTkgMTAuNzIgMTYuOTkgNi4yNCA2LjAxIDEgNi4wMSAxIDQuMDQgNy41NCA0LjA0IDEyLjAyIDE1LjAyIDIwLjI0IDE1LjAyIDIzLjE5IDguMjYgMjUgOS4wMiAyMS41NCAxNi45OSIgZmlsbD0iIzAwNGI4ZCIvPjxjaXJjbGUgY3g9IjEzIiBjeT0iMjAiIHI9IjIiIGZpbGw9IiMwMDRiOGQiLz48Y2lyY2xlIGN4PSIxOSIgY3k9IjIwIiByPSIyIiBmaWxsPSIjMDA0YjhkIi8+PC9zdmc+)
+			&:empty
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIxNy42OCIgdmlld0JveD0iMCAwIDI0IDE3LjY4Ij48dGl0bGU+aWNvbi1iYXNrZXQ8L3RpdGxlPjxwb2x5Z29uIHBvaW50cz0iMjAuNjggMTIuODEgOS44NiAxMi44MSA1LjI1IDEuOTYgMCAxLjk2IDAgMCA2LjU1IDAgMTEuMTYgMTAuODUgMTkuMzggMTAuODUgMjIuMTkgNC4yMSAyNCA0Ljk4IDIwLjY4IDEyLjgxIiBmaWxsPSIjMDA0YjhkIi8+PGNpcmNsZSBjeD0iMTIuMzciIGN5PSIxNS45OSIgcj0iMS42OSIgZmlsbD0iIzAwNGI4ZCIvPjxjaXJjbGUgY3g9IjE4LjUzIiBjeT0iMTUuOTkiIHI9IjEuNjkiIGZpbGw9IiMwMDRiOGQiLz48L3N2Zz4=)
+	.footer
+		padding-bottom: 65px
+		&-menu
+			padding-left: 30px
+	.top
+		bottom: 65px
+
+	.product
+		&-desc
+			margin-top: 30px
+
+	.montazh-page-description
+		margin-top: 30px
+
+	.catalog-table-title
+		text-indent: 0
+/*@media only screen and (min-width: 576px) and (max-width : 991px)
+	.menu-tile
+		.col:nth-child(4n+1), .col:nth-child(4n+4)
+			.menu-tile-item
+				background-color: $accent
+			&:hover
+				box-shadow: 0 0 0 2px $accent
+		.col:nth-child(4n+2), .col:nth-child(4n+3)
+			.menu-tile-item
+				background-color: lighten($accent, 7%)
+				&:hover
+					box-shadow: 0 0 0 2px lighten($accent, 7%)*/
+
+@media only screen and (max-width : 767px)
+	.catalog-items
+		.product
+			&-image
+				margin-bottom: 15px
+			&-buttons
+				margin-top: 15px
+			&-table .product-buttons
+				margin-top: 0
+			.spoiler
+				height: 180px
+
+	.catalog-search .dropdown-toggle::after
+		display: none
+
+	.contacts
+		right: 0
+	.product-table-price
+		text-align: left
+	.product-table-item
+		padding-bottom: .5em
+		padding-right: .5em
+		&:after
+			content: ""
+			position: absolute
+			bottom: -1px
+			width: 100%
+			border-bottom: 1px solid $gray-400
+
+	.product-navigation-link
+		width: 100%
+		box-shadow: inset 0px -1px $gray-300
+		margin: 0
+		padding: 15px 2px
+
+	.h1
+		font-size: 1.7rem
+
+	.product-card-image
+		margin-bottom: 40px
+
+	.portfolio-page, .montazh-page
+		h1
+			font-size: 2rem
+	.person-logo
+		max-width: 54px
+		
+@media only screen and (max-width : 575px)
+
+	.cart-items
+		.product
+			&-image
+				margin-bottom: 15px
+	.product
+		padding: 15px
+		&-card
+			&-image
+				margin-right: -10px
+				margin-left: -10px
+	//.modal-content
+		//border-radius: 0
+		//border: none
+	.cd-nav ul
+		width: 100%
+	.cards a
+		max-width: 100%
+
+	.person-info td
+		display: block
+		width: auto !important
+
+//@media only screen and (max-height : 700px)
+	//.modal-dialog
+		//margin: 0 auto
+		//max-height: 100%
+	//modal-dialog-scrollable .modal-content
+		//max-height: 100vh
+
+@media only screen and (max-width : 360px)
+	.top-line .logo
+		padding-top: 19px
+		font-size: .61em
+		margin-top: 4px

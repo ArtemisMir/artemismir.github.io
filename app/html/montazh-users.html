@@ -10,18 +10,18 @@
 	<div class="montazh-user-item pt-3 border-top" data-id="1">
 		<div class="row flex-lg-nowrap align-items-center">
 			<div class="col-lg-3 mb-3 text-break">
-				<small class="text-muted">Телефон</small>
-				<p class="mb-0">+79123456789</p>
+				<small class="text-muted">Email/Логин</small>
+				<p class="mb-0">info24@duim24.ru</p>
 			</div>
 			<div class="col-lg mb-3">
-				<small class="text-muted">ФИО</small>
+				<small class="text-muted">Комментарий</small>
 				<div class="data-edit">
 					<p class="data-edit-info-wrp mb-0">
-						<span class="data-edit-info">Николаев Николай Николаевич</span>
+						<span class="data-edit-info">Николай +7-000-000-00-00</span>
 						<i class="data-edit-activate fa fa-pencil-alt"></i>
 					</p>
 					<div class="data-edit-input input-group">
-						<input type="text" name="comment" class="data-edit-field form-control" value="Николаев Николай Николаевич">
+						<input type="text" name="comment" class="data-edit-field form-control" value='Николай +7-000-000-00-00'>
 						<button class="btn btn-outline-danger data-edit-no" type="button"><i class="fa fa-times"></i></button>
 						<button class="btn btn-outline-success data-edit-yes" type="button"><i class="fa fa-check"></i></button>
 					</div>
@@ -42,18 +42,18 @@
 	<div class="montazh-user-item pt-3 border-top" data-id="2">
 		<div class="row flex-lg-nowrap align-items-center">
 			<div class="col-lg-3 mb-3 text-break">
-				<small class="text-muted">Телефон</small>
-				<p class="mb-0">+79123456789</p>
+				<small class="text-muted">Email/Логин</small>
+				<p class="mb-0">info24@duim24.ru</p>
 			</div>
 			<div class="col-lg mb-3">
-				<small class="text-muted">ФИО</small>
+				<small class="text-muted">Комментарий</small>
 				<div class="data-edit">
 					<p class="data-edit-info-wrp mb-0">
-						<span class="data-edit-info">Николаев Николай Николаевич</span>
+						<span class="data-edit-info">Николай +7-000-000-00-00</span>
 						<i class="data-edit-activate fa fa-pencil-alt"></i>
 					</p>
 					<div class="data-edit-input input-group">
-						<input type="text" name="comment" class="data-edit-field form-control" value="Николаев Николай Николаевич">
+						<input type="text" name="comment" class="data-edit-field form-control" value='Николай +7-000-000-00-00'>
 						<button class="btn btn-outline-danger data-edit-no" type="button"><i class="fa fa-times"></i></button>
 						<button class="btn btn-outline-success data-edit-yes" type="button"><i class="fa fa-check"></i></button>
 					</div>
@@ -74,18 +74,18 @@
 	<div class="montazh-user-item pt-3 border-top" data-id="3">
 		<div class="row flex-lg-nowrap">
 			<div class="col-lg-3 mb-3 text-break">
-				<small class="text-muted">Телефон</small>
-				<p class="mb-0">+79123456789</p>
+				<small class="text-muted">Email/Логин</small>
+				<p class="mb-0">info24@duim24.ru</p>
 			</div>
 			<div class="col-lg mb-3">
-				<small class="text-muted">ФИО</small>
+				<small class="text-muted">Комментарий</small>
 				<div class="data-edit">
 					<p class="data-edit-info-wrp">
-						<span class="data-edit-info">Николаев Николай Николаевич</span>
+						<span class="data-edit-info">Далеко-далеко за словесными горами в стране, гласных и согласных, живут рыбные тексты. Большой использовало своего, они буквоград послушавшись о агентство имеет до.</span>
 						<i class="data-edit-activate fa fa-pencil-alt"></i>
 					</p>
 					<div class="data-edit-input input-group">
-						<input type="text" name="comment" class="data-edit-field form-control" value="Николаев Николай Николаевич">
+						<input type="text" name="comment" class="data-edit-field form-control" value='Далеко-далеко за словесными горами в стране, гласных и согласных, живут рыбные тексты. Большой использовало своего, они буквоград послушавшись о агентство имеет до.'>
 						<button class="btn btn-outline-danger data-edit-no" type="button"><i class="fa fa-times"></i></button>
 						<button class="btn btn-outline-success data-edit-yes" type="button"><i class="fa fa-check"></i></button>
 					</div>
@@ -125,27 +125,30 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<div class="mb-3">
-					<label>Телефон</label>
-					<input type="tel" class="form-control" name="montazh-user-new-tel" placeholder="+7" required="">
+				<div class="form-group mb-3">
+					<label for="montazh-user-new-email">Email</label>
+					<input type="email" class="form-control" id="montazh-user-new" name="montazh-user-new-email" placeholder="@" required="">
 					<small class="text-muted">Используется для входа</small>
 				</div>
-				<div class="mb-3">
+				<div class="form-group mb-3">
+					<label for="montazh-user-new-password">Пароль</label>
+					<input type="password" class="form-control" id="montazh-user-new-password" name="montazh-user-new-password" placeholder="*" required="">
+				</div>
+				<div class="form-group mb-3">
+					<label for="montazh-user-new-password2">Пароль ещё раз</label>
+					<input type="password" class="form-control" id="montazh-user-new-password2" name="montazh-user-new-password2" placeholder="*" required="">
+				</div>
+				<div class="form-group mb-3">
 					<label for="montazh-user-new-group">Группа</label>
 					<select class="form-select" id="montazh-user-new-group" name="montazh-user-new-group">
 						<option value="1" selected>Администратор</option>
 						<option value="2">Сотрудник</option>
 					</select>
 				</div>
-				<div class="mb-3">
-					<label>ФИО</label>
-					<input type="text" class="form-control" name="montazh-user-new-comment" required="">
+				<div class="form-group mb-3">
+					<label>Комментарий</label>
+					<textarea class="form-control" name="montazh-user-new-comment" rows="3"></textarea>
 				</div>
-				<label class="good-checkbox mb-3">
-					<input name="counterparty-archive" type="checkbox" checked="checked" value="1">
-					<span class="good-checkbox-box"></span>
-					Оповестить пользователя
-				</label>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>

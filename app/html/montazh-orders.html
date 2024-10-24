@@ -1,5 +1,5 @@
 <div class="container montazh-orders-page">
-	<h1 class="h1 mb-3">Заявки мне</h1>
+	<h1 class="h1 mb-3">Ищут монтажника</h1>
 
 	<div class="row">
 		<div class="col-md">
@@ -17,13 +17,13 @@
 						<a class="dropdown-item" href="#">Сначала старые</a>
 					</div>
 				</div>
-				<button class="btn btn-outline-primary pl-4 pr-4" type="button" data-toggle="modal" data-target="#search-order-region-list">Регионы<span class="region-quantity badge bg-primary ml-2">2</span></button>
+				<button class="btn btn-outline-primary pl-4 pr-4" type="button" data-toggle="modal" data-target="#region-list">Регионы<span class="region-quantity badge bg-primary ml-2">2</span></button>
 			</div>
 		</div>
 	</div>
 	
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -40,7 +40,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -57,7 +57,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -74,7 +74,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -91,7 +91,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -108,7 +108,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -125,7 +125,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -142,7 +142,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -159,7 +159,7 @@
 		</div>
 	</div>
 	<div class="montazh-order-item mb-2">
-		<div class="card box-shadow">
+		<div class="card">
 			<div class="card-body pb-2">
 				<h5 class="card-title">Требуется труба бесшовная</h5>
 				<h6 class="card-subtitle mb-3 text-muted">03.09.2020 Москва Химки</h6>
@@ -186,12 +186,12 @@
 		</ul>
 	</nav>
 </div>
-<form id="search-order-region-list" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="region-list" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
 		<div class="modal-content">
 			<div class="modal-header">
 				<div class="flex-grow-1">
-					<div class="modal-list-search search-input">
+					<div class="region-search search-input">
 						<input type="text" class="form-control" placeholder="Поиск по регионам...">
 						<i class="fa fa-search"></i>
 					</div>
@@ -199,15 +199,15 @@
 				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<div class="column-list">
-					<label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Алтайский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Амурская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Архангельская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Астраханская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Белгородская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Брянская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Владимирская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Волгоградская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Вологодская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Воронежская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Еврейская АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Забайкальский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ивановская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Иркутская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Кабардино-Балкарская республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Калининградская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Калужская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Камчатский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Карачаево-Черкесская Республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Кемеровская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Кировская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Костромская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Краснодарский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Красноярский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Курганская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Курская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ленинградская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Липецкая область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Магаданская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Московская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Мурманская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ненецкий АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Нижегородская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Новгородская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Новосибирская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Омская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Оренбургская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Орловская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Пензенская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Пермский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Приморский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Псковская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Адыгея</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Алтай</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Башкортостан</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Бурятия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Дагестан</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Ингушетия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Калмыкия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Карелия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Коми</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Крым</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Марий Эл</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Мордовия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Саха (Якутия)</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Северная Осетия-Алания</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Татарстан</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Тыва</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Хакасия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ростовская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Рязанская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Самарская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Саратовская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Сахалинская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Свердловская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Смоленская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ставропольский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тамбовская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тверская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Томская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тульская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тюменская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Удмуртская Республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ульяновская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Хабаровский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ханты-Мансийский АО - Югра</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Челябинская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Чеченская республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Чувашская Республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Чукотский АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ямало-Ненецкий АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ярославская область</label>
+				<div class="region-list">
+					<label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Алтайский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Амурская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Архангельская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Астраханская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Белгородская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Брянская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Владимирская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Волгоградская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Вологодская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Воронежская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Еврейская АО</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Забайкальский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ивановская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Иркутская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Кабардино-Балкарская республика</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Калининградская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Калужская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Камчатский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Карачаево-Черкесская Республика</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Кемеровская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Кировская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Костромская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Краснодарский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Красноярский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Курганская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Курская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ленинградская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Липецкая область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Магаданская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Московская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Мурманская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ненецкий АО</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Нижегородская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Новгородская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Новосибирская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Омская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Оренбургская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Орловская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Пензенская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Пермский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Приморский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Псковская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Адыгея</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Алтай</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Башкортостан</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Бурятия</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Дагестан</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Ингушетия</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Калмыкия</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Карелия</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Коми</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Крым</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Марий Эл</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Мордовия</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Саха (Якутия)</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Северная Осетия-Алания</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Татарстан</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Тыва</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Республика Хакасия</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ростовская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Рязанская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Самарская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Саратовская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Сахалинская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Свердловская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Смоленская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ставропольский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Тамбовская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Тверская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Томская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Тульская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Тюменская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Удмуртская Республика</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ульяновская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Хабаровский край</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ханты-Мансийский АО - Югра</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Челябинская область</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Чеченская республика</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Чувашская Республика</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Чукотский АО</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ямало-Ненецкий АО</label><label class="good-checkbox"><input type="checkbox"><span class="good-checkbox-box"></span>Ярославская область</label>
 
 				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-				<button type="submit" class="btn btn-primary">Применить</button>
+				<button type="button" class="btn btn-primary">Применить</button>
 			</div>
 		</div>
 	</div>
-</form>
+</div>

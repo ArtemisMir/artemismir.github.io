@@ -6,7 +6,7 @@
 			<p class="product-code">Артикул: 1500106</p>
 
 			<div class="row">
-				<div class="col-12 col-md-6 col-lg-4 order-lg-1 g-0 g-sm-3">
+				<div class="col-12 col-md-6 col-lg-4 order-lg-1">
 					<div class="product-card-image fotorama" data-maxheight="300px" data-nav="thumbs" data-allowfullscreen="true" data-loop="true" data-transition="crossfade" data-transitionduration="100">
 						<a href="images/products/p1_fullsize.jpg"><img src="images/products/p1_fullsize.jpg"></a>
 						<a href="images/products/p1_fullsize1.jpg"><img src="images/products/p1_thumb1.jpg"></a>
@@ -34,15 +34,15 @@
 						<p class="product-instock">В наличии</p>
 					</div>
 					<div class="product-buttons">
-						<!-- <div class="product-review">
+						<div class="product-review">
 							<div class="rate" title="4.40">
 								<div class="fullness" style="width: 88%"></div>
 							</div>
 							<a class="product-review-link" href="#">45 отзывов</a>
-						</div> -->
+						</div>
 
 						<span class="product-added"><i class="fa fa-check"></i><a href="#">В корзине</a></span>
-						<button type="button" class="btn btn-primary buy w-100">Купить</button>
+						<button type="button" class="btn btn-primary buy">Купить</button>
 						<div class="product-counter">
 							<div class="input-group">
 								<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
@@ -50,52 +50,52 @@
 								<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
 							</div>
 						</div>
+						<div class="product-buttons-special">
+							<button class="btn product-compare informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>сравнение</a>" data-content-hidden="Удалить из <a href='#'>сравнения</a>">
+								<span><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 14h3a1 1 0 010 2h-3v3a1 1 0 01-2 0v-3h-3a1 1 0 010-2h3v-3a1 1 0 012 0v3zM3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2z" fill="currentColor" fill-rule="nonzero"></path>
+								</svg>Сравнить</span>
+								<span class="active"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="active">
+									<path d="M3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2zm18.292 8.293a1 1 0 111.416 1.414l-5.996 6.004a1 1 0 01-1.415 0l-3.004-3.004a1 1 0 111.414-1.414l2.296 2.297 5.29-5.297z" fill="currentColor" fill-rule="nonzero"></path>
+								</svg>В сравнении</span>
+							</button>
+							<button class="btn product-favorite informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>избранное</a>" data-content-hidden="Удалить из <a href='#'>избранного</a>">
+								<span><i class="far fa-heart"></i>В избранное</span>
+								<span class="active"><i class="fas fa-heart"></i>В избранном</span>
+							</button>
+						</div>
 					</div>
-					<form class="product-oneclick mt-3 p-2 bg-light rounded border">
+					<form class="product-oneclick">
 						<p class="product-oneclick-title mb-2">Купить в один клик</p>
 						<div class="input-group mb-2">
-							<span class="input-group-text bg-white input-group-icon"><i class="fa fa-mobile-alt"></i></span>
-							<input type="tel" data-type="number" name="phone" class="form-control" placeholder="Телефон*" required="" minlength="7">
-							<button type="button" class="btn btn-outline-primary product-oneclick-more collapsed" data-toggle="collapse" data-target="#collapse-oneclick"><i class="fa fa-chevron-down"></i></button>
+							<span class="input-group-text"><i class="fa fa-mobile-alt"></i></span>
+							<input type="text" aria-label="Phone" name="phone" class="form-control" placeholder="Телефон" required="" minlength="7">
+							<button type="button" class="btn btn-outline-primary product-oneclick-more collapsed" data-toggle="collapse" href="#collapse-oneclick"><i class="fa fa-chevron-down"></i></button>
 						</div>
 						<div class="collapse" id="collapse-oneclick">
 							<div class="input-group mb-2">
-								<span class="input-group-text bg-white input-group-icon"><i class="far fa-user"></i></span>
+								<span class="input-group-text"><i class="far fa-user"></i></span>
 								<input type="text" aria-label="Name" name="name" class="form-control" placeholder="Имя">
 							</div>
-							<textarea type="text" aria-label="Comment" name="comment" class="form-control mb-2" placeholder="Комментарий"></textarea>
+							<div class="input-group mb-2">
+								<span class="input-group-text"><i class="far fa-comment-dots"></i></span>
+								<input type="text" aria-label="Comment" name="comment" class="form-control" placeholder="Комментарий">
+							</div>
 						</div>
-						<button type="submit" class="btn btn-outline-primary w-100 font-500">Купить</button>
+						<div class="btn-group buy-oneclick">
+							<button type="submit" class="btn btn-secondary">Купить</button>
+						</div>
 					</form>
 				</div>
 				<div class="col-12 col-lg order-lg-2">
-					<div class="product-desc clearfix">
-						<p>Газовый настенный котел. Мощность: 18 кВт. Контур ГВС: да. Камера: закрытая. Температура отопления: до +82 оС. КПД: до 93,2%. Расход газа: 2,1 куб.м/ч. ГВС: до 8,6 л/мин.</p>
-
-					</div>
-					<p class="product-brand mb-3">Производитель: BOSCH</p>
-					<a class="product-logo" href="#"><img src="images/favblue192.png"></a>
-					<div class="product-buttons-special mt-3">
-						<button class="btn product-compare informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>сравнение</a>" data-content-hidden="Удалить из <a href='#'>сравнения</a>">
-							<span><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 14h3a1 1 0 010 2h-3v3a1 1 0 01-2 0v-3h-3a1 1 0 010-2h3v-3a1 1 0 012 0v3zM3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2z" fill="currentColor" fill-rule="nonzero"></path>
-							</svg>Сравнить</span>
-							<span class="active"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="active">
-								<path d="M3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2zm18.292 8.293a1 1 0 111.416 1.414l-5.996 6.004a1 1 0 01-1.415 0l-3.004-3.004a1 1 0 111.414-1.414l2.296 2.297 5.29-5.297z" fill="currentColor" fill-rule="nonzero"></path>
-							</svg>В сравнении</span>
-						</button>
-						<button class="btn product-favorite informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>избранное</a>" data-content-hidden="Удалить из <a href='#'>избранного</a>">
-							<span><i class="far fa-heart"></i>В избранное</span>
-							<span class="active"><i class="fas fa-heart"></i>В избранном</span>
-						</button>
-					</div>
+					<p class="product-desc">Газовый настенный котел. Мощность: 18 кВт. Контур ГВС: да. Камера: закрытая. Температура отопления: до +82 оС. КПД: до 93,2%. Расход газа: 2,1 куб.м/ч. ГВС: до 8,6 л/мин.</p>
+					<p class="product-brand">Производитель: BOSH</p>
 				</div>
 			</div>
 		</div>
 
 		<nav class="product-navigation">
 			<a class="product-navigation-link active" href="#nav-related">Варианты товара</a>
-			<a class="product-navigation-link" href="#nav-availability">Наличие по складам</a>
 			<a class="product-navigation-link" href="#nav-description">Описание</a>
 			<a class="product-navigation-link" href="#nav-characteristics">Характеристики</a>
 			<a class="product-navigation-link" href="#nav-video">Видео</a>
@@ -119,19 +119,16 @@
 				<tr>
 					<th>Размер</th>
 					<th class="d-none d-lg-table-cell">Артикул</th>
-					<th class="d-none d-lg-table-cell">Наличие</th>
 					<th class="d-none d-lg-table-cell" colspan="2">Цена, руб.</th>
 					<th class="d-lg-none">Цена</th>
 				</tr>
 				<tr class="product-data" data-id="45" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: Много</small>
+						<p class="mb-0"><a class="link" href="#">3/8"</a></p>
+						<small class="d-lg-none text-muted">1500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">Много</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">845,08</td>
+					<td class="d-none d-lg-table-cell text-right">845,08</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">845,00</p>
 						<div class="product-buttons">
@@ -148,13 +145,11 @@
 				</tr>
 				<tr class="product-data" data-id="44" data-ed="50">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: 3</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2</a></p>
+						<small class="d-lg-none text-muted">1500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">3</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">8 991,00</td>
+					<td class="d-none d-lg-table-cell text-right">8 991,00</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">8 991,00</p>
 						<div class="product-buttons">
@@ -171,13 +166,11 @@
 				</tr>
 				<tr class="product-data" data-id="43" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2" 3/8"x1/2"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500102234236</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: Нет</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2" 3/8"x1/2"</a></p>
+						<small class="d-lg-none text-muted">1500102234236</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">Нет</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">80 991,00</td>
+					<td class="d-none d-lg-table-cell text-right">80 991,00</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">80 991,00</p>
 						<div class="product-buttons">
@@ -194,13 +187,11 @@
 				</tr>
 				<tr class="product-data" data-id="42" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">150010615001061500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: Много</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2"</a></p>
+						<small class="d-lg-none text-muted">150010615001061500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">150010615001061500106</td>
-					<td class="d-none d-lg-table-cell">Много</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">800 991,00</td>
+					<td class="d-none d-lg-table-cell text-right">800 991,00</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">800 991,00</p>
 						<div class="product-buttons">
@@ -217,13 +208,11 @@
 				</tr>
 				<tr class="product-data" data-id="41" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2" 3/8"x1/2"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: 3</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2" 3/8"x1/2"</a></p>
+						<small class="d-lg-none text-muted">1500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">3</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">81,08</td>
+					<td class="d-none d-lg-table-cell text-right">81,08</td>
 					<td class="p-lg-0">
 						<p class="rub mt-1 mb-1 d-lg-none">845,00</p>
 						<div class="product-buttons">
@@ -238,35 +227,139 @@
 						</div>
 					</td>
 				</tr>
+
 			</table>
-		</div>
-
-		<h2 class="h2" id="nav-availability">Наличие по складам</h2>
-
-		<div class="row row-cols-1 row-cols-md-2">
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="1">
-					<span class="input-group-text product-availability-name"><span>Москва-Химки</span></span>
-					<span class="input-group-text product-availability-count text-success"><small>ПОД ЗАКАЗ</small></span>
-				</div>
-			</div>
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="2">
-					<span class="input-group-text product-availability-name"><span>Москва-Бутово</span></span>
-					<span class="input-group-text product-availability-count text-success">11 234</span>
-				</div>
-			</div>
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="4">
-					<span class="input-group-text product-availability-name"><span>Санкт- Петербург</span></span>
-					<span class="input-group-text product-availability-count text-danger">0</span>
-				</div>
-			</div>
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="3">
-					<span class="input-group-text product-availability-name"><span>Казань</span></span>
-					<span class="input-group-text product-availability-count text-success">24</span>
-				</div>
+			<div class="product-table row row-cols-1">
+				<div class="col"><div class="product-table-item product-data" data-id="8" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">1500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">381,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="9" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">15001061500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">3 381,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="10" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">150010615001061500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">33 381,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="11" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">1500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">81,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="12" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">1500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">81,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
 			</div>
 		</div>
 
@@ -331,6 +424,10 @@
 				<dt><span>Напряжение электропитания</span></dt><dd>230 В</dd>
 				<dt><span>Частота питающей сети</span></dt><dd>50 Гц</dd>
 			</dl>
+			<a href="#" class="spoiler-open">
+				<span>Открыть <i class="fa fa-chevron-down"></i></span>
+				<span class="active">Свернуть <i class="fa fa-chevron-up"></i></span>
+			</a>
 		</div>
 		<h2 class="h2" id="nav-video">Видео</h2>
 		<div class="product-video row row-cols-1 row-cols-md-2 row-cols-xl-3">
@@ -357,41 +454,41 @@
 		<h2 class="h2" id="nav-docs">Документация</h2>
 
 		<div class="table-docs">
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Брошюра газовые настенные котлы 6000w</div>
 					<div class="col-auto">6,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-pdf"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-pdf"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
 				</div>
 			</div>
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Паспорт на котлы газовые GAS 6000 W</div>
 					<div class="col-auto">4,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-word"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-word"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
 				</div>
 			</div>
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Паспорт на котлы газовые GAS 6000 W</div>
 					<div class="col-auto">4,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-excel"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-excel"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
 				</div>
 			</div>
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Паспорт на котлы газовые GAS 6000 W</div>
 					<div class="col-auto">4,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-image"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-image"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
@@ -424,7 +521,9 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="modal-msg-title"></h5>
-				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+					
+				</button>
 			</div>
 			<div class="modal-body" id="modal-msg-body">
 				<b>Заказ № 12345 успешно принят!</b><br />
@@ -432,81 +531,6 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">Хорошо!</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal fade modal-instock" id="modal-instock" data-keyboard="false" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-xl">
-		<div class="modal-content">
-			<div class="modal-header">
-				<div>
-					<h5 class="modal-title" id="modal-msg-title">Наличие товара по складам</h5>
-					<div class="mt-2 d-lg-none">
-						<div class="mr-4 d-inline-block">
-							<label class="form-check-label">
-								<input class="form-check-input mr-1" type="radio" name="target-instock" data-toggle="collapse-change" data-target="#target-instock-1" checked>
-								Список
-							</label>
-						</div>
-						<div class="d-inline-block">
-							<label class="form-check-label">
-								<input class="form-check-input mr-1" type="radio" name="target-instock" data-toggle="collapse-change" data-target="#target-instock-2">
-								Карта
-							</label>
-						</div>
-					</div>
-				</div>
-				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body p-0">
-				<div class="row accordion g-0 h-100" id="accordion-instock">
-					<div class="col-12 col-lg-4 placemark-wrp collapse collapse-no-animation show d-lg-block" id="target-instock-1" data-parent="#accordion-instock">
-						<div class="border-bottom p-3 placemark-item active" data-latitude="55.919809" data-longitude="37.419909"  data-placemark-id="1">
-							<div class="small">
-								<p class="h6 mb-0">Москва-Химки</p>
-								г. Москва, Вашутинское шоссе, владение 36<br />
-								<a href="tel:84951342728">8 (495) 134-27-28</a><br />
-								<a href="tel:84951342728">8 (495) 134-27-28</a><br />
-								Пн-пт c 9:30 до 18:00<br />
-								В наличии <span class="text-success">134</span> шт.
-							</div>
-						</div>
-						<div class="border-bottom p-3 placemark-item" data-latitude="55.551825" data-longitude="37.531023" data-placemark-id="2">
-							<div class="small">
-								<p class="h6 mb-0">Москва-Бутово</p>
-								г. Москва, ул. Бартеневская, д. 10<br />
-								<a href="tel:84951342728">8 (495) 134-27-28</a><br />
-								Пн-пт c 9:30 до 18:00<br />
-								В наличии <span class="text-danger">0</span> шт.
-							</div>
-						</div>
-						<div class="border-bottom p-3 placemark-item" data-latitude="55.748458" data-longitude="49.166898" data-placemark-id="3">
-							<div class="small">
-								<p class="h6 mb-0">Офис Казань</p>
-								г. Казань, ул. Молодецкая, д. 3а<br />
-								<a href="tel:88432085841">8 (843) 208-58-41</a><br />
-								Пн-пт. с 8.00 до 17.00. Сб с 8.00 до 13.00. Вс выходной<br />
-								<span class="text-danger">Под заказ</span>
-							</div>
-						</div>
-						<div class="border-bottom p-3 placemark-item" data-latitude="59.839226" data-longitude="30.302300" data-placemark-id="4">
-							<div class="small">
-								<p class="h6 mb-0">Офис Санкт-Петербург</p>
-								г. Санкт-Петербург, ул. Кубинская, 82<br />
-								<a href="tel:88123036100">8 (812) 303-61-00</a><br />
-								Пн-пт c 9:30 до 18:00<br />
-								В наличии <span class="text-success">234</span> шт.
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-8 offset-0 offset-lg-4 collapse collapse-no-animation d-lg-block" id="target-instock-2" data-parent="#accordion-instock">
-						<div id="map-instock" class="map-instock"></div>
-						<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-						<script src="js/product-instock.map.js" type="text/javascript"></script>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

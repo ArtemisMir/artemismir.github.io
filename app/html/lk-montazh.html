@@ -103,7 +103,7 @@
 					<tr>
 						<td colspan="2">
 							<label class="good-checkbox">
-								<input name="notifications-new-work" type="checkbox" checked="">
+								<input name="counterparty-archive" type="checkbox" checked="">
 								<span class="good-checkbox-box"></span>
 								Уведомления о новых работах
 							</label>
@@ -112,9 +112,18 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="col-xl-auto ml-xl-auto mb-5">
-			<p class="mb-2 font-500"><a href="#" class="link" data-toggle="modal" data-target="#modal-your-manager">Ваш менеджер: Алексеев Алексей</a></p>
-			<p class="mb-0 font-500"><a href="#" class="link" data-toggle="modal" data-target="#modal-main-manager">Ведущий менеджер: Васильков Василий</a></p>
+		<div class="col-lg-5">
+			<div class="media text-lg-right mb-5">
+				<div class="align-self-center ml-lg-3 mr-3 mr-lg-0 order-lg-2 d-none">
+					<!-- <img src="" alt=""> -->
+					<i class="fa fa-user-tie" style="font-size: 64px; color: #555"></i>
+				</div>
+				<div class="media-body">
+					<p class="mb-0 font-weight-bold">Ваш менеджер: Mr.Nobody</p>
+					<p class="mb-0"><a href="tel:84951342728">8 (495) 134-27-28</a></p>
+					<p class="mb-0"><a target="_blank" href="mailto:info@duim24.ru">info@duim24.ru</a></p>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -187,6 +196,14 @@
 			<div class="col">
 				<a href="#" class="menu-tile-item">
 					<div class="menu-tile-icon">
+						<i class="fa fa-file-invoice-dollar"></i>
+					</div>
+					<div class="menu-tile-name">Счет для клиента</div>
+				</a>
+			</div>
+			<div class="col">
+				<a href="#" class="menu-tile-item">
+					<div class="menu-tile-icon">
 						<i class="fa fa-file-csv"></i>
 					</div>
 					<div class="menu-tile-name">Выгрузка данных</div>
@@ -216,84 +233,8 @@
 					<div class="menu-tile-name">Центр уведомлений</div>
 				</a>
 			</div>
-			<div class="col">
-				<a href="favorites.html" class="menu-tile-item">
-					<div class="menu-tile-icon">
-						<i class="fa fa-star"></i>
-					</div>
-					<div class="menu-tile-name">Избранное</div>
-				</a>
-			</div>
-			<div class="col">
-				<a href="notifications.html" class="menu-tile-item">
-					<div class="menu-tile-icon">
-						<i class="fa fa-hands-helping"></i>
-					</div>
-					<div class="menu-tile-name">Стать монтажником</div>
-				</a>
-			</div>
 		</div>
 	</div>
 
 </div>
 <!-- END Динамическая часть -->
-<div class="modal fade" id="modal-your-manager" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">Ваш менеджер</h5>
-				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<div class="container-fluid">
-					<div class="row justify-content-center">
-						<div class="col-auto m-auto m-md-0">
-							<!-- <img src="" alt=""> -->
-							<i class="fa fa-user-tie" style="font-size: 150px; color: #555"></i>
-						</div>
-						<div class="w-100 d-md-none"></div>
-						<div class="col-auto mt-4 mt-md-0 m-auto m-md-0">
-							<p class="mb-0 font-500">Алексеев Алексей Алексеевич</p>
-							<p class="mb-0"><a href="tel:84951342728">8 (495) 134-27-28</a></p>
-							<p class="mb-0"><a href="tel:84951342728">8 (495) 134-27-28</a></p>
-							<p class="mb-0"><a target="_blank" href="mailto:info@duim24.ru">info@duim24.ru</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="modal fade" id="modal-main-manager" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">Ведущий менеджер</h5>
-				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<div class="container-fluid">
-					<div class="row justify-content-center">
-						<div class="col-auto m-auto m-md-0">
-							<!-- <img src="" alt=""> -->
-							<i class="fa fa-user-tie" style="font-size: 150px; color: #555"></i>
-						</div>
-						<div class="w-100 d-md-none"></div>
-						<div class="col-auto mt-4 mt-md-0 m-auto m-md-0">
-							<p class="mb-0 font-500">Васильков Василий Васильевич</p>
-							<p class="mb-0"><a href="tel:84951342728">8 (495) 134-27-28</a></p>
-							<p class="mb-0"><a href="tel:84951342728">8 (495) 134-27-28</a></p>
-							<p class="mb-0"><a target="_blank" href="mailto:info@duim24.ru">info@duim24.ru</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
-			</div>
-		</div>
-	</div>
-</div>

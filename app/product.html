@@ -21,7 +21,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favblue16.png">
 
 	<!-- <meta property="og:image" content="images/dest/preview.jpg"> -->
-	<link rel="stylesheet" href="css/main.min.css?12">
+	<link rel="stylesheet" href="css/app.min.css?8">
 
 </head>
 
@@ -63,30 +63,6 @@
 			
 			<nav class="cd-nav">
 				<ul id="cd-nav-main" class="cd-nav-main">
-
-					<li class="has-children">
-						<a href="#" class="cd-nav-link"><i class="fa fa-user mr-2"></i>Мой раздел</a>
-						<ul class="cd-nav-menu lk" id="menu-lk">
-							<li class="go-back"><a href="#"><i class="fa fa-chevron-left"></i>Назад</a></li>
-							<li><a href="lk-montazh.html">Личный кабинет</a></li><!--всем - на главкую ЛК - только под логином-->
-							<li><a href="login.html">Вход/Регистрация</a></li><!--всем - на страницу входа/регистрации - только без логина-->
-							<li><a href="montazh-page.html">Страница монтажника</a></li>
-							<li><a href="montazh-page-public.html">Страница монтажника (публичная)</a></li>
-							<li><a href="montazh-counterparties.html">Контрагенты</a></li>
-							<li><a href="montazh-orders.html">Ищут монтажника</a></li>
-							<li><a href="montazh-users.html">Пользователи</a></li>
-							<li><a href="portfolio.html">Портфолио</a></li>
-							<li><a href="user-addresses.html">Адреса заказов</a></li>
-							<li><a href="orderlist.html">История заказов</a></li>
-							<li><a href="order-import.html">Загрузка заказа</a></li>
-							<li><a href="price-lists.html">Скачать прайс-лист</a></li>
-							<li><a href="notifications.html">Центр уведомлений</a></li>
-							<li><a href="referal.html">Реферальная программа</a></li>
-							<li><a href="export.html">Выгрузка данных</a></li>
-							<li><a href="calculations.html">Взаиморасчеты</a></li>
-						</ul>
-					</li>
-
 					<li class="has-children">
 						<a href="#" class="cd-nav-link">Каталог</a>
 
@@ -344,8 +320,24 @@
 							<li><a class="brands_img_bastion" href="#">Бастион</a></li>
 						</ul>
 					</li>
+					<li class="has-children">
+						<a href="#" class="cd-nav-link">Мой раздел</a>
+						<ul class="cd-nav-menu lk" id="menu-lk">
+							<li class="go-back"><a href="#"><i class="fa fa-chevron-left"></i>Назад</a></li>
+							<li><a href="#">Личный кабинет</a></li><!--всем - на главкую ЛК - только под логином-->
+							<li><a href="#">Вход/Регистрация</a></li><!--всем - на страницу входа/регистрации - только без логина-->
+							<li><a href="#">Ценовые соглашения</a></li><!--только юр лицам-->
+							<li><a href="#">Плательщики</a></li><!--только юр лицам-->
+							<li><a href="#">Заказы</a></li><!--только юр лицам-->
+							<li><a href="#">Счета</a></li><!--только юр лицам-->
+							<li><a href="#">Акты</a></li><!--только юр лицам-->
+							<li><a href="#">Взаиморасчеты</a></li><!--только юр лицам-->
+							<li><a href="#">Избранные товары</a></li><!--всем - только под логином-->
+						</ul>
+					</li>
 
-					<li><a class="cd-nav-link" href="montazhnik-list.html">Монтажники</a></li>
+					<li><a class="cd-nav-link" href="#">Монтажники</a></li>
+					<li><a class="cd-nav-link" href="#">Загрузить смету</a></li>
 
 					<li class="has-children">
 						<a href="#" class="cd-nav-link">Покупателям</a>
@@ -358,7 +350,7 @@
 					</li>
 
 					<li><a class="cd-nav-link" href="#">Контакты</a></li>
-					<li><a class="cd-nav-link" href="#"><span class="text-dashed" data-toggle="modal" data-target="#user-region-list">регион: Москва</span></a></li>
+					<li><a class="cd-nav-link" href="#"><span class="dashed">регион: Москва</span></a></li>
 				</ul>
 			</nav>
 		</header>
@@ -384,22 +376,22 @@
 									Ещё
 								</button>
 								<div class="dropdown-menu dropdown-menu-right">
+									<a href="#" class="dropdown-item">Сохранить как КП</a>
+									<a href="#" class="dropdown-item">Скачать в Excel</a>
+									<a href="#" class="dropdown-item">Загрузить из Excel</a>
+									<a href="#" class="dropdown-item">Счет для клиента</a>
 									<button class="dropdown-item">Распечатать</button>
-									<a href="#" class="dropdown-item">Скачать все в Excel</a>
-									<a href="#" class="dropdown-item">Догрузить из Excel</a>
-									<a href="#" class="dropdown-item">Сохранить черновик</a>
-									<a href="#" class="dropdown-item">Создать КП</a>
 								</div>
 							</div>
 						</div>
-						<div class="modal-body products">
+						<div class="modal-body">
 							<h5 class="modal-title mb-3">
 								<p>Позиций в списке<span id=cart-counter>7</span></p>
-								<p>Итого:<span class="rub" id="cart-sum" data-total-amount="230618.64">230 618,64</span></p>
+								<p>Итого:<span class="rub" id="cart-sum">230 618,64</span></p>
 								<p>Экономия:<span id="cart-eco">9,1% (<span class="rub">230 618,64</span>)</span></p>
 							</h5>
 							<div class="cart-items">
-								<div class="border-top py-3 product-data" data-id="1" data-ed="1" data-price="49277.50" data-amount="349277.50">
+								<div class="border-top py-3 product-data" data-id="1" data-ed="1">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -439,13 +431,13 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 49 277,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">349 277,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">349 277,50</div>
 												</div>	
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="border-top py-3 product-data" data-id="2" data-ed="50" data-price="88.55" data-amount="1188.50">
+								<div class="border-top py-3 product-data" data-id="2" data-ed="50">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -484,13 +476,13 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 88,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">1188,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">1188,50</div>
 												</div>	
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="border-top py-3 product-data" data-id="1" data-ed="1" data-price="49277.50" data-amount="349277.50">
+								<div class="border-top py-3 product-data" data-id="1" data-ed="1">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -522,13 +514,13 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 49 277,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">349 277,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">349 277,50</div>
 												</div>	
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="border-top py-3 product-data" data-id="2" data-ed="50" data-price="88.55" data-amount="1188.50">
+								<div class="border-top py-3 product-data" data-id="2" data-ed="50">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -560,7 +552,7 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 88,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">1188,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">1188,50</div>
 												</div>	
 											</div>
 										</div>
@@ -646,7 +638,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Закрыть</button>
-							<a href="cart.html" class="btn btn-lg btn-primary order-button">Оформить заказ</a>
+							<button type="button" class="btn btn-lg btn-primary order-button">Оформить заказ</button>
 						</div>
 					</div>
 				</div>
@@ -669,7 +661,7 @@
 			<p class="product-code">Артикул: 1500106</p>
 
 			<div class="row">
-				<div class="col-12 col-md-6 col-lg-4 order-lg-1 g-0 g-sm-3">
+				<div class="col-12 col-md-6 col-lg-4 order-lg-1">
 					<div class="product-card-image fotorama" data-maxheight="300px" data-nav="thumbs" data-allowfullscreen="true" data-loop="true" data-transition="crossfade" data-transitionduration="100">
 						<a href="images/products/p1_fullsize.jpg"><img src="images/products/p1_fullsize.jpg"></a>
 						<a href="images/products/p1_fullsize1.jpg"><img src="images/products/p1_thumb1.jpg"></a>
@@ -697,15 +689,15 @@
 						<p class="product-instock">В наличии</p>
 					</div>
 					<div class="product-buttons">
-						<!-- <div class="product-review">
+						<div class="product-review">
 							<div class="rate" title="4.40">
 								<div class="fullness" style="width: 88%"></div>
 							</div>
 							<a class="product-review-link" href="#">45 отзывов</a>
-						</div> -->
+						</div>
 
 						<span class="product-added"><i class="fa fa-check"></i><a href="#">В корзине</a></span>
-						<button type="button" class="btn btn-primary buy w-100">Купить</button>
+						<button type="button" class="btn btn-primary buy">Купить</button>
 						<div class="product-counter">
 							<div class="input-group">
 								<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
@@ -713,52 +705,52 @@
 								<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
 							</div>
 						</div>
+						<div class="product-buttons-special">
+							<button class="btn product-compare informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>сравнение</a>" data-content-hidden="Удалить из <a href='#'>сравнения</a>">
+								<span><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 14h3a1 1 0 010 2h-3v3a1 1 0 01-2 0v-3h-3a1 1 0 010-2h3v-3a1 1 0 012 0v3zM3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2z" fill="currentColor" fill-rule="nonzero"></path>
+								</svg>Сравнить</span>
+								<span class="active"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="active">
+									<path d="M3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2zm18.292 8.293a1 1 0 111.416 1.414l-5.996 6.004a1 1 0 01-1.415 0l-3.004-3.004a1 1 0 111.414-1.414l2.296 2.297 5.29-5.297z" fill="currentColor" fill-rule="nonzero"></path>
+								</svg>В сравнении</span>
+							</button>
+							<button class="btn product-favorite informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>избранное</a>" data-content-hidden="Удалить из <a href='#'>избранного</a>">
+								<span><i class="far fa-heart"></i>В избранное</span>
+								<span class="active"><i class="fas fa-heart"></i>В избранном</span>
+							</button>
+						</div>
 					</div>
-					<form class="product-oneclick mt-3 p-2 bg-light rounded border">
+					<form class="product-oneclick">
 						<p class="product-oneclick-title mb-2">Купить в один клик</p>
 						<div class="input-group mb-2">
-							<span class="input-group-text bg-white input-group-icon"><i class="fa fa-mobile-alt"></i></span>
-							<input type="tel" data-type="number" name="phone" class="form-control" placeholder="Телефон*" required="" minlength="7">
-							<button type="button" class="btn btn-outline-primary product-oneclick-more collapsed" data-toggle="collapse" data-target="#collapse-oneclick"><i class="fa fa-chevron-down"></i></button>
+							<span class="input-group-text"><i class="fa fa-mobile-alt"></i></span>
+							<input type="text" aria-label="Phone" name="phone" class="form-control" placeholder="Телефон" required="" minlength="7">
+							<button type="button" class="btn btn-outline-primary product-oneclick-more collapsed" data-toggle="collapse" href="#collapse-oneclick"><i class="fa fa-chevron-down"></i></button>
 						</div>
 						<div class="collapse" id="collapse-oneclick">
 							<div class="input-group mb-2">
-								<span class="input-group-text bg-white input-group-icon"><i class="far fa-user"></i></span>
+								<span class="input-group-text"><i class="far fa-user"></i></span>
 								<input type="text" aria-label="Name" name="name" class="form-control" placeholder="Имя">
 							</div>
-							<textarea type="text" aria-label="Comment" name="comment" class="form-control mb-2" placeholder="Комментарий"></textarea>
+							<div class="input-group mb-2">
+								<span class="input-group-text"><i class="far fa-comment-dots"></i></span>
+								<input type="text" aria-label="Comment" name="comment" class="form-control" placeholder="Комментарий">
+							</div>
 						</div>
-						<button type="submit" class="btn btn-outline-primary w-100 font-500">Купить</button>
+						<div class="btn-group buy-oneclick">
+							<button type="submit" class="btn btn-secondary">Купить</button>
+						</div>
 					</form>
 				</div>
 				<div class="col-12 col-lg order-lg-2">
-					<div class="product-desc clearfix">
-						<p>Газовый настенный котел. Мощность: 18 кВт. Контур ГВС: да. Камера: закрытая. Температура отопления: до +82 оС. КПД: до 93,2%. Расход газа: 2,1 куб.м/ч. ГВС: до 8,6 л/мин.</p>
-
-					</div>
-					<p class="product-brand mb-3">Производитель: BOSCH</p>
-					<a class="product-logo" href="#"><img src="images/favblue192.png"></a>
-					<div class="product-buttons-special mt-3">
-						<button class="btn product-compare informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>сравнение</a>" data-content-hidden="Удалить из <a href='#'>сравнения</a>">
-							<span><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 14h3a1 1 0 010 2h-3v3a1 1 0 01-2 0v-3h-3a1 1 0 010-2h3v-3a1 1 0 012 0v3zM3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2z" fill="currentColor" fill-rule="nonzero"></path>
-							</svg>Сравнить</span>
-							<span class="active"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="active">
-								<path d="M3 9h10a1 1 0 010 2H3a1 1 0 010-2zm0 5h6a1 1 0 010 2H3a1 1 0 010-2zM3 4h10a1 1 0 010 2H3a1 1 0 110-2zm18.292 8.293a1 1 0 111.416 1.414l-5.996 6.004a1 1 0 01-1.415 0l-3.004-3.004a1 1 0 111.414-1.414l2.296 2.297 5.29-5.297z" fill="currentColor" fill-rule="nonzero"></path>
-							</svg>В сравнении</span>
-						</button>
-						<button class="btn product-favorite informer" type="button" data-placement="bottom" data-content-active="Добавить в <a href='#'>избранное</a>" data-content-hidden="Удалить из <a href='#'>избранного</a>">
-							<span><i class="far fa-heart"></i>В избранное</span>
-							<span class="active"><i class="fas fa-heart"></i>В избранном</span>
-						</button>
-					</div>
+					<p class="product-desc">Газовый настенный котел. Мощность: 18 кВт. Контур ГВС: да. Камера: закрытая. Температура отопления: до +82 оС. КПД: до 93,2%. Расход газа: 2,1 куб.м/ч. ГВС: до 8,6 л/мин.</p>
+					<p class="product-brand">Производитель: BOSH</p>
 				</div>
 			</div>
 		</div>
 
 		<nav class="product-navigation">
 			<a class="product-navigation-link active" href="#nav-related">Варианты товара</a>
-			<a class="product-navigation-link" href="#nav-availability">Наличие по складам</a>
 			<a class="product-navigation-link" href="#nav-description">Описание</a>
 			<a class="product-navigation-link" href="#nav-characteristics">Характеристики</a>
 			<a class="product-navigation-link" href="#nav-video">Видео</a>
@@ -782,19 +774,16 @@
 				<tr>
 					<th>Размер</th>
 					<th class="d-none d-lg-table-cell">Артикул</th>
-					<th class="d-none d-lg-table-cell">Наличие</th>
 					<th class="d-none d-lg-table-cell" colspan="2">Цена, руб.</th>
 					<th class="d-lg-none">Цена</th>
 				</tr>
 				<tr class="product-data" data-id="45" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: Много</small>
+						<p class="mb-0"><a class="link" href="#">3/8"</a></p>
+						<small class="d-lg-none text-muted">1500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">Много</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">845,08</td>
+					<td class="d-none d-lg-table-cell text-right">845,08</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">845,00</p>
 						<div class="product-buttons">
@@ -811,13 +800,11 @@
 				</tr>
 				<tr class="product-data" data-id="44" data-ed="50">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: 3</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2</a></p>
+						<small class="d-lg-none text-muted">1500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">3</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">8 991,00</td>
+					<td class="d-none d-lg-table-cell text-right">8 991,00</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">8 991,00</p>
 						<div class="product-buttons">
@@ -834,13 +821,11 @@
 				</tr>
 				<tr class="product-data" data-id="43" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2" 3/8"x1/2"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500102234236</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: Нет</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2" 3/8"x1/2"</a></p>
+						<small class="d-lg-none text-muted">1500102234236</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">Нет</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">80 991,00</td>
+					<td class="d-none d-lg-table-cell text-right">80 991,00</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">80 991,00</p>
 						<div class="product-buttons">
@@ -857,13 +842,11 @@
 				</tr>
 				<tr class="product-data" data-id="42" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">150010615001061500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: Много</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2"</a></p>
+						<small class="d-lg-none text-muted">150010615001061500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">150010615001061500106</td>
-					<td class="d-none d-lg-table-cell">Много</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">800 991,00</td>
+					<td class="d-none d-lg-table-cell text-right">800 991,00</td>
 					<td class="p-lg-0">
 						<p class="rub mb-1 d-lg-none">800 991,00</p>
 						<div class="product-buttons">
@@ -880,13 +863,11 @@
 				</tr>
 				<tr class="product-data" data-id="41" data-ed="1">
 					<td class="catalog-table-title">
-						<p class="mb-0"><a href="#">3/8"x1/2" 3/8"x1/2"</a></p>
-						<small class="d-block d-lg-none text-muted mr-2 catalog-table-code">1500106</small>
-						<small class="d-block d-lg-none text-muted text-nowrap">Наличие: 3</small>
+						<p class="mb-0"><a class="link" href="#">3/8"x1/2" 3/8"x1/2"</a></p>
+						<small class="d-lg-none text-muted">1500106</small>
 					</td>
 					<td class="d-none d-lg-table-cell text-left">1500106</td>
-					<td class="d-none d-lg-table-cell">3</td>
-					<td class="d-none d-lg-table-cell text-right text-nowrap">81,08</td>
+					<td class="d-none d-lg-table-cell text-right">81,08</td>
 					<td class="p-lg-0">
 						<p class="rub mt-1 mb-1 d-lg-none">845,00</p>
 						<div class="product-buttons">
@@ -901,35 +882,139 @@
 						</div>
 					</td>
 				</tr>
+
 			</table>
-		</div>
-
-		<h2 class="h2" id="nav-availability">Наличие по складам</h2>
-
-		<div class="row row-cols-1 row-cols-md-2">
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="1">
-					<span class="input-group-text product-availability-name"><span>Москва-Химки</span></span>
-					<span class="input-group-text product-availability-count text-success"><small>ПОД ЗАКАЗ</small></span>
-				</div>
-			</div>
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="2">
-					<span class="input-group-text product-availability-name"><span>Москва-Бутово</span></span>
-					<span class="input-group-text product-availability-count text-success">11 234</span>
-				</div>
-			</div>
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="4">
-					<span class="input-group-text product-availability-name"><span>Санкт- Петербург</span></span>
-					<span class="input-group-text product-availability-count text-danger">0</span>
-				</div>
-			</div>
-			<div class="col col-xl">
-				<div class="input-group flex-nowrap mb-2 product-availability" data-toggle="modal" data-target="#modal-instock" data-placemark-id="3">
-					<span class="input-group-text product-availability-name"><span>Казань</span></span>
-					<span class="input-group-text product-availability-count text-success">24</span>
-				</div>
+			<div class="product-table row row-cols-1">
+				<div class="col"><div class="product-table-item product-data" data-id="8" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">1500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">381,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="9" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">15001061500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">3 381,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="10" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">150010615001061500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">33 381,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="11" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2" 3/8"x1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">1500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">81,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
+				<div class="col"><div class="product-table-item product-data" data-id="12" data-ed="1">
+					<div class="row gx-0">
+						<div class="col-md col-auto">
+							<h6 class="product-table-title"><a href="#">3/8"x1/2"</a></h6>
+						</div>
+						<div class="col-auto ml-auto">
+							<span class="product-table-code text-muted">1500106</span>
+						</div>
+						<div class="w-100 d-md-none"></div>
+						<div class="col-3">
+							<p class="product-table-price rub">81,08</p>
+						</div>
+						<div class="col-auto ml-auto">
+							<div class="product-buttons">
+								<button type="button" class="btn btn-outline-primary buy">Купить</button>
+								<div class="product-counter">
+									<div class="input-group">
+										<button class="btn btn-outline-primary count-down" type="button" ><i class="fa fa-minus"></i></button>
+										<input class="form-control quantity" type="text" min="0" value="1">
+										<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div></div>
 			</div>
 		</div>
 
@@ -994,6 +1079,10 @@
 				<dt><span>Напряжение электропитания</span></dt><dd>230 В</dd>
 				<dt><span>Частота питающей сети</span></dt><dd>50 Гц</dd>
 			</dl>
+			<a href="#" class="spoiler-open">
+				<span>Открыть <i class="fa fa-chevron-down"></i></span>
+				<span class="active">Свернуть <i class="fa fa-chevron-up"></i></span>
+			</a>
 		</div>
 		<h2 class="h2" id="nav-video">Видео</h2>
 		<div class="product-video row row-cols-1 row-cols-md-2 row-cols-xl-3">
@@ -1020,41 +1109,41 @@
 		<h2 class="h2" id="nav-docs">Документация</h2>
 
 		<div class="table-docs">
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Брошюра газовые настенные котлы 6000w</div>
 					<div class="col-auto">6,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-pdf"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-pdf"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
 				</div>
 			</div>
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Паспорт на котлы газовые GAS 6000 W</div>
 					<div class="col-auto">4,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-word"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-word"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
 				</div>
 			</div>
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Паспорт на котлы газовые GAS 6000 W</div>
 					<div class="col-auto">4,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-excel"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-excel"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
 				</div>
 			</div>
-			<div class="border-top py-2">
+			<div class="table-docs-item">
 				<div class="row align-items-center">
 					<div class="col-md mb-md-0 mb-2">Паспорт на котлы газовые GAS 6000 W</div>
 					<div class="col-auto">4,68 mb</div>
-					<div class="col-auto display-5"><i class="far fa-file-image"></i></div>
+					<div class="col-auto table-docs-format"><i class="far fa-file-image"></i></div>
 					<div class="col-auto ml-auto">
 						<a href="#" target="_blank" class="btn btn-outline-primary">Скачать</a>
 					</div>
@@ -1087,7 +1176,9 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="modal-msg-title"></h5>
-				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+					
+				</button>
 			</div>
 			<div class="modal-body" id="modal-msg-body">
 				<b>Заказ № 12345 успешно принят!</b><br />
@@ -1095,81 +1186,6 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">Хорошо!</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal fade modal-instock" id="modal-instock" data-keyboard="false" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-xl">
-		<div class="modal-content">
-			<div class="modal-header">
-				<div>
-					<h5 class="modal-title" id="modal-msg-title">Наличие товара по складам</h5>
-					<div class="mt-2 d-lg-none">
-						<div class="mr-4 d-inline-block">
-							<label class="form-check-label">
-								<input class="form-check-input mr-1" type="radio" name="target-instock" data-toggle="collapse-change" data-target="#target-instock-1" checked>
-								Список
-							</label>
-						</div>
-						<div class="d-inline-block">
-							<label class="form-check-label">
-								<input class="form-check-input mr-1" type="radio" name="target-instock" data-toggle="collapse-change" data-target="#target-instock-2">
-								Карта
-							</label>
-						</div>
-					</div>
-				</div>
-				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body p-0">
-				<div class="row accordion g-0 h-100" id="accordion-instock">
-					<div class="col-12 col-lg-4 placemark-wrp collapse collapse-no-animation show d-lg-block" id="target-instock-1" data-parent="#accordion-instock">
-						<div class="border-bottom p-3 placemark-item active" data-latitude="55.919809" data-longitude="37.419909"  data-placemark-id="1">
-							<div class="small">
-								<p class="h6 mb-0">Москва-Химки</p>
-								г. Москва, Вашутинское шоссе, владение 36<br />
-								<a href="tel:84951342728">8 (495) 134-27-28</a><br />
-								<a href="tel:84951342728">8 (495) 134-27-28</a><br />
-								Пн-пт c 9:30 до 18:00<br />
-								В наличии <span class="text-success">134</span> шт.
-							</div>
-						</div>
-						<div class="border-bottom p-3 placemark-item" data-latitude="55.551825" data-longitude="37.531023" data-placemark-id="2">
-							<div class="small">
-								<p class="h6 mb-0">Москва-Бутово</p>
-								г. Москва, ул. Бартеневская, д. 10<br />
-								<a href="tel:84951342728">8 (495) 134-27-28</a><br />
-								Пн-пт c 9:30 до 18:00<br />
-								В наличии <span class="text-danger">0</span> шт.
-							</div>
-						</div>
-						<div class="border-bottom p-3 placemark-item" data-latitude="55.748458" data-longitude="49.166898" data-placemark-id="3">
-							<div class="small">
-								<p class="h6 mb-0">Офис Казань</p>
-								г. Казань, ул. Молодецкая, д. 3а<br />
-								<a href="tel:88432085841">8 (843) 208-58-41</a><br />
-								Пн-пт. с 8.00 до 17.00. Сб с 8.00 до 13.00. Вс выходной<br />
-								<span class="text-danger">Под заказ</span>
-							</div>
-						</div>
-						<div class="border-bottom p-3 placemark-item" data-latitude="59.839226" data-longitude="30.302300" data-placemark-id="4">
-							<div class="small">
-								<p class="h6 mb-0">Офис Санкт-Петербург</p>
-								г. Санкт-Петербург, ул. Кубинская, 82<br />
-								<a href="tel:88123036100">8 (812) 303-61-00</a><br />
-								Пн-пт c 9:30 до 18:00<br />
-								В наличии <span class="text-success">234</span> шт.
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-8 offset-0 offset-lg-4 collapse collapse-no-animation d-lg-block" id="target-instock-2" data-parent="#accordion-instock">
-						<div id="map-instock" class="map-instock"></div>
-						<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-						<script src="js/product-instock.map.js" type="text/javascript"></script>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -1198,7 +1214,7 @@
 					</div>
 					<div class="col-12 col-sm-5 col-md-6 col-lg-3">
 						<ul class="footer-menu">
-							<li><a href="#" data-toggle="modal" data-target="#modal-check-order">Проверить статус заказа</a></li>
+							<li><a href="#">Проверить статус заказа</a></li>
 							<li><a href="#">Личный кабинет</a></li>
 							<li><a href="#">Найти монтажника</a></li>
 							<li><a href="#">Обучающее видео</a></li>
@@ -1225,7 +1241,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="copyright">Дюйм24 - ООО "АКВИЛАНО" - ОГРН 1197746155419 - ИНН 7727411567</div>
+				<div class="copyright">© 2002—2020 Компания Дюйм24 (ООО "Исириус" ОГРН 1175029004006)</div>
 			</div>
 		</footer>
 
@@ -1233,60 +1249,7 @@
 		<div class="top" title="Наверх"><i class="fas fa-chevron-up"></i></div>
 	</div>
 
-	<form id="user-region-list" class="modal fade">
-		<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="flex-grow-1">
-						<div class="modal-list-search search-input">
-							<input type="text" class="form-control" placeholder="Поиск по регионам...">
-							<i class="fa fa-search"></i>
-						</div>
-					</div>
-					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="column-list">
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Алтайский край</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Амурская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Архангельская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Астраханская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Белгородская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Брянская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Владимирская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Волгоградская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Вологодская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Воронежская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Еврейская АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Забайкальский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ивановская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Иркутская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Кабардино-Балкарская республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Калининградская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Калужская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Камчатский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Карачаево-Черкесская Республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Кемеровская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Кировская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Костромская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Краснодарский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Красноярский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Курганская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Курская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ленинградская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Липецкая область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Магаданская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Московская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Мурманская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ненецкий АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Нижегородская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Новгородская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Новосибирская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Омская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Оренбургская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Орловская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Пензенская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Пермский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Приморский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Псковская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Адыгея</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Алтай</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Башкортостан</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Бурятия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Дагестан</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Ингушетия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Калмыкия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Карелия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Коми</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Крым</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Марий Эл</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Мордовия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Саха (Якутия)</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Северная Осетия-Алания</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Татарстан</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Тыва</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Хакасия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ростовская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Рязанская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Самарская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Саратовская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Сахалинская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Свердловская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Смоленская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ставропольский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тамбовская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тверская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Томская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тульская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тюменская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Удмуртская Республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ульяновская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Хабаровский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ханты-Мансийский АО - Югра</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Челябинская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Чеченская республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Чувашская Республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Чукотский АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ямало-Ненецкий АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ярославская область</label>
-
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-					<button type="submit" class="btn btn-primary">Применить</button>
-				</div>
-			</div>
-		</div>
-	</form>
-
-	<form class="modal fade" id="modal-check-order" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<h5 class="modal-title text-center w-100" id="modal-msg-title">Проверить статус заказа</h5>
-					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-						
-					</button>
-				</div>
-				<div class="modal-body py-0" id="modal-msg-body">
-					<input type="number" id="check-order-number" name="check-order-number" class="form-control form-control-lg text-center" placeholder="Введите номер заказа" required>
-					<div id="check-order-result" class="collapse">
-						<p class="h5 text-center mt-3 mb-0 text-success">Заказ в обработке</p>
-					</div>
-				</div>
-				<div class="modal-footer border-0 justify-content-center">
-					<button type="submit" class="btn btn-lg btn-primary px-4">Проверить</button>
-				</div>
-			</div>
-		</div>
-	</form>
-
-	<script src="js/app.min.js?8"></script>
+	<script src="js/app.min.js?5"></script>
 
 </body>
 </html>

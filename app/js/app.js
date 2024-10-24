@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-function smallDev() {
-	var small_dev = $(window).width() >= 992 ? false : true;
-	return small_dev;
-}
-lazyload();
-
 $('.magnific-image').magnificPopup({
 	type: 'image',
 	image: {
@@ -24,26 +18,7 @@ $('.magnific-image').magnificPopup({
 		easing: 'ease-in-out',
 	}
 });
-if(!smallDev())
-{
-	$('.magnific-doc').magnificPopup({
-		type: 'iframe',
-		height: "100%",
-		zoom: {
-			enabled: true,
-			duration: 200,
-			easing: 'ease-in-out',
-		},
-		callbacks: {
-			open: function() {
-				$('body').addClass('mfp-iframe-maxh');
-			},
-			close: function() {
-				$('body').removeClass('mfp-iframe-maxh');
-			}
-		}
-	});
-}
+
 
 jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function(arg) {
 	return function( elem ) {
@@ -118,17 +93,6 @@ $('.cd-nav-menu > .has-children > a').on('mousemove', function(event){
 
 	x1 = x,
 	y1 = y;
-
-	var envelope = $('.cd-nav-menu.catalog'),
-	envelope_h = envelope.height(),
-	eOffset = envelope.offset();
-
-	x2i = eOffset.left + envelope.outerWidth(),
-	y2i = eOffset.top,
-	x3i = x2i,
-	y3i = eOffset.top + envelope.outerHeight()*0.9;/*домножение на 0.6 - сократил конверт до снизу по высоте для более резкой реакции при траектории мышки в сторону 4-5 часов*/
-
-	//console.log(" x=" + x + " y=" + y + " x1=" + x1 + " y1=" + y1 + " x2i=" + x2i + " y2i=" + y2i + " x3i=" + x3i + " y3i=" + y3i)
 });
 
 /*for cd-nav:*/
@@ -157,6 +121,15 @@ function inPoly(){
 	}
 	return c;
 }
+
+var envelope = $('.cd-nav-menu.catalog'),
+envelope_h = envelope.height(),
+eOffset = envelope.offset();
+
+x2i = eOffset.left + envelope.outerWidth(),
+y2i = eOffset.top,
+x3i = x2i,
+y3i = eOffset.top + envelope.outerHeight()*0.9;/*домножение на 0.6 - сократил конверт до снизу по высоте для более резкой реакции при траектории мышки в сторону 4-5 часов*/
 
 
 $(window).scroll(function(){
@@ -189,15 +162,13 @@ $("body").on('click', '.product-delete',function(){
 });
 
 var timer = {};
-function check_quantity(e, i)
+function check_quantity(th, i)
 {
-	p = $(e).parents('.product-data');
+	p = $(th).parents('.product-data');
 	q = p.find('.quantity');
 	var new_q = Math.ceil(q.val()/p.data('ed')) * p.data('ed') + i * p.data('ed');
 	if (new_q >= 0) q.val(new_q);
 	else q.val('0');
-
-	product_recount_amount(e)
 
 	clearTimeout(timer[p.data('id')]);
 	timer[p.data('id')] = setTimeout(function(p, q) {
@@ -209,41 +180,6 @@ function check_quantity(e, i)
 	}, 500, p, q);
 }
 
-function product_recount_amount(e)
-{
-	p = $(e).parents('.product-data');
-	q = p.find('.quantity');
-
-	var price = parseFloat(p.data('price'));
-	var quantity = parseFloat($(q).val());
-	var amount_wrp = p.find('.product-amount')
-
-	if(price > 0 && quantity > 0 )
-	{
-		var amount = price * quantity;
-		p.data("amount", amount)
-
-		var amount_format = Intl.NumberFormat('ru-RU').format(amount)
-		amount_wrp.html(amount_format)
-
-		product_recount_total_amount(e);
-	}
-}
-
-function product_recount_total_amount(e)
-{
-	total_amount_wrp = $(e).parents('.products').find('[data-total-amount]')
-	if(total_amount_wrp.length > 0)
-	{
-		var total_amount = 0
-		$(e).parents('.products').find('[data-amount]').each(function(){
-			total_amount += parseFloat($(this).data('amount'))
-		})
-		total_amount_wrp.data('total-amount', total_amount)
-		total_amount_wrp.html(Intl.NumberFormat('ru-RU').format(total_amount))
-	}
-}
-
 $("body").on('click', '.count-down', function(){
 	check_quantity(this, -1);
 });
@@ -252,7 +188,11 @@ $("body").on('click', '.count-up',function(){
 	check_quantity(this, 1);
 });
 
-$("body").on('change input', '.quantity', function(){
+$("body").on('change', '.quantity', function(){
+	check_quantity(this, 0);
+});
+
+$("body").on('change keyup input', '.quantity', function(){
 	if (this.value.match(/[^0-9]/g)) {
 		this.value = this.value.replace(/[^0-9]/g, '');
 	}
@@ -260,11 +200,6 @@ $("body").on('change input', '.quantity', function(){
 		this.value = '';
 	}
 });
-
-$("body").on('change input', '.quantity', function(){
-	check_quantity(this, 0);
-});
-
 
 function update_product_quantity(id, q){
 	console.log("PHP запрос отправлен: новое количество id:" + id + " q:" + q);
@@ -275,6 +210,11 @@ function update_product_quantity(id, q){
 function animate(c) {
 	$(c).removeClass('animate')
 	setTimeout(function(){ $(c).addClass('animate') }, 50);
+}
+
+function smallDev() {
+	var small_dev = $(window).width() >= 992 ? false : true;
+	return small_dev;
 }
 
 $("body").on('click', '.filter-header', function(){
@@ -469,7 +409,6 @@ $('.product-navigation-link').click(function(){
 });
 
 $('.img-to-video').click(function(){
-	if($(this).find('iframe').length) return
 	$('<iframe>', {
 		src: $(this).find('img').data('video'),
 		frameborder: 0,
@@ -502,7 +441,7 @@ $(".product-oneclick").submit(function(){
 });
 
 
-$('.input-edit .input-edit-activate').click(function(){
+$('.input-edit-activate').click(function(){
 	var th = $(this).parents('.input-edit')
 	th.addClass('active')
 	th.find('.input-edit-field').attr('data-old-value', th.find('.input-edit-field').val());
@@ -523,7 +462,7 @@ $('.input-edit-no').on('click', function(){
 	th.find('.input-edit-field').val(th.find('.input-edit-field').attr('data-old-value'));
 });
 
-$('.data-edit .data-edit-activate').click(function(){
+$('.data-edit-activate').click(function(){
 	var th = $(this).parents('.data-edit')
 	th.addClass('active')
 	th.find('.data-edit-field').val(th.find('.data-edit-info').text())
@@ -548,11 +487,10 @@ $('.gallery-popup-delete').click(function(){
 	return false;
 });
 
-$('.modal-list-search input').on('input change', function(){
-	var this_modal = $(this).parents('.modal-content')
-	this_modal.find('.column-list label').hide();
-	this_modal.find(".column-list label:Contains('"+$(this).val()+"')").show();
-	if($(this).val() == '') this_modal.find(".column-list label").show();
+$('.region-search input').on('input change', function(){
+	$('.region-list .good-checkbox').hide();
+	$(".region-list .good-checkbox:Contains('"+$(this).val()+"')").show();
+	if($(this).val() == '') $(".region-list .good-checkbox").show();
 });
 
 $('.montazh-users .data-edit-yes').on('click', function(){
@@ -587,360 +525,30 @@ $(".counterparty-edit").submit(function(){
 	console.log($(this).serialize())
 
 	$("#modal-counterparty-edit-" + id).modal('hide')
-	$("#modal-new-counterparty-msg").modal('show')
 	return false;
 });
 
-$('#counterparty-search').submit(function(){
-	$('.counterparty-step-2').collapse('show')
-	return false;
-});
-$('.counterparty-start-search').click(function(){
-	$('.counterparty-step-2').collapse('show')
-
-	$('html, body').stop().animate({scrollTop: $('.counterparty-step-2').offset().top}, 'fast', 'swing');
-	return false;
-});
-
-$(".counterparty-new").submit(function(){
-
-	var form = $(this)
-
-	$.post(form.attr('action'), form.serialize())
-	.done(function(data) {
-		console.log(form.attr('action'))
-		console.log(form.serialize())
-		console.log(data)
-	})
-	.fail(function() {
-		console.log(form.attr('action'))
-		console.log(form.serialize())
-	});
+$("#modal-counterparty-new").submit(function(){
+	console.log($(this).serialize())
 
 	$("#modal-counterparty-new").modal('hide')
-	form.trigger("reset")
-	$("#modal-new-counterparty-msg").modal('show')
+	$(this).trigger("reset")
 	return false;
 });
 
 $('[data-type=number]').bind("change keyup input click", function() {
-	if (this.value.match(/[^0-9+]/g)) {
-		this.value = this.value.replace(/[^0-9+]/g, '');
+	if (this.value.match(/[^0-9]/g)) {
+		this.value = this.value.replace(/[^0-9]/g, '');
 	}
 });
-
-/*$('.collapse-no-animation').collapse({
-	animate: false
-});*/
+///END
+});
 
 $('input[data-toggle="collapse-change"]').bind("change", function() {
 	$($(this).data('target')).collapse('show')
 });
 
-$('select[data-toggle="collapse-change"]').bind("change", function() {
-	$($(this).find('option:selected').data('target')).collapse('show')
-});
 
-$('.dropdown-input [data-toggle="dropdown"]').on('show.bs.dropdown', function () {
-	if( $(this).parent().find('.dropdown-item').length < 1 ) return false;
-});
-
-$('.dropdown-input .dropdown-item').on('click', function () {
-	var input = $(this).parents('.dropdown-input').find('[data-toggle="dropdown"]')
-	input.val($(this).text())
-	input.dropdown('hide')
-	return false;
-});
-
-stm = 0
-$('.invoice-number').on('keyup input', function(){
-	var th = this
-	clearTimeout(stm);
-	stm = setTimeout(function() {
-		console.log("Запрос в бэкэнд")
-		$(th).dropdown('show')
-	}, 300);
-
-});
-
-$(".datepick").flatpickr({
-	dateFormat: "d.m.Y",
-	locale: "ru",
-});
-$('.datepick').prop('readonly', false)
-if($('.datepick.flatpickr-mobile').length < 1) $('.datepick').mask("99.99.9999")
-
-$(".btn-loading").click(function(){
-	let btn = $(this)
-	btn.prop("disabled", true);
-	setTimeout(function(){ btn.prop("disabled", false); }, 3000);
-});
-$("form.calculations-form").submit(function(){
-	return false;
-});
-$("form#user-region-list").submit(function(){
-	console.log($(this).serialize());
-	$(this).modal('hide')
-});
-
-$("form#modal-check-order").submit(function(){
-	console.log($(this).serialize());
-	$('#check-order-result').collapse('show')
-	return false
-});
-
-$('[data-target="#modal-check-order"]').click(function(){
-	$('#check-order-number').focus();
-});
-
-
-$('#main-slider').carousel({
-	pause: false,
-  	interval: 8000
-})
-
-$('#home-slider').slick()
-var homeCurrentSlide = 0
-$('.home-slider [data-slide-to]').click(function(){
-	homeCurrentSlide = $(this).data('slide-to');
-	$($(this).data('target')).slick('slickGoTo', $(this).data('slide-to'));
-});
-$('#home-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	homeCurrentSlide = nextSlide;
-	$(this).parent().find('[data-slide-to]').removeClass('active')
-	$(this).parent().find('[data-slide-to="' + nextSlide + '"]').addClass('active');
-});
-$('#home-slider').on('afterChange', function(event, slick, currentSlide){
-	var th = this;
-	if(currentSlide != homeCurrentSlide)
-	{
-		setTimeout(function(){ $(th).slick('slickGoTo', homeCurrentSlide); }, 10);
-	}
-});
-$('.home-slider').removeClass('d-none');
-
-$("form#modal-montazh-new-review").submit(function() {
-	var th = $(this);
-/*	$.ajax({ /// Раскоментить на сервере
-		type: "POST",
-		url: "/send.php",
-		data: th.serialize()
-	}).done(function() {*/
-		$(th).find('.send-success').addClass('active').hide().fadeIn();
-		setTimeout(function() {
-			$(th).find('.send-success').removeClass('active').fadeOut();
-			th.trigger("reset");
-			th.modal('hide')
-		}, 3000);
-	//});
-
-	$('.sc-cart-clear').click();
-	return false;
-});
-
-$('.phone-mask').mask("+7 (999) 999-99-99");
-
-$('.phone-input').on('focus', function(){
-	if($(this).val().length < 1) $(this).val('+7')
-});
-
-$("form.login-1").submit(function() {
-	var login = $(this).find('[name="login"]')
-	if(validator.isMobilePhone(login.val()))
-	{
-		login.removeClass('is-invalid')
-		login.removeClass('animate')
-		$('.login-phone').html(login.val())
-		$("#target-login-2").collapse('show')
-		$("form.login-2").find('.login-code input:first-child').focus()
-		startLoginNewCodeTimer()
-	}
-	else
-	{
-		login.addClass('is-invalid')
-		animate(login)
-	}
-	return false;
-});
-
-var wrongCounter = 0 // <--Имитация трех неправильных вводов
-$("form.login-2").submit(function() {
-	var loginCode = $(this).find('.login-code')
-	loginCode.addClass('is-invalid')
-	animate(loginCode)
-
-	// START Имитация трех неправильных вводов
-	wrongCounter++
-	if(wrongCounter >= 3)
-	{
-		startLoginSubmitBlock()
-		wrongCounter = 0
-	}
-	//END Имитация трех неправильных вводов
-
-	return false;
-});
-
-var loginNewCodeTimer = 0
-function startLoginNewCodeTimer() {
-	clearInterval(loginNewCodeTimer)
-	$('.login-new-code').addClass('active')
-	let seconds = $('.login-new-code-timer span')
-	loginNewCodeTimer = setInterval(function() {
-		if (seconds.text() > 0) {
-			seconds.text(seconds.text()-1)
-		} else {
-			clearInterval(loginNewCodeTimer)
-			$('.login-new-code').removeClass('active')
-			seconds.text(60)
-		}
-	}, 1000);
-}
-$('.login-new-code-link').click(function(){
-	startLoginNewCodeTimer()
-	return false
-})
-
-var loginSubmitBlock = 0
-function startLoginSubmitBlock() {
-	clearInterval(loginSubmitBlock)
-	$('.login-submit').addClass('is-invalid')
-	let seconds = $('.login-submit .lock span')
-	loginSubmitBlock = setInterval(function() {
-		if (seconds.text() > 0) {
-			seconds.text(seconds.text()-1)
-		} else {
-			clearInterval(loginSubmitBlock)
-			$('.login-submit').removeClass('is-invalid')
-			seconds.text(60)
-		}
-	}, 1000);
-}
-
-$('.login-code input').on('focus', function(){
-	$(this).parent().removeClass('is-invalid')
-	$(this).parent().removeClass('animate')
-	$(this).select()
-})
-
-$('.login-code input').on('keydown', function(e){
-	if(e.key == 'Backspace' || e.key == 'Delete')
-	{
-		if(this.value.length > 0)
-		{
-			this.value = ''
-			return false
-		}
-		else
-			prevCodeField(this)
-	}
-	else if(e.key == 'ArrowLeft') { prevCodeField(this); return false }
-	else if(e.key == 'ArrowRight') { nextCodeField(this); return false }
-	else if(numberSymbol(e)) { this.value = '' }
-
-});
-$('.login-code input').on('keyup', function(e){
-	if (this.value.length == this.dataset.maxlength && numberSymbol(e)) {
-		nextCodeField(this)
-	}
-});
-$('.login-code input').on('input', function(e){
-
-	let code = $(this).val().replace(/[^\d]/g, '')
-	if(code.length < 2) return;
-
-	let codeFields = $(this).parent().find('input')
-	let shift = codeFields.index(this)
-
-	for (let i = 0; i < code.length; i++) {
-
-		if(i + shift == codeFields.length) break
-		codeFields[i + shift].value = code[i]
-		nextCodeField(codeFields[i + shift])
-	}
-
-});
-
-function numberSymbol(e)
-{
-	if(e.key.match(/[\d]/g) !== null) return true
-	return false
-}
-
-function nextCodeField(e) {
-	let $next = $(e).next('input')
-	if ($next.length)
-		$(e).next('input').focus().select()
-}
-
-function prevCodeField(e) {
-	let $prev = $(e).prev('input')
-	if ($prev.length)
-		$(e).prev('input').focus().select()
-}
-
-$('[max]').on('input keyup', function(){
-	if(parseFloat($(this).val()) > parseFloat($(this).attr('max'))) $(this).val($(this).attr('max'))
-})
-$('[min]').on('input keyup', function(){
-	if(parseFloat($(this).val()) < parseFloat($(this).attr('min'))) $(this).val($(this).attr('min'))
-})
-
-$(".bonus-points-range").on('change mousemove click touchmove', function(){
-	inputRangeFill(this)
-})
-$(".bonus-points").on('change input', function(){
-	inputRangeFill(this)
-})
-
-function inputRangeFill(e) {
-	$(e).parents('.diapazon').find('.bonus-points').val($(e).val())
-	let range = $(e).parents('.diapazon').find('.bonus-points-range')
-	range.val($(e).val())
-
-	let width = $(e).val()/$(e).attr('max')
-	if(width > 1) width = 1
-	$(range).next('.range-fill').width('calc((' + width + ' * 100%) + 0.5rem - (' + width + ' * 1rem))')
-}
-inputRangeFill($('.form-range'))
-
-
-$('#modal-counterparty-new [name="counterparty-ogrn"]').on('change input', function(){
-	$('.counterparty-step-1').collapse('show')
-})
-
-$('[data-required]').each(function () {
-	$(this).prop('required', true)
-})
-$('.dynamic-required .collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
-	let e = $(this).parents('.dynamic-required').find('[data-required]')
-	e.prop('required', false)
-	e.filter(":visible").prop('required', true)
-	e.filter(":hidden").val('')
-})
-
-$('.counterparty-step-2').on('show.bs.collapse', function () { // демонстрация включения лоадра
-	let e = $(this);
-	e.addClass('active');
-	setTimeout(function(){ e.removeClass('active') }, 1500);
-})
-
-setTimeout(function(){ // демонстрация лоадра
-	$('.loading').removeClass('active')
-}, 3000);
-
-$('[data-collapse=".address-type-2"]').click(function () {
-	$('.address-type-2').collapse('show')
-	$('[name="delivery-address"]').val(0)
-})
-
-/*if($('#deliverymap').length > 0){
-	$.getScript("/js/delivery.map.js");
-}
-
-if($('#map-address').length > 0){
-	$.getScript("/js/cartaddress.map.js");
-}*/
-
-///END
-});
+/*$('.catalog-items [class*="col-"]').each(function(){
+	$(this).attr('class', $(this).attr('class').replace(/col-/g, 'col_1-'));
+});*/

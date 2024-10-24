@@ -6,7 +6,6 @@
 		<div class="col-auto">
 			<small class="text-muted">Статус заказа:</small>
 			<span class="badge bg-warning ">Ожидает оплаты</span>
-			<span class="badge bg-dark ">Черновик</span>
 		</div>
 		<!-- <div class="col-md-auto text-md-right">
 			<span class="mr-2">Сумма заказа:</span>
@@ -43,14 +42,14 @@
 	</div>
 	<div class="row align-items-end">
 		<div class="col-md-auto ml-auto order-md-2">
-			<button class="btn btn-primary mb-3" data-toggle="modal" data-target="#modal-all-in-cart"><i class="fa fa-redo mr-2"></i>Добавить все товары в корзину</button>
+			<button class="btn btn-primary mb-3"><i class="fa fa-redo mr-2"></i>Добавить все товары в корзину</button>
 		</div>
 		<div class="col-md-auto order-md-1">
 			<h4 class="h4 text-left mb-2">Состав заказа:</h2>
 		</div>
 	</div>
-	<div class="orderdetails-product products">
-		<div class="border-top py-3 product-data" data-id="1" data-ed="1" data-price="49277.50" data-amount="349277.50">
+	<div class="orderdetails-product">
+		<div class="border-top py-3">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg">
 					<div class="text-muted"><span class="mr-2">#1</span> 7736900197RU</div>
@@ -62,22 +61,24 @@
 					<small class="text-muted">Склад:</small>
 					<div class="text-nowrap text-success">234шт.</div>
 				</div>
-				<div class="col-auto ml-auto">
-					<div class="product-counter d-inline-block">
-						<div class="input-group">
-							<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
-							<input class="form-control quantity" type="text" min="0" value="1">
-							<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+				<div class="col-auto">
+					<div class="product-data" data-id="3" data-ed="1">
+						<div class="product-counter d-inline-block">
+							<div class="input-group">
+								<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
+								<input class="form-control quantity" type="text" min="0" value="1">
+								<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-lg-2 col-12 mt-2 mt-md-0">
+				<div class="col-auto col-lg-2 ml-auto ml-lg-0">
 					<div class="text-right text-muted rub text-nowrap">&times; 49 277,50</div>
-					<div class="text-right font-500 rub text-nowrap"><span class="product-amount">349 277,50</span></div>
+					<div class="text-right font-500 rub text-nowrap">349 277,50</div>
 				</div>
 			</div>
 		</div>
-		<div class="border-top py-3 product-data" data-id="2" data-ed="50" data-price="77.50" data-amount="77277.50">
+		<div class="border-top py-3">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg">
 					<div class="text-muted"><span class="mr-2">#2</span> 7736900197RU</div>
@@ -89,22 +90,24 @@
 					<small class="text-muted">Склад:</small>
 					<div class="text-nowrap text-danger">2000шт.</div>
 				</div>
-				<div class="col-auto ml-auto">
-					<div class="product-counter d-inline-block">
-						<div class="input-group">
-							<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
-							<input class="form-control quantity" type="text" min="0" value="2500">
-							<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+				<div class="col-auto">
+					<div class="product-data" data-id="3" data-ed="1">
+						<div class="product-counter d-inline-block">
+							<div class="input-group">
+								<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
+								<input class="form-control quantity" type="text" min="0" value="2500">
+								<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-lg-2 col-12 mt-2 mt-md-0">
+				<div class="col-auto col-lg-2 ml-auto ml-lg-0">
 					<div class="text-right text-muted rub text-nowrap">&times; 77,50</div>
-					<div class="text-right font-500 rub text-nowrap"><span class="product-amount">77 277,50</span></div>
+					<div class="text-right font-500 rub text-nowrap">77 277,50</div>
 				</div>
 			</div>
 		</div>
-		<div class="border-top py-3 product-data" data-id="3" data-ed="1" data-price="9997.50" data-amount="999999999.50">
+		<div class="border-top py-3">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg">
 					<div class="text-muted"><span class="mr-2">#3</span> 7736900197RU7736900197RU77369</div>
@@ -116,22 +119,24 @@
 					<small class="text-muted">Склад:</small>
 					<div class="text-nowrap text-success">12шт.</div>
 				</div>
-				<div class="col-auto ml-auto">
-					<div class="product-counter d-inline-block">
-						<div class="input-group">
-							<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
-							<input class="form-control quantity" type="text" min="0" value="1">
-							<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+				<div class="col-auto">
+					<div class="product-data" data-id="3" data-ed="1">
+						<div class="product-counter d-inline-block">
+							<div class="input-group">
+								<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
+								<input class="form-control quantity" type="text" min="0" value="1">
+								<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-lg-2 col-12 mt-2 mt-md-0">
+				<div class="col-auto col-lg-2 ml-auto ml-lg-0">
 					<div class="text-right text-muted rub text-nowrap">&times; 9 997,50</div>
-					<div class="text-right font-500 rub text-nowrap"><span class="product-amount">999 999 999,50</span></div>
+					<div class="text-right font-500 rub text-nowrap">999 999 999,50</div>
 				</div>
 			</div>
 		</div>
-		<div class="border-top py-3 product-data" data-id="4" data-ed="1" data-price="7.50" data-amount="7.50">
+		<div class="border-top py-3">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg">
 					<div class="text-muted"><span class="mr-2">#4</span> 7736900197RU</div>
@@ -143,22 +148,24 @@
 					<small class="text-muted">Склад:</small>
 					<div class="text-nowrap text-danger">0шт.</div>
 				</div>
-				<div class="col-auto ml-auto">
-					<div class="product-counter d-inline-block">
-						<div class="input-group">
-							<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
-							<input class="form-control quantity" type="text" min="0" value="50">
-							<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+				<div class="col-auto">
+					<div class="product-data" data-id="3" data-ed="1">
+						<div class="product-counter d-inline-block">
+							<div class="input-group">
+								<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
+								<input class="form-control quantity" type="text" min="0" value="50">
+								<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-lg-2 col-12 mt-2 mt-md-0">
+				<div class="col-auto col-lg-2 ml-auto ml-lg-0">
 					<div class="text-right text-muted rub text-nowrap">&times; 7,50</div>
-					<div class="text-right font-500 rub text-nowrap"><span class="product-amount">7,50</span></div>
+					<div class="text-right font-500 rub text-nowrap">7,50</div>
 				</div>
 			</div>
 		</div>
-		<div class="product-data border-top py-3" data-id="5" data-ed="1" data-price="49277.50" data-amount="349277.50">
+		<div class="border-top py-3">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg">
 					<div class="text-muted"><span class="mr-2">#5</span> 7736900197RU</div>
@@ -170,58 +177,50 @@
 					<small class="text-muted">Склад:</small>
 					<div class="text-nowrap text-success">234шт.</div>
 				</div>
-				<div class="col-auto ml-auto">
-					<div class="product-counter d-inline-block">
-						<div class="input-group">
-							<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
-							<input class="form-control quantity" type="text" min="0" value="1">
-							<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+				<div class="col-auto">
+					<div class="product-data" data-id="3" data-ed="1">
+						<div class="product-counter d-inline-block">
+							<div class="input-group">
+								<button class="btn btn-outline-primary count-down" type="button"><i class="fa fa-minus"></i></button>
+								<input class="form-control quantity" type="text" min="0" value="1">
+								<button class="btn btn-outline-primary count-up" type="button"><i class="fa fa-plus"></i></button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-lg-2 col-12 mt-2 mt-md-0">
+				<div class="col-auto col-lg-2 ml-auto ml-lg-0">
 					<div class="text-right text-muted rub text-nowrap">&times; 49 277,50</div>
-					<div class="text-right font-500 rub text-nowrap"><span class="product-amount">349 277,50</span></div>
+					<div class="text-right font-500 rub text-nowrap">349 277,50</div>
 				</div>
 			</div>
 		</div>
 		<div class="border-top py-3 text-right font-500">
 			<div class="row">
 				<div class="col-auto ml-auto">Итого:</div>
-				<div class="col-auto text-nowrap rub"><span data-total-amount="123456789">123 456 789</span></div>
+				<div class="col-auto text-nowrap rub">123 456 789</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="row g-2 row-cols-1 row-cols-md-auto justify-content-end mt-3">
+	<div class="row g-2 row-cols-1 row-cols-md-auto">
 		<div class="col">
-			<button class="w-100 btn btn-outline-primary px-5">Счета к заказу</button>
+			<button class="w-100 btn btn-outline-primary"><i class="fa fa-print mr-2"></i>Распечатать</button>
 		</div>
 		<div class="col">
-			<button class="w-100 btn btn-outline-primary px-5">Загрузить из Excel</button>
+			<button class="w-100 btn btn-outline-primary">Сохранить как КП</button>
 		</div>
 		<div class="col">
-			<button class="w-100 btn btn-success px-5">Купить</button>
+			<button class="w-100 btn btn-outline-primary">Скачать в Excel</button>
+		</div>
+		<div class="col">
+			<button class="w-100 btn btn-outline-primary">Загрузить из Excel</button>
+		</div>
+		<div class="col">
+			<button class="w-100 btn btn-outline-primary">Счет для клиента</button>
+		</div>
+		<div class="col">
+			<button class="w-100 btn btn-primary">Оформить</button>
 		</div>
 	</div>
 	
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="modal-all-in-cart" data-keyboard="false" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-body">
-				<h5 class="modal-title text-center" id="modal-msg-title">Добавить все товары в корзину?</h5>
-				<div class="text-center text-muted mt-3">
-					Внимание! Цены могут отличаться от указанных
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Отмена</button>
-				<button type="button" class="btn btn-primary px-4" data-dismiss="modal">Да</button>
-			</div>
-		</div>
-	</div>
 </div>

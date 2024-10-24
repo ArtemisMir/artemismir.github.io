@@ -21,7 +21,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favblue16.png">
 
 	<!-- <meta property="og:image" content="images/dest/preview.jpg"> -->
-	<link rel="stylesheet" href="css/main.min.css?12">
+	<link rel="stylesheet" href="css/app.min.css?8">
 
 </head>
 
@@ -63,30 +63,6 @@
 			
 			<nav class="cd-nav">
 				<ul id="cd-nav-main" class="cd-nav-main">
-
-					<li class="has-children">
-						<a href="#" class="cd-nav-link"><i class="fa fa-user mr-2"></i>Мой раздел</a>
-						<ul class="cd-nav-menu lk" id="menu-lk">
-							<li class="go-back"><a href="#"><i class="fa fa-chevron-left"></i>Назад</a></li>
-							<li><a href="lk-montazh.html">Личный кабинет</a></li><!--всем - на главкую ЛК - только под логином-->
-							<li><a href="login.html">Вход/Регистрация</a></li><!--всем - на страницу входа/регистрации - только без логина-->
-							<li><a href="montazh-page.html">Страница монтажника</a></li>
-							<li><a href="montazh-page-public.html">Страница монтажника (публичная)</a></li>
-							<li><a href="montazh-counterparties.html">Контрагенты</a></li>
-							<li><a href="montazh-orders.html">Ищут монтажника</a></li>
-							<li><a href="montazh-users.html">Пользователи</a></li>
-							<li><a href="portfolio.html">Портфолио</a></li>
-							<li><a href="user-addresses.html">Адреса заказов</a></li>
-							<li><a href="orderlist.html">История заказов</a></li>
-							<li><a href="order-import.html">Загрузка заказа</a></li>
-							<li><a href="price-lists.html">Скачать прайс-лист</a></li>
-							<li><a href="notifications.html">Центр уведомлений</a></li>
-							<li><a href="referal.html">Реферальная программа</a></li>
-							<li><a href="export.html">Выгрузка данных</a></li>
-							<li><a href="calculations.html">Взаиморасчеты</a></li>
-						</ul>
-					</li>
-
 					<li class="has-children">
 						<a href="#" class="cd-nav-link">Каталог</a>
 
@@ -344,8 +320,24 @@
 							<li><a class="brands_img_bastion" href="#">Бастион</a></li>
 						</ul>
 					</li>
+					<li class="has-children">
+						<a href="#" class="cd-nav-link">Мой раздел</a>
+						<ul class="cd-nav-menu lk" id="menu-lk">
+							<li class="go-back"><a href="#"><i class="fa fa-chevron-left"></i>Назад</a></li>
+							<li><a href="#">Личный кабинет</a></li><!--всем - на главкую ЛК - только под логином-->
+							<li><a href="#">Вход/Регистрация</a></li><!--всем - на страницу входа/регистрации - только без логина-->
+							<li><a href="#">Ценовые соглашения</a></li><!--только юр лицам-->
+							<li><a href="#">Плательщики</a></li><!--только юр лицам-->
+							<li><a href="#">Заказы</a></li><!--только юр лицам-->
+							<li><a href="#">Счета</a></li><!--только юр лицам-->
+							<li><a href="#">Акты</a></li><!--только юр лицам-->
+							<li><a href="#">Взаиморасчеты</a></li><!--только юр лицам-->
+							<li><a href="#">Избранные товары</a></li><!--всем - только под логином-->
+						</ul>
+					</li>
 
-					<li><a class="cd-nav-link" href="montazhnik-list.html">Монтажники</a></li>
+					<li><a class="cd-nav-link" href="#">Монтажники</a></li>
+					<li><a class="cd-nav-link" href="#">Загрузить смету</a></li>
 
 					<li class="has-children">
 						<a href="#" class="cd-nav-link">Покупателям</a>
@@ -358,7 +350,7 @@
 					</li>
 
 					<li><a class="cd-nav-link" href="#">Контакты</a></li>
-					<li><a class="cd-nav-link" href="#"><span class="text-dashed" data-toggle="modal" data-target="#user-region-list">регион: Москва</span></a></li>
+					<li><a class="cd-nav-link" href="#"><span class="dashed">регион: Москва</span></a></li>
 				</ul>
 			</nav>
 		</header>
@@ -384,22 +376,22 @@
 									Ещё
 								</button>
 								<div class="dropdown-menu dropdown-menu-right">
+									<a href="#" class="dropdown-item">Сохранить как КП</a>
+									<a href="#" class="dropdown-item">Скачать в Excel</a>
+									<a href="#" class="dropdown-item">Загрузить из Excel</a>
+									<a href="#" class="dropdown-item">Счет для клиента</a>
 									<button class="dropdown-item">Распечатать</button>
-									<a href="#" class="dropdown-item">Скачать все в Excel</a>
-									<a href="#" class="dropdown-item">Догрузить из Excel</a>
-									<a href="#" class="dropdown-item">Сохранить черновик</a>
-									<a href="#" class="dropdown-item">Создать КП</a>
 								</div>
 							</div>
 						</div>
-						<div class="modal-body products">
+						<div class="modal-body">
 							<h5 class="modal-title mb-3">
 								<p>Позиций в списке<span id=cart-counter>7</span></p>
-								<p>Итого:<span class="rub" id="cart-sum" data-total-amount="230618.64">230 618,64</span></p>
+								<p>Итого:<span class="rub" id="cart-sum">230 618,64</span></p>
 								<p>Экономия:<span id="cart-eco">9,1% (<span class="rub">230 618,64</span>)</span></p>
 							</h5>
 							<div class="cart-items">
-								<div class="border-top py-3 product-data" data-id="1" data-ed="1" data-price="49277.50" data-amount="349277.50">
+								<div class="border-top py-3 product-data" data-id="1" data-ed="1">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -439,13 +431,13 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 49 277,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">349 277,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">349 277,50</div>
 												</div>	
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="border-top py-3 product-data" data-id="2" data-ed="50" data-price="88.55" data-amount="1188.50">
+								<div class="border-top py-3 product-data" data-id="2" data-ed="50">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -484,13 +476,13 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 88,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">1188,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">1188,50</div>
 												</div>	
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="border-top py-3 product-data" data-id="1" data-ed="1" data-price="49277.50" data-amount="349277.50">
+								<div class="border-top py-3 product-data" data-id="1" data-ed="1">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -522,13 +514,13 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 49 277,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">349 277,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">349 277,50</div>
 												</div>	
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="border-top py-3 product-data" data-id="2" data-ed="50" data-price="88.55" data-amount="1188.50">
+								<div class="border-top py-3 product-data" data-id="2" data-ed="50">
 									<i class="fa fa-times product-delete py-3 px-2"></i>
 									<div class="row">
 										<div class="col-12 col-sm-auto">
@@ -560,7 +552,7 @@
 												</div>
 												<div class="col">
 													<div class="text-right text-muted rub text-nowrap">&times; 88,50</div>
-													<div class="text-right font-500 rub text-nowrap"><span class="product-amount">1188,50</span></div>
+													<div class="text-right font-500 rub text-nowrap">1188,50</div>
 												</div>	
 											</div>
 										</div>
@@ -646,7 +638,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Закрыть</button>
-							<a href="cart.html" class="btn btn-lg btn-primary order-button">Оформить заказ</a>
+							<button type="button" class="btn btn-lg btn-primary order-button">Оформить заказ</button>
 						</div>
 					</div>
 				</div>
@@ -663,49 +655,25 @@
 
 <div class="container invoice-for-client-page">
 
-	<h1 class="h1 mb-4">Счет и КП</h1>
+	<h1 class="h1 mb-4">Счет для клиента</h1>
 
 	<form class="invoice-for-client">
 		<div class="mb-3">
-			<label class="form-label">Тип документа:</label>
-			<div class="ml-3 d-inline-block">
-				<label class="form-check-label">
-					<input class="form-check-input" type="radio" name="document-type" checked>
-					Счет
-				</label>
-			</div>
-			<div class="ml-3 d-inline-block">
-				<label class="form-check-label">
-					<input class="form-check-input" type="radio" name="document-type">
-					КП
-				</label>
-			</div>
-		</div>
-
-		<div class="mb-3">
-			<label class="form-label">Номер заказа</label>
-			<div class="dropdown dropdown-input">
-				<input type="text" data-type="number" class="invoice-number form-control dropdown-toggle" data-toggle="dropdown" required>
-				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="#">123124</a></li>
-					<li><a class="dropdown-item" href="#">232352</a></li>
-					<li><a class="dropdown-item" href="#">123124</a></li>
-					<li><a class="dropdown-item" href="#">232352</a></li>
-				</ul>
-			</div>
+			<label class="form-label">Номер счета</label>
+			<input type="text" data-type="number" class="form-control">
 		</div>
 		<div class="mb-3">
-			<label class="form-label">Для:</label>
+			<label class="form-label">Тип счета:</label>
 			<div class="ml-3 d-inline-block">
 				<label class="form-check-label">
-					<input class="form-check-input" type="radio" name="invoice-type" data-toggle="collapse-change" data-target="#target-type-1" checked>
-					Меня
+					<input class="form-check-input mr-1" type="radio" name="invoice-type" data-toggle="collapse-change" data-target="#target-type-1" checked>
+					Для меня
 				</label>
 			</div>
 			<div class="ml-3 d-inline-block">
-				<label class="form-check-label">
-					<input class="form-check-input" type="radio" name="invoice-type" data-toggle="collapse-change" data-target="#target-type-2">
-					Клиента
+				<label class="form-check-label" data-toggle="collapse-change" data-target="#target-2">
+					<input class="form-check-input mr-1" type="radio" name="invoice-type" data-toggle="collapse-change" data-target="#target-type-2">
+					Для клиента
 				</label>
 			</div>
 		</div>
@@ -713,26 +681,21 @@
 
 			<div id="target-type-1" class="collapse show" data-parent="#accordion-type">
 				<label class="form-label">Выбрать контрагента</label>
-				<select class="form-select" required>
-					<option value="">ООО "Прораб 24"</option>
-					<option value="1">ООО "Прораб 25"</option>
-					<option value="2">Дюйм</option>
-					<option value="3">Three</option>
-				</select>
+				<input type="text" data-type="number" class="form-control">
 			</div>
 
 			<div id="target-type-2" class="collapse" data-parent="#accordion-type">
-				<button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#modal-counterparty-new">Реквизиты клиента</button>
+				<button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#modal-counterparty-choice">Реквизиты клиента</button>
 			</div>
 
 		</div>
 
 		<div id="accordion-price" class="accordion">
 
-			<label class="form-label">Цены:</label>
+			<label class="form-label">Наценка:</label>
 			<div class="form-check">
 				<label class="form-check-label">
-					<input class="form-check-input" type="radio" name="invoice-price-type" data-toggle="collapse-change" data-target="#target-price-1" checked>
+					<input class="form-check-input" type="radio" name="invoice-price" data-toggle="collapse-change" data-target="#target-price-1" checked>
 					Розничные цены с сайта
 				</label>
 			</div>
@@ -740,216 +703,110 @@
 
 			<div class="form-check">
 				<label class="form-check-label">
-					<input class="form-check-input" type="radio" name="invoice-price-type" data-toggle="collapse-change" data-target="#target-price-1">
-					Мои цены
+					<input class="form-check-input" type="radio" name="invoice-price" data-toggle="collapse-change" data-target="#target-price-2">
+					Розница минус %
 				</label>
+			</div>
+			<div id="target-price-2" class="collapse pl-4" data-parent="#accordion-price">
+				<input type="text" data-type="number" class="form-control mb-2" placeholder="-%">
 			</div>
 
 			<div class="form-check">
 				<label class="form-check-label">
-					<input class="form-check-input mb-3" type="radio" name="invoice-price-type" data-toggle="collapse-change" data-target="#target-price-2">
-					Измененные цены
+					<input class="form-check-input" type="radio" name="invoice-price" data-toggle="collapse-change" data-target="#target-price-3">
+					Розница плюс %
 				</label>
 			</div>
-			<div id="target-price-2" class="collapse" data-parent="#accordion-price">
-				<select class="form-select" name="invoice-price-base">
-					<option value="0" data-target="#target-period-all" selected>Розничная цена</option>
-					<option value="1" data-target="#target-period-week">Моя цена</option>
-				</select>
-				<div class="row flex-nowrap g-1 mt-2">
-					<div class="col-auto">
-						<select class="form-select" name="invoice-price-plus-minus">
-							<option value="0" selected>Плюс</option>
-							<option value="1">Минус</option>
-						</select>
-					</div>
-					<div class="col">
-						<input type="text" data-type="number" class="form-control mb-2" name="invoice-price-delta">
-					</div>
-					<div class="col-auto">
-						<select class="form-select" name="invoice-price-cur">
-							<option value="0" selected>Рубль</option>
-							<option value="1">Процент</option>
-						</select>
-					</div>
-				</div>
+			<div id="target-price-3" class="collapse pl-4" data-parent="#accordion-price">
+				<input type="text" data-type="number" class="form-control mb-2" placeholder="+%">
 			</div>
 
 		</div>
-		<button class="btn btn-lg btn-primary mt-4 w-100" type="submit">Скачать</button>
+		<button class="btn btn-lg btn-primary mt-4" type="submit">Скачать</button>
 	</form>
 
-	<div class="modal fade" id="modal-counterparty-new" tabindex="-1" role="dialog" aria-hidden="true">
+	<form class="modal fade" id="modal-counterparty-choice" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Добавить контрагента</h5>
-					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+					<h5 class="modal-title">Выбрать контрагента</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						
+					</button>
 				</div>
 				<div class="modal-body">
-
-					<div id="accordion-steps" class="accordion">
-						<div class="counterparty-step-1 collapse show" data-parent="#accordion-steps">
-							<!-- Для юр. лица шаг 1 -->
-							<div class="btn-group mb-3 counterparty-type w-100">
-								<input type="radio" value="1" class="btn-check" name="counterparty-type" id="counterparty-type-1" checked="" data-toggle="collapse-change" data-target=".counterparty-type-1">
-								<label class="btn btn-outline-primary" for="counterparty-type-1">Организация</label>
-
-								<input type="radio" value="2" class="btn-check" name="counterparty-type" id="counterparty-type-2" data-toggle="collapse-change" data-target=".counterparty-type-2">
-								<label class="btn btn-outline-primary" for="counterparty-type-2">Физ. лицо</label>
-							</div>
-
-							<div id="accordion-details" class="accordion">
-
-								<form action="counterparty-search.php" id="counterparty-search" class="counterparty-type-1 collapse show" data-parent="#accordion-details">
-									<!-- Для юр. лица -->
-									<div class="mb-3">
-										<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
-										<input type="tel" data-type="number" class="form-control" name="counterparty-ogrn" required minlength="13" maxlength="13">
-									</div>
-									<div class="text-center text-muted">
-										Реквизиты будут заполнены автоматически
-									</div>
-								</form>
-
-								<form id="counterparty-form-type-2" action="counterparty-new.php?type=2" class="counterparty-new counterparty-type-2 collapse" data-parent="#accordion-details">
-									<!-- Для физ. лица -->
-									<div class="mb-3">
-										<label>Фамилия <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" name="counterparty-fiz-name" required>
-									</div>
-									<div class="mb-3">
-										<label>Имя <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" name="counterparty-fiz-surname" required>
-									</div>
-									<div class="mb-3">
-										<label>Отчество <span class="text-danger">*</span></label>
-										<input type="text" class="form-control" name="counterparty-fiz-patronymic" required>
-									</div>
-									<div class="mb-3">
-										<label>Телефон <span class="text-danger">*</span></label>
-										<input type="tel" data-type="number" class="form-control" name="counterparty-fiz-phone" required>
-									</div>
-									<div class="mb-3">
-										<label>Email <span class="text-danger">*</span></label>
-										<input type="email" class="form-control" name="counterparty-fiz-email" required>
-									</div>
-									<div class="mb-3">
-										<label>Почтовый индекс</label>
-										<input type="number" class="form-control" name="counterparty-fiz-index">
-									</div>
-									<div class="mb-3">
-										<label>Город</label>
-										<input type="text" class="form-control" name="counterparty-fiz-city">
-									</div>
-									<div class="mb-3">
-										<label>Почтовый адрес</label>
-										<textarea type="text" class="form-control" name="counterparty-fiz-mail-address"></textarea>
-									</div>
-									<div class="mb-3">
-										<label>Комментарий</label>
-										<textarea class="form-control" name="counterparty-fiz-comment" min-height="100" rows="3"></textarea>
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<form id="counterparty-form-type-1" action="counterparty-new.php?type=1" class="counterparty-new counterparty-step-2 collapse loading" data-parent="#accordion-steps">
-							<!-- Для юр. лица шаг 2 -->
-							<div class="mb-3">
-								<label>Наименование <span class="text-danger">*</span></label>
-								<input type="text" class="form-control" name="counterparty-name" required>
-							</div>
-							<div class="mb-3">
-								<label>ИНН <span class="text-danger">*</span></label>
-								<input type="tel" data-type="number" class="form-control" name="counterparty-inn" required minlength="10" maxlength="12">
-							</div>
-							<div class="mb-3">
-								<label>КПП</label>
-								<input type="tel" data-type="number" class="form-control" name="counterparty-kpp">
-							</div>
-							<div class="mb-3">
-								<label>ОКПО</label>
-								<input type="tel" data-type="number" class="form-control" name="counterparty-okpo">
-							</div>
-							<div class="mb-3">
-								<label>Юридический адрес <span class="text-danger">*</span></label>
-								<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
-							</div>
-							<div class="mb-3">
-								<label>Фактический адрес</label>
-								<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
-							</div>
-							<div class="mb-3">
-								<label>Почтовый адрес</label>
-								<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
-							</div>
-							<div class="mb-3">
-								<label>Email</label>
-								<input type="email" class="form-control" name="counterparty-email">
-							</div>
-							<div class="mb-3">
-								<label>Телефон</label>
-								<input type="text" class="form-control" name="counterparty-phone">
-							</div>
-							<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
-							<div class="mb-3">
-								<label>БИК <span class="text-danger">*</span></label>
-								<input type="tel" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
-							</div>
-							<div class="mb-3">
-								<label>Название банка <span class="text-danger">*</span></label>
-								<input type="text" class="form-control" name="counterparty-bank-name" required>
-							</div>
-							<div class="mb-3">
-								<label>Кор. счет <span class="text-danger">*</span></label>
-								<input type="tel" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
-							</div>
-							<div class="mb-3">
-								<label>Расчетный счет организации <span class="text-danger">*</span></label>
-								<input type="tel" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
-							</div>
-							<div class="mb-3">
-								<label>Комментарий</label>
-								<textarea class="form-control" name="counterparty-comment" min-height="100" rows="3"></textarea>
-							</div>
-						</form>
+					<div class="mb-3">
+						<label>Форма организации</label>
+						<select class="form-select" id="montazh-users-group">
+							<option value="1" selected>Юр. лицо</option>
+							<option value="2">ИП</option>
+						</select>
 					</div>
-
+					<div class="mb-3">
+						<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
+						<input type="text" data-type="number" class="form-control" name="counterparty-ogrn" required minlength="13" maxlength="13">
+					</div> 
+					<div class="mb-3">
+						<label>Наименование <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-name" required="">
+					</div>
+					<div class="mb-3">
+						<label>ИНН <span class="text-danger">*</span></label>
+						<input type="text" data-type="number" class="form-control" name="counterparty-inn" required="" minlength="10" maxlength="12">
+					</div>
+					<div class="mb-3">
+						<label>КПП</label>
+						<input type="text" data-type="number" class="form-control" name="counterparty-kpp">
+					</div>
+					<div class="mb-3">
+						<label>ОКПО</label>
+						<input type="text" data-type="number" class="form-control" name="counterparty-okpo">
+					</div>
+					<div class="mb-3">
+						<label>Юридический адрес <span class="text-danger">*</span></label>
+						<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Фактический адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Почтовый адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Email</label>
+						<input type="email" class="form-control" name="counterparty-email">
+					</div>
+					<div class="mb-3">
+						<label>Телефон</label>
+						<input type="text" class="form-control" name="counterparty-phone">
+					</div>
+					<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
+					<div class="mb-3">
+						<label>БИК <span class="text-danger">*</span></label>
+						<input type="text" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
+					</div>
+					<div class="mb-3">
+						<label>Название банка <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-bank-name" required>
+					</div>
+					<div class="mb-3">
+						<label>Кор. счет <span class="text-danger">*</span></label>
+						<input type="text" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
+					</div>
+					<div class="mb-3">
+						<label>Расчетный счет организации <span class="text-danger">*</span></label>
+						<input type="text" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
+					</div>
 				</div>
 				<div class="modal-footer">
-
-					<div id="accordion-buttons" class="accordion">
-
-						<div class="counterparty-type-1 collapse collapse-no-animation show" data-parent="#accordion-buttons">
-							<div id="accordion-buttons-steps" class="accordion">
-
-								<div class="counterparty-step-1 collapse collapse-no-animation show" data-parent="#accordion-buttons-steps">
-									<!-- Для юр. лица шаг 1 -->
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-									<button type="submit" form="counterparty-search" class="btn btn-primary">Создать</button>
-								</div>
-
-								<div class="counterparty-step-2 collapse collapse-no-animation" data-parent="#accordion-buttons-steps">
-									<!-- Для юр. лица шаг 2 -->
-									<button type="button" class="btn btn-secondary"  data-toggle="collapse" data-target=".counterparty-step-1">Назад</button>
-									<button type="submit" form="counterparty-form-type-1" class="btn btn-primary">Сохранить</button> 
-								</div>
-
-							</div>
-						</div>
-
-						<div class="counterparty-type-2 collapse collapse-no-animation" data-parent="#accordion-buttons">
-							<!-- Для физ. лица -->
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-							<button type="submit" form="counterparty-form-type-2" class="btn btn-primary">Сохранить</button>
-						</div>
-					</div>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="submit" class="btn btn-primary">Выбрать</button>
 				</div>
 			</div>
 		</div>
-	</div>
-
+	</form>
 
 </div>
 
@@ -975,7 +832,7 @@
 					</div>
 					<div class="col-12 col-sm-5 col-md-6 col-lg-3">
 						<ul class="footer-menu">
-							<li><a href="#" data-toggle="modal" data-target="#modal-check-order">Проверить статус заказа</a></li>
+							<li><a href="#">Проверить статус заказа</a></li>
 							<li><a href="#">Личный кабинет</a></li>
 							<li><a href="#">Найти монтажника</a></li>
 							<li><a href="#">Обучающее видео</a></li>
@@ -1002,7 +859,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="copyright">Дюйм24 - ООО "АКВИЛАНО" - ОГРН 1197746155419 - ИНН 7727411567</div>
+				<div class="copyright">© 2002—2020 Компания Дюйм24 (ООО "Исириус" ОГРН 1175029004006)</div>
 			</div>
 		</footer>
 
@@ -1010,60 +867,7 @@
 		<div class="top" title="Наверх"><i class="fas fa-chevron-up"></i></div>
 	</div>
 
-	<form id="user-region-list" class="modal fade">
-		<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="flex-grow-1">
-						<div class="modal-list-search search-input">
-							<input type="text" class="form-control" placeholder="Поиск по регионам...">
-							<i class="fa fa-search"></i>
-						</div>
-					</div>
-					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="column-list">
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Алтайский край</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Амурская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Архангельская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Астраханская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Белгородская область</label>
-						<label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Брянская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Владимирская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Волгоградская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Вологодская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Воронежская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Еврейская АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Забайкальский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ивановская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Иркутская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Кабардино-Балкарская республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Калининградская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Калужская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Камчатский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Карачаево-Черкесская Республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Кемеровская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Кировская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Костромская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Краснодарский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Красноярский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Курганская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Курская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ленинградская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Липецкая область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Магаданская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Московская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Мурманская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ненецкий АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Нижегородская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Новгородская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Новосибирская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Омская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Оренбургская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Орловская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Пензенская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Пермский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Приморский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Псковская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Адыгея</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Алтай</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Башкортостан</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Бурятия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Дагестан</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Ингушетия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Калмыкия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Карелия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Коми</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Крым</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Марий Эл</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Мордовия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Саха (Якутия)</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Северная Осетия-Алания</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Татарстан</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Тыва</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Республика Хакасия</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ростовская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Рязанская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Самарская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Саратовская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Сахалинская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Свердловская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Смоленская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ставропольский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тамбовская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тверская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Томская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тульская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Тюменская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Удмуртская Республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ульяновская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Хабаровский край</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ханты-Мансийский АО - Югра</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Челябинская область</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Чеченская республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Чувашская Республика</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Чукотский АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ямало-Ненецкий АО</label><label class="form-check"><input class="form-check-input mr-1" type="radio" name="region" value="1">Ярославская область</label>
-
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-					<button type="submit" class="btn btn-primary">Применить</button>
-				</div>
-			</div>
-		</div>
-	</form>
-
-	<form class="modal fade" id="modal-check-order" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<h5 class="modal-title text-center w-100" id="modal-msg-title">Проверить статус заказа</h5>
-					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-						
-					</button>
-				</div>
-				<div class="modal-body py-0" id="modal-msg-body">
-					<input type="number" id="check-order-number" name="check-order-number" class="form-control form-control-lg text-center" placeholder="Введите номер заказа" required>
-					<div id="check-order-result" class="collapse">
-						<p class="h5 text-center mt-3 mb-0 text-success">Заказ в обработке</p>
-					</div>
-				</div>
-				<div class="modal-footer border-0 justify-content-center">
-					<button type="submit" class="btn btn-lg btn-primary px-4">Проверить</button>
-				</div>
-			</div>
-		</div>
-	</form>
-
-	<script src="js/app.min.js?8"></script>
+	<script src="js/app.min.js?5"></script>
 
 </body>
 </html>

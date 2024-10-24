@@ -9,13 +9,13 @@ $line-height-base: 1.65
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px
 $gutter: $grid-gutter-width
-$bdr-rad: 0.5em
+$border-radius: 0.5em
 $accent: #004b8d // Accent Color
 $accent2: #FABC20
 $primary: $accent
 $secondary: $accent2
 $pretty--color-primary: $accent
-$border-radius: $bdr-rad
+
 //$link-color: #fff
 $link-decoration: none
 $link-hover-color: darken($secondary, 5%)
@@ -29,7 +29,7 @@ $input-transition:            border-color .1s ease-in-out, box-shadow .1s ease-
 $custom-forms-transition:     background-color .1s ease-in-out, border-color .1s ease-in-out, box-shadow .1s ease-in-out
 $modal-transition:            transform .1s ease-out
 //$modal-dialog-margin:         0
-$modal-content-border-radius: $bdr-rad
+$modal-content-border-radius: $border-radius
 $modal-backdrop-bg:                 #001527
 $modal-backdrop-opacity:            .5
 $alert-margin-bottom:		  0
@@ -40,13 +40,10 @@ $popover-body-padding-y:            .5rem
 $popover-body-padding-x:            .75rem
 $green: #28a745
 $form-select-height: auto
-$min-contrast-ratio: 3.0
-$form-range-thumb-width: 1.4rem
-$form-range-thumb-active-bg: $accent
-$box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.25)
-
-$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
-$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1320px)
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+//$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
+//$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1320px)
 $fa-font-path: "../fonts/fa"
 //$fa-var-laptop-house: \f966
 
@@ -67,9 +64,7 @@ $hamburger-hover-opacity:	1
 @import 'node_modules/@fortawesome/fontawesome-free/scss/brands.scss'
 @import 'node_modules/@fortawesome/fontawesome-free/scss/regular.scss'
 @import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
-@import 'node_modules/slick-carousel/slick/slick.scss'
 @import 'node_modules/magnific-popup/src/css/main.scss'
-@import 'node_modules/flatpickr/dist/flatpickr.min'
 //@import 'node_modules/pretty-checkbox/src/pretty-checkbox.scss'
 ///@import 'node_modules/magnific-popup/mfp-zoom-in/mfp-zoom-in'
 @import 'node_modules/fotorama/fotorama'
@@ -105,6 +100,13 @@ $hamburger-hover-opacity:	1
 	background-color: $accent
 	color: #fff
 
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
 body
 	//font-family: $roboto
 	font-size: $fontsize
@@ -113,11 +115,3 @@ body
 	line-height: 1.65
 	overflow-x: hidden
 	color: $textcolor
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button
-	-webkit-appearance: none
-	margin: 0
-
-input[type=number]
-	-moz-appearance: textfield
