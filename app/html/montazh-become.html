@@ -1,0 +1,183 @@
+<div class="container">
+
+	<h1 class="h1 mb-4">Стать монтажником</h1>
+
+	<div>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свою большой, по всей они, ведущими продолжил имеет она рот! Своих, собрал. Своих одна осталось, свое даже которое залетают злых, ты. Единственное которое толку мир составитель о лучше, продолжил залетают рукописи вершину знаках своих по всей свою осталось текста безорфографичный силуэт возвращайся последний, даль, бросил если, пунктуация взгляд.</div>
+
+	<div class="row justify-content-center">
+		<div class="col-12 col-xxl-5 col-lg-6">
+
+			<h4 class="h4 text-center mb-4 mt-5">Заполните информацию о себе</h4>
+
+			<label>Организация:</label>
+			<div class="btn-group mb-3 counterparty-type w-100">
+				<input type="radio" value="2" class="btn-check" name="counterparty-type" id="counterparty-type-2" data-toggle="collapse-change" data-target=".counterparty-type-2" checked="">
+				<label class="btn btn-outline-primary" for="counterparty-type-2">Нет</label>
+
+				<input type="radio" value="0" class="btn-check" name="counterparty-type" id="counterparty-type-0" data-toggle="collapse-change" data-target=".counterparty-type-1">
+				<label class="btn btn-outline-primary" for="counterparty-type-0">Юр.лицо</label>
+
+				<input type="radio" value="1" class="btn-check" name="counterparty-type" id="counterparty-type-1" data-toggle="collapse-change" data-target=".counterparty-type-1">
+				<label class="btn btn-outline-primary" for="counterparty-type-1">ИП</label>
+			</div>
+
+			<div id="accordion-details" class="accordion">
+
+				<form action="new.php?type=1" id="counterparty-form-type-1" class="counterparty-new counterparty-type-1 collapse collapse-no-animation" data-parent="#accordion-details">
+					<!-- Для юр. лица -->
+					<div class="mb-3">
+						<label>ФИО <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-fio" required>
+					</div>
+					<div class="mb-3">
+						<label>Сайт</label>
+						<input type="text" class="form-control" name="counterparty-site">
+					</div>
+					<div class="mb-4">
+						<label>Email</label>
+						<input type="email" class="form-control" name="counterparty-email">
+					</div>
+					<div class="mb-3">
+						<button class="btn btn-outline-primary pl-4 pr-4" type="button" data-toggle="modal" data-target="#counterparty-region-list">Регионы<span class="region-quantity badge bg-primary ml-2">2</span></button>
+					</div>
+					<div class="mb-3">
+						<label>О себе</label>
+						<textarea class="form-control" name="counterparty-about" min-height="100" rows="3" placeholder="Cсылки или примеры работ"></textarea>
+					</div>
+					<div class="mb-3">
+						<input type="file" name="counterparty-file" class="form-control-file" multiple>
+					</div>
+					<div class="mb-3">
+						<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
+						<div class="input-group">
+							<input type="tel" data-type="number" class="form-control" name="counterparty-ogrn" required minlength="13" maxlength="13">
+							<button type="button" class="btn btn-primary px-3 counterparty-start-search"><i class="fa fa-arrow-right"></i></button>
+						</div>
+						<div class="text-right small text-muted">
+							Реквизиты будут заполнены автоматически
+						</div>
+					</div>
+
+					<div id="accordion-steps" class="accordion">
+						<div class="counterparty-step-1 collapse show" data-parent="#accordion-steps"><!-- Для юр. лица шаг 1 --></div>
+						<div class="counterparty-step-2 collapse loading" data-parent="#accordion-steps">
+							<!-- Для юр. лица шаг 2 -->
+							<div class="mb-3">
+								<label>Наименование организации <span class="text-danger">*</span></label>
+								<input type="text" class="form-control" name="counterparty-name" required>
+							</div>
+							<div class="mb-3">
+								<label>ИНН <span class="text-danger">*</span></label>
+								<input type="tel" data-type="number" class="form-control" name="counterparty-inn" required minlength="10" maxlength="12">
+							</div>
+							<div class="mb-3">
+								<label>КПП</label>
+								<input type="tel" data-type="number" class="form-control" name="counterparty-kpp">
+							</div>
+							<div class="mb-3">
+								<label>ОКПО</label>
+								<input type="tel" data-type="number" class="form-control" name="counterparty-okpo">
+							</div>
+							<div class="mb-3">
+								<label>Юридический адрес <span class="text-danger">*</span></label>
+								<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
+							</div>
+							<div class="mb-3">
+								<label>Фактический адрес</label>
+								<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
+							</div>
+							<div class="mb-3">
+								<label>Почтовый адрес</label>
+								<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
+							</div>
+							<div class="mb-3">
+								<label>Email</label>
+								<input type="email" class="form-control" name="counterparty-email">
+							</div>
+							<div class="mb-3">
+								<label>Телефон</label>
+								<input type="text" class="form-control" name="counterparty-phone">
+							</div>
+							<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
+							<div class="mb-3">
+								<label>БИК <span class="text-danger">*</span></label>
+								<input type="tel" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
+							</div>
+							<div class="mb-3">
+								<label>Название банка <span class="text-danger">*</span></label>
+								<input type="text" class="form-control" name="counterparty-bank-name" required>
+							</div>
+							<div class="mb-3">
+								<label>Кор. счет <span class="text-danger">*</span></label>
+								<input type="tel" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
+							</div>
+							<div class="mb-3">
+								<label>Расчетный счет организации <span class="text-danger">*</span></label>
+								<input type="tel" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
+							</div>
+							<div class="mb-3">
+								<label>Комментарий</label>
+								<textarea class="form-control" name="counterparty-comment" min-height="100" rows="3"></textarea>
+							</div>
+							<button type="submit" form="counterparty-form-type-1" class="btn btn-lg btn-primary mt-3 w-100">Отправить</button>
+						</div>
+					</div>
+				</form>
+
+				<form id="counterparty-form-type-2" action="new.php?type=2" class="counterparty-new counterparty-type-2 collapse collapse-no-animation show" data-parent="#accordion-details">
+					<!-- Для физ. лица -->
+					<div class="mb-3">
+						<label>ФИО <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-fiz-fio" required>
+					</div>
+					<div class="mb-3">
+						<label>Сайт</label>
+						<input type="text" class="form-control" name="counterparty-fiz-site">
+					</div>
+					<div class="mb-4">
+						<label>Email</label>
+						<input type="email" class="form-control" name="counterparty-fiz-email">
+					</div>
+					<div class="mb-3">
+						<button class="btn btn-outline-primary pl-4 pr-4" type="button" data-toggle="modal" data-target="#counterparty-region-list">Регионы<span class="region-quantity badge bg-primary ml-2">2</span></button>
+					</div>
+					<div class="mb-3">
+						<label>О себе</label>
+						<textarea class="form-control" name="counterparty-fiz-about" min-height="100" rows="3" placeholder="Cсылки или примеры работ"></textarea>
+					</div>
+					<div class="mb-3">
+						<input type="file" name="counterparty-file" class="form-control-file" multiple>
+					</div>
+					<button type="submit" form="counterparty-form-type-2" class="btn btn-lg btn-primary mt-3 w-100">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<form id="counterparty-region-list" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="flex-grow-1">
+					<div class="modal-list-search search-input">
+						<input type="text" class="form-control" placeholder="Поиск по регионам...">
+						<i class="fa fa-search"></i>
+					</div>
+				</div>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="column-list">
+					<label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Алтайский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Амурская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Архангельская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Астраханская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Белгородская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Брянская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Владимирская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Волгоградская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Вологодская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Воронежская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Еврейская АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Забайкальский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ивановская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Иркутская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Кабардино-Балкарская республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Калининградская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Калужская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Камчатский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Карачаево-Черкесская Республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Кемеровская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Кировская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Костромская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Краснодарский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Красноярский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Курганская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Курская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ленинградская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Липецкая область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Магаданская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Московская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Мурманская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ненецкий АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Нижегородская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Новгородская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Новосибирская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Омская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Оренбургская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Орловская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Пензенская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Пермский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Приморский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Псковская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Адыгея</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Алтай</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Башкортостан</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Бурятия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Дагестан</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Ингушетия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Калмыкия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Карелия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Коми</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Крым</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Марий Эл</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Мордовия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Саха (Якутия)</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Северная Осетия-Алания</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Татарстан</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Тыва</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Республика Хакасия</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ростовская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Рязанская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Самарская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Саратовская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Сахалинская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Свердловская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Смоленская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ставропольский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тамбовская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тверская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Томская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тульская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Тюменская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Удмуртская Республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ульяновская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Хабаровский край</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ханты-Мансийский АО - Югра</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Челябинская область</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Чеченская республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Чувашская Республика</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Чукотский АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ямало-Ненецкий АО</label><label class="good-checkbox"><input type="checkbox" name="region"><span class="good-checkbox-box"></span>Ярославская область</label>
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+				<button type="submit" class="btn btn-primary" data-dismiss="modal">Применить</button>
+			</div>
+		</div>
+	</div>
+</form>

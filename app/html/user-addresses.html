@@ -1,0 +1,275 @@
+<div class="container user-address-page">
+
+<h1 class="h1 mb-4">Адреса заказов</h1>
+
+<button class="btn btn-primary mb-3" data-toggle="modal" data-target="#modal-address-new">
+	<i class="fa fa-plus mr-2"></i>Добавить адрес
+</button>
+
+<div class="user-address user-address-wrp">
+
+	<div class="address-item pt-3 border-top" data-id="1">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Адрес</small>
+				<p class="mb-0">141400, Московская область, г. Химки, Вашутинское шоссе, вл. 36</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-danger user-address-delete">Удалить</button>
+			</div>
+			<div class="col-auto mb-3 align-self-center">
+				<button class="btn btn-outline-primary user-address-edit" data-toggle="modal" data-target="#modal-address-edit-1">Редактировать</button>
+			</div>
+		</div>
+		<form class="modal fade address-edit" id="modal-address-edit-1" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Редактировать адрес</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						
+					</button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="id" value="1">
+					<div class="mb-3">
+						<label>Адрес <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="address-main" required="">
+					</div>
+					<div class="row gx-3">
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Подъезд</label>
+							<input type="number" class="form-control" name="address-podiezd">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Этаж</label>
+							<input type="number" class="form-control" name="address-etazh">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Квартира / офис</label>
+							<input type="number" class="form-control" name="address-kv">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Домофон</label>
+							<input type="number" class="form-control" name="address-domofon">
+						</div>
+						<div class="mb-3 col-lg-4">
+							<label>Лифт</label>
+							<select class="form-select" id="address-lift">
+								<option value="1" selected>Отсутствует</option>
+								<option value="2">Пассажирский</option>
+								<option value="3">Грузовой</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label>Комментарий</label>
+						<textarea class="form-control" name="address-comment" min-height="100" rows="3"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="submit" class="btn btn-primary">Сохранить</button>
+				</div>
+			</div>
+		</div>
+		</form>
+	<div class="address-item pt-3 border-top" data-id="2">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Адрес</small>
+				<p class="mb-0">141400, Московская область, г. Химки, Вашутинское шоссе, вл. 36</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-danger user-address-delete">Удалить</button>
+			</div>
+			<div class="col-auto mb-3 align-self-center">
+				<button class="btn btn-outline-primary user-address-edit" data-toggle="modal" data-target="#modal-address-edit-2">Редактировать</button>
+			</div>
+		</div>
+		<form class="modal fade address-edit" id="modal-address-edit-2" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Редактировать адрес</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						
+					</button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="id" value="1"> 
+					<div class="mb-3">
+						<label>Адрес <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="address-main" required="">
+					</div>
+					<div class="row gx-3">
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Подъезд</label>
+							<input type="number" class="form-control" name="address-podiezd">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Этаж</label>
+							<input type="number" class="form-control" name="address-etazh">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Квартира / офис</label>
+							<input type="number" class="form-control" name="address-kv">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Домофон</label>
+							<input type="number" class="form-control" name="address-domofon">
+						</div>
+						<div class="mb-3 col-lg-4">
+							<label>Лифт</label>
+							<select class="form-select" id="address-lift">
+								<option value="1" selected>Отсутствует</option>
+								<option value="2">Пассажирский</option>
+								<option value="3">Грузовой</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label>Комментарий</label>
+						<textarea class="form-control" name="address-comment" min-height="100" rows="3"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="submit" class="btn btn-primary">Сохранить</button>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+	<div class="address-item pt-3 border-top" data-id="3">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Адрес</small>
+				<p class="mb-0">141400, Московская область, г. Химки, Вашутинское шоссе, вл. 36</p>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">Комментарий</small>
+				<p class="mb-0">Постоянный. Далеко-далеко за словесными горами в стране гласных.</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-danger user-address-delete">Удалить</button>
+			</div>
+			<div class="col-auto mb-3 align-self-center">
+				<button class="btn btn-outline-primary user-address-edit" data-toggle="modal" data-target="#modal-address-edit-3">Редактировать</button>
+			</div>
+		</div>
+		<form class="modal fade address-edit" id="modal-address-edit-3" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Редактировать адрес</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						
+					</button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="id" value="1"> 
+					<div class="mb-3">
+						<label>Адрес <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="address-main" required="">
+					</div>
+					<div class="row gx-3">
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Подъезд</label>
+							<input type="number" class="form-control" name="address-podiezd">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Этаж</label>
+							<input type="number" class="form-control" name="address-etazh">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Квартира / офис</label>
+							<input type="number" class="form-control" name="address-kv">
+						</div>
+						<div class="mb-3 col-6 col-lg-4">
+							<label>Домофон</label>
+							<input type="number" class="form-control" name="address-domofon">
+						</div>
+						<div class="mb-3 col-lg-4">
+							<label>Лифт</label>
+							<select class="form-select" id="address-lift">
+								<option value="1" selected>Отсутствует</option>
+								<option value="2">Пассажирский</option>
+								<option value="3">Грузовой</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label>Комментарий</label>
+						<textarea class="form-control" name="address-comment" min-height="100" rows="3"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="submit" class="btn btn-primary">Сохранить</button>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+	</div>
+</div>
+
+<form class="modal fade address-new" id="modal-address-new" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Добавить адрес</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="id" value="1"> 
+				<div class="mb-3">
+					<label>Адрес <span class="text-danger">*</span></label>
+					<input type="text" class="form-control" name="address-main" required="">
+				</div>
+				<div class="row gx-3">
+					<div class="mb-3 col-6 col-lg-4">
+						<label>Подъезд</label>
+						<input type="number" class="form-control" name="address-podiezd">
+					</div>
+					<div class="mb-3 col-6 col-lg-4">
+						<label>Этаж</label>
+						<input type="number" class="form-control" name="address-etazh">
+					</div>
+					<div class="mb-3 col-6 col-lg-4">
+						<label>Квартира / офис</label>
+						<input type="number" class="form-control" name="address-kv">
+					</div>
+					<div class="mb-3 col-6 col-lg-4">
+						<label>Домофон</label>
+						<input type="number" class="form-control" name="address-domofon">
+					</div>
+					<div class="mb-3 col-lg-4">
+						<label>Лифт</label>
+						<select class="form-select" id="address-lift">
+							<option value="1" selected>Отсутствует</option>
+							<option value="2">Пассажирский</option>
+							<option value="3">Грузовой</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<label>Комментарий</label>
+					<textarea class="form-control" name="address-comment" min-height="100" rows="3"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+				<button type="submit" class="btn btn-primary">Добавить</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+</div>
+<!-- END Динамическая часть -->

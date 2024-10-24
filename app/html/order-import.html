@@ -1,0 +1,43 @@
+<div class="container order-import-page">
+
+	<h1 class="h1 mb-4">Загрузка заказа</h1>
+
+	<p>
+		Эта функция поможет Вам быстро сформировать корзину с заказом. Создайте список требуемых товаров в Excel в формате "Артикул Количество", по <a class="link" href="#">этому образцу</a>, сохраните файл и загрузите его сюда.
+	</p>	
+	<p class="text-muted">
+		Поддерживаемые форматы: .xlsx .xls .csv<br />Размер не более 1мб
+	</p>
+
+	<label class="btn btn-primary" data-toggle="modal" data-target="#modal-order-import">
+		<i class="fa fa-file-upload mr-2"></i>Загрузить
+		<input class="d-none" type="file" multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+	</label>
+	<a class="link ml-3" href="#">Скачать образец</a>
+
+	<div class="modal fade modal-order-import" id="modal-order-import" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Результат загрузки заказа</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="text-success">Артикул 15001342 - 23 шт. добавлен в корзину заказов.</p>
+					<p class="text-success">Артикул RDEO342434 - 150 м. добавлен в корзину заказов.</p>
+					<p class="text-danger">Артикул 4539859 не найден</p>
+					<p class="text-muted">Артикул 4539859 нет в наличии</p>
+					<p class="text-success">Артикул 15001342 - 23 шт. добавлен в корзину заказов.</p>
+					<p class="text-success">Артикул RDEO342434 - 150 м. добавлен в корзину заказов.</p>
+					<p class="text-danger">Артикул 4539859 не найден</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Перейти в корзину</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,139 @@
+<div class="container">
+
+	<h1 class="h1 mb-5">Взаиморасчеты</h1>
+
+	<form class="calculations-form">
+		<div class="row align-items-end">
+			<div class="col-12 col-lg-auto">
+				<div class="mb-3">
+					<label class="text-muted">Период</label>
+					<select class="form-select" name="period" data-toggle="collapse-change">
+						<option value="all" data-target="#target-period-all" selected>За все время</option>
+						<option value="week" data-target="#target-period-week">Неделя</option>
+						<option value="month" data-target="#target-period-month">Месяц</option>
+						<option value="quarter" data-target="#target-period-quarter">Квартал</option>
+						<option value="year" data-target="#target-period-year">Год</option>
+						<option value="free" data-target="#target-period-free">Произвольный</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-12 col-lg-auto">
+				<div id="accordion-period" class="accordion">
+					<div id="target-period-all" class="collapse collapse-no-animation" data-parent="#accordion-period"></div>
+					<div id="target-period-week" class="collapse collapse-no-animation mb-3" data-parent="#accordion-period">
+						<input type="number" name="period-week-number" class="form-control" min="1" max="53" placeholder="от 1 до 53">
+					</div>
+					<div id="target-period-month" class="collapse collapse-no-animation mb-3" data-parent="#accordion-period">
+						<select class="form-select" name="period-month">
+							<option value="1">Январь</option>
+							<option value="2">Февраль</option>
+							<option value="3">Март</option>
+							<option value="4">Апрель</option>
+							<option value="5">Май</option>
+							<option value="6">Июнь</option>
+							<option value="7">Июль</option>
+							<option value="8">Август</option>
+							<option value="9">Сентябрь</option>
+							<option value="10">Октябрь</option>
+							<option value="11">Ноябрь</option>
+							<option value="12">Декабрь</option>
+						</select>
+					</div>
+					<div id="target-period-quarter" class="collapse collapse-no-animation mb-3" data-parent="#accordion-period">
+						<input type="number" name="period-quarter-number" class="form-control" min="1" max="4" placeholder="от 1 до 4">
+					</div>
+					<div id="target-period-year" class="collapse collapse-no-animation mb-3" data-parent="#accordion-period">
+						<select class="form-select" name="period-year">
+							<option value="2020" selected="">2020</option>
+							<option value="2019">2019</option>
+							<option value="2018">2018</option>
+							<option value="2017">2017</option>
+							<option value="2016">2016</option>
+							<option value="2015">2015</option>
+						</select>
+					</div>
+					<div id="target-period-free" class="collapse collapse-no-animation mb-3" data-parent="#accordion-period">
+						<div class="row datepick-wrp">
+							<div class="col-6">
+								<input class="form-control datepick mr-2" name="period-free-from" type="text" placeholder="от...">
+							</div>
+							<div class="col-6">
+								<input class="form-control datepick" name="period-free-to" type="text" placeholder="до..." >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w-100"></div>
+			<div class="col-12 col-lg-auto">
+				<div class="mb-3">
+					<label class="text-muted">Мои контрагенты</label>
+					<select class="form-select" name="counterparty">
+						<option value="0" selected>Все</option>
+						<option value="1">ООО Прораб</option>
+						<option value="2">ООО Прораб-24</option>
+						<option value="3">ООО Дюйм</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary btn-loading px-3 mt-1">Показать отчёт<span class="spinner-border spinner-border-sm ml-2"></span></button>
+	</form>
+
+	<br>
+	<div class="table-responsive">
+		<table class="calculations-table">
+			<thead>
+				<tr>
+					<th scope="col" colspan="2"></th>
+					<th scope="col" class="text-center">ООО "Прораб"</th>
+					<th scope="col" class="text-center">Итого</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="btd">
+					<th scope="row" rowspan="2">Начальный остаток</th>
+					<th>Долг магазина</th>
+					<td class="text-right">5 678,23</td>
+					<td class="text-right">-</td>
+				</tr>
+				<tr class="btg">
+					<th>Наш долг</th>
+					<td class="text-right">5 678,23</td>
+					<td class="text-right">-</td>
+				</tr>
+				<tr class="btd">
+					<th rowspan="2">Операции за период</th>
+					<th>Оплачено</th>
+					<td class="text-right">5 678,23</td>
+					<td class="text-right">25 678,23</td>
+				</tr>
+				<tr class="btg">
+					<th>Получено</th>
+					<td class="text-right">5 678,23</td>
+					<td class="text-right">25 678,23</td>
+				</tr>
+				<tr class="btd">
+					<th rowspan="2">Конечный остаток</th>
+					<th>Долг магазина</th>
+					<td class="text-right">5 678,23</td>
+					<td class="text-right">25 678,23</td>
+				</tr>
+				<tr class="btg">
+					<th>Наш долг</th>
+					<td class="text-right">5 678,23</td>
+					<td class="text-right">-</td>
+				</tr>
+				<tr class="btd">
+					<th colspan="2" class="text-right">Сальдо долга (конечное)</th>
+					<td class="text-right">5 678,23</td>
+					<td class="text-right">25 678,23</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<button type="button" class="btn btn-outline-primary mt-4">
+		Скачать в Excel<i class="far fa-file-excel ml-2"></i>
+	</button>
+</div>

@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="login-wrp">
+		<div id="accordion-login" class="login accordion">
+			<div id="target-login-1" class="collapse collapse-no-animation show" data-parent="#accordion-login">
+				<form action="" class="login-1">
+					<h1 class="h2">Вход / регистрация</h1>
+					<label for="login" class="form-label">Телефон</label>
+					<input type="tel" data-type="number" class="form-control form-control-lg phone-input vibrate" name="login" id="login" placeholder="+7" maxlength="20" required>
+					<div class="invalid-feedback">Некорректный формат телефона</div>
+				<!-- <input type="phone" class="form-control form-control-lg is-invalid" id="login" placeholder="+7" maxlength="20" required>
+					<div class="invalid-feedback">Некорректный формат телефона</div> -->
+
+					<button class="btn btn-lg w-100 btn-primary mt-4" type="submit">Получить код</button>
+				</form>
+			</div>
+			<div id="target-login-2" class="collapse collapse-no-animation" data-parent="#accordion-login">
+				<form action="" class="login-2">
+					<p class="h2">Введите код</p>
+					<p class="text-center mb-3">Мы отправили код подтверждения на номер <span class="login-phone">+7 968 068-98-88</span> <a href="#" class="login-edit" data-toggle="collapse" data-target="#target-login-1">Изменить</a></p>
+					<div class="login-code vibrate">
+						<input type="tel" data-type="number" class="form-control form-control-lg vibrate" name="code-1" data-maxlength="1" required>
+						<input type="tel" data-type="number" class="form-control form-control-lg vibrate" name="code-2" data-maxlength="1" required>
+						<input type="tel" data-type="number" class="form-control form-control-lg vibrate" name="code-3" data-maxlength="1" required>
+						<input type="tel" data-type="number" class="form-control form-control-lg vibrate" name="code-4" data-maxlength="1" required>
+					</div>
+					<div class="invalid-feedback">Неверный код. Попробуйте еще раз</div>
+					<div class="text-center mt-3 lh-sm login-new-code">
+						<a href="#" class="login-new-code-link">Получить новый код</a>
+						<small class="login-new-code-timer text-muted">
+							Получить новый код можно<br />через <span>20</span> сек.
+						</small>
+					</div>
+					<div>
+						<button class="btn btn-lg w-100 btn-primary mt-4 login-submit" type="submit">
+							<span class="unlock">Вход</span>
+							<span class="lock"><i class="fa fa-lock mr-2"></i><span>20</span> сек.</span>
+						</button>
+						<div class="invalid-feedback">Превышено количество попыток входа</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

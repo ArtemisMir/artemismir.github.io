@@ -1,0 +1,159 @@
+<div class="container montazh-users-page">
+
+<h1 class="h1 mb-4">Пользователи</h1>
+
+<button class="btn btn-primary mb-3" data-toggle="modal" data-target="#modal-montazh-user-new">
+	<i class="fa fa-plus mr-2"></i>Добавить пользователя
+</button>
+
+<div class="montazh-users montazh-users-wrp">
+	<div class="montazh-user-item pt-3 border-top" data-id="1">
+		<div class="row flex-lg-nowrap align-items-center">
+			<div class="col-lg-3 mb-3 text-break">
+				<small class="text-muted">Телефон</small>
+				<p class="mb-0">+79123456789</p>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">ФИО</small>
+				<div class="data-edit">
+					<p class="data-edit-info-wrp mb-0">
+						<span class="data-edit-info">Николаев Николай Николаевич</span>
+						<i class="data-edit-activate fa fa-pencil-alt"></i>
+					</p>
+					<div class="data-edit-input input-group">
+						<input type="text" name="comment" class="data-edit-field form-control" value="Николаев Николай Николаевич">
+						<button class="btn btn-outline-danger data-edit-no" type="button"><i class="fa fa-times"></i></button>
+						<button class="btn btn-outline-success data-edit-yes" type="button"><i class="fa fa-check"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-end">
+				<small class="text-muted">Группа</small>
+				<select class="form-select" id="montazh-users-group">
+					<option value="1" selected>Администратор</option>
+					<option value="2">Сотрудник</option>
+				</select>
+			</div>
+			<div class="col-auto mb-3 align-self-end">
+				<button class="btn btn-outline-danger montazh-users-delete">Удалить</button>
+			</div>
+		</div>
+	</div>
+	<div class="montazh-user-item pt-3 border-top" data-id="2">
+		<div class="row flex-lg-nowrap align-items-center">
+			<div class="col-lg-3 mb-3 text-break">
+				<small class="text-muted">Телефон</small>
+				<p class="mb-0">+79123456789</p>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">ФИО</small>
+				<div class="data-edit">
+					<p class="data-edit-info-wrp mb-0">
+						<span class="data-edit-info">Николаев Николай Николаевич</span>
+						<i class="data-edit-activate fa fa-pencil-alt"></i>
+					</p>
+					<div class="data-edit-input input-group">
+						<input type="text" name="comment" class="data-edit-field form-control" value="Николаев Николай Николаевич">
+						<button class="btn btn-outline-danger data-edit-no" type="button"><i class="fa fa-times"></i></button>
+						<button class="btn btn-outline-success data-edit-yes" type="button"><i class="fa fa-check"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-end">
+				<small class="text-muted">Группа</small>
+				<select class="form-select" id="montazh-users-group">
+					<option value="1" selected>Администратор</option>
+					<option value="2">Сотрудник</option>
+				</select>
+			</div>
+			<div class="col-auto mb-3 align-self-end">
+				<button class="btn btn-outline-danger montazh-users-delete">Удалить</button>
+			</div>
+		</div>
+	</div>
+	<div class="montazh-user-item pt-3 border-top" data-id="3">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg-3 mb-3 text-break">
+				<small class="text-muted">Телефон</small>
+				<p class="mb-0">+79123456789</p>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">ФИО</small>
+				<div class="data-edit">
+					<p class="data-edit-info-wrp">
+						<span class="data-edit-info">Николаев Николай Николаевич</span>
+						<i class="data-edit-activate fa fa-pencil-alt"></i>
+					</p>
+					<div class="data-edit-input input-group">
+						<input type="text" name="comment" class="data-edit-field form-control" value="Николаев Николай Николаевич">
+						<button class="btn btn-outline-danger data-edit-no" type="button"><i class="fa fa-times"></i></button>
+						<button class="btn btn-outline-success data-edit-yes" type="button"><i class="fa fa-check"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-end">
+				<small class="text-muted">Группа</small>
+				<select class="form-select" id="montazh-users-group">
+					<option value="1" selected>Администратор</option>
+					<option value="2">Сотрудник</option>
+				</select>
+			</div>
+			<div class="col-auto mb-3 align-self-end">
+				<button class="btn btn-outline-danger montazh-users-delete">Удалить</button>
+			</div>
+		</div>
+	</div>
+	<button class="btn btn-primary montazh-users-more w-100 mt-5">Показать ещё</button>
+	<nav>
+		<ul class="pagination justify-content-center mt-2">
+			<li class="page-item"><a class="page-link" href="#"><<</a></li>
+			<li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">>></a></li>
+		</ul>
+	</nav>
+</div>
+
+<form class="modal fade" id="modal-montazh-user-new" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Добавить пользователя</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+					
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="mb-3">
+					<label>Телефон</label>
+					<input type="tel" class="form-control" name="montazh-user-new-tel" placeholder="+7" required="">
+					<small class="text-muted">Используется для входа</small>
+				</div>
+				<div class="mb-3">
+					<label for="montazh-user-new-group">Группа</label>
+					<select class="form-select" id="montazh-user-new-group" name="montazh-user-new-group">
+						<option value="1" selected>Администратор</option>
+						<option value="2">Сотрудник</option>
+					</select>
+				</div>
+				<div class="mb-3">
+					<label>ФИО</label>
+					<input type="text" class="form-control" name="montazh-user-new-comment" required="">
+				</div>
+				<label class="good-checkbox mb-3">
+					<input name="counterparty-archive" type="checkbox" checked="checked" value="1">
+					<span class="good-checkbox-box"></span>
+					Оповестить пользователя
+				</label>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+				<button type="submit" class="btn btn-primary" data-dismiss="modal">Готово</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+</div>
+<!-- END Динамическая часть -->

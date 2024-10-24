@@ -1,0 +1,107 @@
+<div class="container invoice-for-client-page">
+
+	<h1 class="h1 mb-4">Новый счет</h1>
+
+	<form class="invoice-for-client">
+		<div class="mb-3">
+			<label class="form-label">Номер заказа</label>
+			<div class="dropdown dropdown-input">
+				<input type="text" data-type="number" class="invoice-number form-control dropdown-toggle" data-toggle="dropdown" required>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">123124</a></li>
+					<li><a class="dropdown-item" href="#">232352</a></li>
+					<li><a class="dropdown-item" href="#">123124</a></li>
+					<li><a class="dropdown-item" href="#">232352</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<label class="form-label">Цены:</label>
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="radio" name="invoice-price-type" data-toggle="collapse-change" data-target="#target-price-1" checked>
+				Розничные цены с сайта
+			</label>
+		</div>
+
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="radio" name="invoice-price-type" data-toggle="collapse-change" data-target="#target-price-1">
+				Мои цены
+			</label>
+		</div>
+
+		<div class="form-check mb-3">
+			<label class="form-check-label">
+				<input class="form-check-input" type="radio" name="invoice-price-type" data-toggle="collapse-change" data-target="#target-price-2">
+				Измененные цены
+			</label>
+		</div>
+		<div id="accordion-price" class="accordion">
+
+			<div id="target-price-1" class="collapse" data-parent="#accordion-price"></div>
+
+			<div id="target-price-2" class="collapse" data-parent="#accordion-price">
+				<select class="form-select" name="invoice-price-base">
+					<option value="0" data-target="#target-period-all" selected>Розничная цена</option>
+					<option value="1" data-target="#target-period-week">Моя цена</option>
+				</select>
+				<div class="row flex-nowrap g-1 mt-2 mb-3">
+					<div class="col-auto">
+						<select class="form-select" name="invoice-price-plus-minus">
+							<option value="0" selected>Плюс</option>
+							<option value="1">Минус</option>
+						</select>
+					</div>
+					<div class="col">
+						<input type="text" data-type="number" class="form-control mb-2" name="invoice-price-delta">
+					</div>
+					<div class="col-auto">
+						<select class="form-select" name="invoice-price-cur">
+							<option value="0" selected>Рубль</option>
+							<option value="1">Процент</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="font-500 mb-2">Сумма заказа:<span class="float-right rub">230 618,64</span></div>
+		<div class="font-500">Сумма счета:<span class="float-right rub">230 618,64</span></div>
+
+		<button class="btn btn-lg btn-primary mt-4 w-100 btn-loading" type="button" data-toggle="modal" data-target="#download-options">Сформировать<span class="spinner-border spinner-border-sm ml-2"></span></button>
+	</form>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" id="download-options">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title download-options-title">Счет #3434</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="btn-group w-100">
+					<input type="radio" class="btn-check" name="download-options-format" id="download-options-format-1" checked="" data-toggle="collapse-change" data-target=".download-options-format-1">
+					<label class="btn btn-outline-primary" for="download-options-format-1"><i class="far fa-file-pdf mx-1"></i>PDF</label>
+
+					<input type="radio" class="btn-check" name="download-options-format" id="download-options-format-2" data-toggle="collapse-change" data-target=".download-options-format-2">
+					<label class="btn btn-outline-primary" for="download-options-format-2"><i class="far fa-file-excel mx-1"></i>Excel</label>
+
+					<input type="radio" class="btn-check" name="download-options-format" id="download-options-format-3" data-toggle="collapse-change" data-target=".download-options-format-3">
+					<label class="btn btn-outline-primary" for="download-options-format-3"><i class="far fa-file-word mx-1"></i>Word</label>
+				</div>
+				<div class="mt-3">
+					<a href="invoice-download.html" class="link">вариант с отдельной страницей</a>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a type="button" class="btn btn-outline-primary px-4 flex-grow-1" href="invoice-all.html">Список всех счетов</a>
+				<button type="button" class="btn btn-primary px-4 flex-grow-1">Скачать</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,168 @@
+<div class="container">
+
+<h1 class="h1 mb-4">Получатели</h1>
+
+<button class="btn btn-primary mb-3" data-toggle="modal" data-target="#modal-recipient-new">
+	<i class="fa fa-plus mr-2"></i>Добавить получателя
+</button>
+
+<div class="recipients">
+
+	<div class="recipient-item pt-3 border-top">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Имя</small>
+				<p class="mb-0">Коля Николай</p>
+			</div>
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Телефон</small>
+				<p class="mb-0">+7 999 999-99-99</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-danger recipient-delete">Удалить</button>
+			</div>
+			<div class="col-auto mb-3 align-self-center">
+				<button class="btn btn-outline-primary recipient-edit" data-toggle="modal" data-target="#modal-recipient-edit-1">Редактировать</button>
+			</div>
+		</div>
+		<form class="modal fade recipient-edit" id="modal-recipient-edit-1" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Редактировать получателя</h5>
+						<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="input-group mb-2">
+							<span class="input-group-text input-group-icon bg-white"><i class="far fa-user"></i></span>
+							<input type="text" name="new-recipient-name" class="form-control" placeholder="Имя">
+						</div>
+						<div class="input-group">
+							<span class="input-group-text input-group-icon bg-white"><i class="fa fa-mobile-alt"></i></span>
+							<input type="tel" data-type="number" name="new-recipient-phone" class="form-control" placeholder="Телефон" required="" minlength="7">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+						<button type="submit" class="btn btn-primary">Сохранить</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="recipient-item pt-3 border-top">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Имя</small>
+				<p class="mb-0">Иванов Иван Иванович</p>
+			</div>
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Телефон</small>
+				<p class="mb-0">+7 999 999-99-99</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-danger recipient-delete">Удалить</button>
+			</div>
+			<div class="col-auto mb-3 align-self-center">
+				<button class="btn btn-outline-primary recipient-edit" data-toggle="modal" data-target="#modal-recipient-edit-2">Редактировать</button>
+			</div>
+		</div>
+		<form class="modal fade recipient-edit" id="modal-recipient-edit-2" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Редактировать получателя</h5>
+						<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="input-group mb-2">
+							<span class="input-group-text input-group-icon bg-white"><i class="far fa-user"></i></span>
+							<input type="text" name="new-recipient-name" class="form-control" placeholder="Имя">
+						</div>
+						<div class="input-group">
+							<span class="input-group-text input-group-icon bg-white"><i class="fa fa-mobile-alt"></i></span>
+							<input type="tel" data-type="number" name="new-recipient-phone" class="form-control" placeholder="Телефон" required="" minlength="7">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+						<button type="submit" class="btn btn-primary">Сохранить</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="recipient-item pt-3 border-top">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Имя</small>
+				<p class="mb-0">Коля Николай</p>
+			</div>
+			<div class="col-lg mb-3 text-break">
+				<small class="text-muted">Телефон</small>
+				<p class="mb-0">+7 999 999-99-99</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-danger recipient-delete">Удалить</button>
+			</div>
+			<div class="col-auto mb-3 align-self-center">
+				<button class="btn btn-outline-primary recipient-edit" data-toggle="modal" data-target="#modal-recipient-edit-3">Редактировать</button>
+			</div>
+		</div>
+		<form class="modal fade recipient-edit" id="modal-recipient-edit-3" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Редактировать получателя</h5>
+						<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="input-group mb-2">
+							<span class="input-group-text input-group-icon bg-white"><i class="far fa-user"></i></span>
+							<input type="text" name="new-recipient-name" class="form-control" placeholder="Имя">
+						</div>
+						<div class="input-group">
+							<span class="input-group-text input-group-icon bg-white"><i class="fa fa-mobile-alt"></i></span>
+							<input type="tel" data-type="number" name="new-recipient-phone" class="form-control" placeholder="Телефон" required="" minlength="7">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+						<button type="submit" class="btn btn-primary">Сохранить</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>
+
+<form class="modal fade address-new" id="modal-recipient-new" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Добавить получателя</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="input-group mb-2">
+					<span class="input-group-text input-group-icon bg-white"><i class="far fa-user"></i></span>
+					<input type="text" name="new-recipient-name" class="form-control" placeholder="Имя">
+				</div>
+				<div class="input-group">
+					<span class="input-group-text input-group-icon bg-white"><i class="fa fa-mobile-alt"></i></span>
+					<input type="tel" data-type="number" name="new-recipient-phone" class="form-control" placeholder="Телефон" required="" minlength="7">
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+				<button type="submit" class="btn btn-primary">Сохранить</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+</div>
+<!-- END Динамическая часть -->

@@ -1,0 +1,188 @@
+<div class="container order-import-page">
+
+	<h1 class="h1 mb-4 text-center">Доставка и Оплата</h1>
+
+	<div class="payment">
+		<h3 class="h3 mb-3">Способы оплаты</h3>
+		<ul class="list-style list-style-disc"> 
+			<li class="mb-3">
+				<strong>Наличный расчёт</strong><br />
+				Вы можете оплатить покупку наличными в магазине или курьеру (при доставке товара).
+			</li>
+			<li class="mb-3">
+				<strong>Банковские карты</strong><br />
+				Безналичная оплата банковской картой в магазине и при доставке. Принимаются карты следующих платёжных систем:
+«VISA», «MasterCard», «МИР». При оплате банковской картой, комиссия НЕ взимается.
+			</li>
+			<li class="mb-3">
+				<strong>Безналичный расчет</strong><br />
+				Доступен для юридических лиц (ООО, ЧП, ИП и т.п.). При оплате безналичным переводом, банком-отправителем может взиматься комиссия.
+			</li>
+			<li class="mb-3">
+				<strong>Онлайн-оплата на сайте</strong><br />
+				К оплате принимаются электронные кошельки и банковские карты. Комиссия не взимается.
+			</li>
+		</ul>
+
+	</div>
+	<div class="delivery">
+		<h3 class="h3 mb-3 mt-5">Доставка</h3>
+		<h5 class="h5 mb-3">Стоимость</h5>
+		<ul class="list-style list-style-disc">
+			<li class="mb-3">
+				Доставка заказов по г. Москва + Химки - <strong class="rub">390</strong>
+			</li>
+			<li class="mb-3">
+				<p class="mb-2">Доставка по Московской области:</p>
+				<ul class="list-style list-style-circle">
+					<li class="mb-2">до 40 км от нулевого километра - <strong class="rub">490</strong></li>
+					<li class="mb-2">до 70 км от нулевого километра - <strong class="rub">990</strong></li>
+					<li class="mb-2">до 110 км от нулевого километра - <strong class="rub">1490</strong></li>
+				</ul>
+			</li>
+		</ul>
+		<button class="btn btn-primary mb-3" data-toggle="collapse" data-target=".delivery-calc-2">Калькулятор доставки</button>
+		<div id="accordion-delivery-calc" class="accordion">
+
+			<div class="delivery-calc-1 collapse show" data-parent="#accordion-delivery-calc"></div>
+
+			<div class="delivery-calc-2 collapse" data-parent="#accordion-delivery-calc">
+				<p class="display-4 text-primary mb-4 mt-3">Калькулятор доставки</p>
+
+				<div class="btn-group mb-4 delivery-choice">
+					<input type="radio" class="btn-check" name="delivery-type" id="delivery-type-1" checked="" data-toggle="collapse-change" data-target=".delivery-type-1">
+					<label class="btn btn-outline-primary" for="delivery-type-1">Адрес доставки</label>
+
+					<input type="radio" class="btn-check" name="delivery-type" id="delivery-type-2" data-toggle="collapse-change" data-target=".delivery-type-2">
+					<label class="btn btn-outline-primary" for="delivery-type-2">Пункты выдачи</label>
+				</div>
+
+				<div id="accordion-delivery" class="accordion">
+					<div class="delivery-type-1 collapse collapse-no-animation show" data-parent="#accordion-delivery">
+						<div class="row">
+							<div class="col-12">
+								<div class="row">
+									<div class="col-12 col-xxl-6 col-lg-9">
+										<div class="mb-3">
+											<label>Адрес</label>
+											<input type="text" class="form-control" name="address-main" placeholder="Введите улицу, дом, корпус и выберите предложенный вариант" list="address-list">
+											<datalist id="address-list">
+												<option value="Москва Химки">
+												<option value="Питер">
+												<option value="Казань">
+											</datalist>
+										</div>
+									</div>
+								</div>
+								<div class="display-5 text-muted text-center mt-4 mb-3">Для расчёта суммы доставки выберите адрес</div>
+								<!-- <div class="h4 text-primary text-center mb-3">Стоимость доставки: <span class="rub">490</span></div> -->
+							</div>
+							<div class="col-12">
+								<div id="map-address" class="map-address"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="delivery-type-2 collapse collapse-no-animation" data-parent="#accordion-delivery">
+						<p>Выберите адрес самовывоза<br />
+						На пункте выдачи товар будет доступен не более 10 дней с момента оформления заказа. Мы оставляем за собой право отозвать заказ по истечении указанного срока.</p>
+						<div id="map-samovivoz" class="map-samovivoz"></div>
+					</div>
+
+					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat" type="text/javascript"></script>
+					<script src="js/cartaddress.map.js" type="text/javascript"></script>
+				</div>
+			</div>
+		</div>
+		<div id="deliverymap" class="mb-4 mt-3" style="height:400px;width:100%;"></div>
+		<script src="js/delivery.map.js" type="text/javascript"></script>
+
+
+		<h5 class="h5 mb-3">Сроки</h5>
+		<ul class="list-style list-style-disc">
+			<li class="mb-3">Для доставки в выходной день, заказ необходимо сделать в рабочий день или до 14.00 в пятницу.</li>
+			<li class="mb-3">При подтверждении заказа до 15:00 доставка товара осуществляется на следующий рабочий день.</li>
+			<li class="mb-3">При подтверждении заказа после 15:00 доставка товара осуществляется через один рабочий день.</li>
+		</ul>
+
+		<h5 class="h5 mb-3">Прочие условия</h5>
+		<ul class="list-style list-style-disc">
+			<li class="mb-3">Доставка заказов свыше 20 кг осуществляется "до подъезда".  Разгрузка товара на месте доставки организуется заказчиком (покупателем).</li>
+			<li class="mb-3"><strong>В случае отказа от товара</strong> (при его соответствии заказу и отсутствии дефектов), стоимость доставки оплачивается заказчиком в полном объеме.</li>
+		</ul>
+
+		<h5 class="h5 mb-3">Простой автотранспорта</h5>
+		<p class="mb-3">В стоимость доставки включено определенное количество времени для разгрузки машины. При превышении данного времени к стоимости доставки будет добавлена оплата за простой.</p>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Вес</th>
+					<th>Время под разгрузку (бесплатно)</th>
+					<th>Оплата за простой</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>до 1500 кг</td>
+					<td>30 мин</td>
+					<td class="rub">500</td>
+				</tr>
+				<tr>
+					<td>до 3000 кг</td>
+					<td>40 мин</td>
+					<td class="rub">600</td>
+				</tr>
+				<tr>
+					<td>до 5000 кг</td>
+					<td>60 мин</td>
+					<td class="rub">700</td>
+				</tr>
+				<tr>
+					<td>до 10000 кг</td>
+					<td>120 мин</td>
+					<td class="rub">800</td>
+				</tr>
+				<tr>
+					<td>до 20000 кг</td>
+					<td>180 мин</td>
+					<td class="rub">1000</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="pickup">
+		<h3 class="h3 mb-3 mt-5">Самовывоз</h3>
+
+		<p class="text-success font-500">28 марта - 30 апреля - САМОВЫВОЗА C НАШИХ СКЛАДОВ НЕТ, ТОЛЬКО ПУНКТЫ ВЫДАЧИ IML. Забрать товар можно платно с пункта самовывоза.</p>
+
+		<h5 class="h5 mb-3">Стоимость</h5>
+		<ul class="list-style list-style-disc">
+			<li class="mb-3">С пункта самовывоза - платно, расчет стоимости можно увидеть в корзине при оформлении заказа или в <a class="link" href="#">калькуляторе</a> доставки</li>
+		</ul>
+
+		<h5 class="h5 mb-3">Сроки и время работы</h5>
+		<ul class="list-style list-style-disc">
+			<li class="mb-3">С пункта самовывоза - ориентировочно через 2 дня. Время работы каждого из пунктов можно увидеть тут</li>
+			<li class="mb-3">Срок хранения товара на пункте самовывоза 7 дней</li>
+		</ul>
+
+		<h5 class="h5 mb-3">Адреса</h5>
+		<ul class="list-style list-style-disc">
+			<li class="mb-3">Пункты самовывоза можно увидеть в корзине или в <a class="link" href="#">калькуляторе</a> доставки</li>
+		</ul>
+
+		<h5 class="h5 mb-3">Прочие условия</h5>
+		<ul class="list-style list-style-disc">
+			<li class="mb-3">Оформить доставку до пункта самовывоза можно только малогабаритные грузы, не превышающие 15кг. При превышении лимитов, вы не сможете выбрать неправильный пункт в корзине.<br /> С наших складов лимитов по габаритам и весу нет.</li>
+		</ul>
+
+		<h5 class="h5 mb-3">Доставка до пункта самовывоза IML</h5>
+		<p class="mb-3">
+			Максимальный суммарный вес товаров не должен превышать 25 кг.<br />Карту с пунктами самовывоза IML вы можете найти <a class="link" href="#">здесь</a>
+		</p>
+	</div>
+	<div class="return">
+		<h3 class="h3 mb-3 mt-5">Возврат товара</h3>
+		<p class="mb-3">Возврат товара осуществляется в соответствии с условиями, указанными в разделе «Возврат Товара» (п.7), Договора - Оферты, размещенном на сайте <a class="link" target="_blank" href="oferta.html">www.duim24.ru/oferta/</a></p>
+	</div>
+</div>

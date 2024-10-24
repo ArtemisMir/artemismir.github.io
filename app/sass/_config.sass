@@ -1,0 +1,123 @@
+// USER VARIABLES SECTION
+
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$roboto: Roboto, sans-serif // Roboto Font Family
+$line-height-base: 1.65
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+$bdr-rad: 0.5em
+$accent: #004b8d // Accent Color
+$accent2: #FABC20
+$primary: $accent
+$secondary: $accent2
+$pretty--color-primary: $accent
+$border-radius: $bdr-rad
+//$link-color: #fff
+$link-decoration: none
+$link-hover-color: darken($secondary, 5%)
+$link-hover-decoration: none
+$h1-font-size: 2rem
+$btn-transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out, box-shadow .1s ease-in-out 
+$transition-base:             all .15s ease-in-out
+$transition-fade:             opacity .10s linear
+$transition-collapse:         height .25s ease
+$input-transition:            border-color .1s ease-in-out, box-shadow .1s ease-in-out
+$custom-forms-transition:     background-color .1s ease-in-out, border-color .1s ease-in-out, box-shadow .1s ease-in-out
+$modal-transition:            transform .1s ease-out
+//$modal-dialog-margin:         0
+$modal-content-border-radius: $bdr-rad
+$modal-backdrop-bg:                 #001527
+$modal-backdrop-opacity:            .5
+$alert-margin-bottom:		  0
+$display-font-sizes: (1: 4rem, 2: 3.5rem, 3: 2.5rem, 4: 2rem, 5: 1.5rem, 6: 1rem)
+$badge-font-weight: 500
+$badge-font-size: 80%
+$popover-body-padding-y:            .5rem
+$popover-body-padding-x:            .75rem
+$green: #28a745
+$form-select-height: auto
+$min-contrast-ratio: 3.0
+$form-range-thumb-width: 1.4rem
+$form-range-thumb-active-bg: $accent
+$box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.25)
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1320px)
+$fa-font-path: "../fonts/fa"
+//$fa-var-laptop-house: \f966
+
+$hamburger-padding-x:		0
+$hamburger-padding-y:		0
+$hamburger-types:			(spin)
+$hamburger-layer-color:		lighten($accent2, 5%)
+$hamburger-layer-width:		28px
+$hamburger-layer-height:	3px
+$hamburger-layer-spacing:	5px
+$hamburger-hover-opacity:	1
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss' // Optional Bootstrap
+//@import '../libs/hero-slider/css/style.css' // Optional Bootstrap
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss'
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid.scss'
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands.scss'
+@import 'node_modules/@fortawesome/fontawesome-free/scss/regular.scss'
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
+@import 'node_modules/slick-carousel/slick/slick.scss'
+@import 'node_modules/magnific-popup/src/css/main.scss'
+@import 'node_modules/flatpickr/dist/flatpickr.min'
+//@import 'node_modules/pretty-checkbox/src/pretty-checkbox.scss'
+///@import 'node_modules/magnific-popup/mfp-zoom-in/mfp-zoom-in'
+@import 'node_modules/fotorama/fotorama'
+
+//@import '../../node_modules/bootstrap/dist/css/bootstrap-reboot.css' // Bootstrap Reboot collection
+//@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+//@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+@include font('rouble', normal, 400, '../fonts/rub/rouble-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	//font-family: $roboto
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+input[type=number]
+	-moz-appearance: textfield

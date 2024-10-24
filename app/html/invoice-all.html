@@ -1,0 +1,110 @@
+<div class="container">
+
+	<h1 class="h1 mb-4">Счета</h1>
+
+	<div class="row align-items-center mb-3">
+		<div class="col col-md-5 mt-2">
+			<div class="dropdown dropdown-input">
+				<input type="text" data-type="number" class="invoice-number form-control dropdown-toggle" data-toggle="dropdown" placeholder="Выбор заказа">
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">123124</a></li>
+					<li><a class="dropdown-item" href="#">232352</a></li>
+					<li><a class="dropdown-item" href="#">123124</a></li>
+					<li><a class="dropdown-item" href="#">232352</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-auto ml-auto mt-2">
+			<button class="btn btn-primary"><i class="fa fa-redo"></i></button>
+			<button class="btn btn-primary px-4" data-toggle="modal" data-target="#modal-add-kp"><i class="fa fa-plus mr-2"></i>Добавить</button>
+		</div>
+	</div>
+	<div class="loading active overflow-auto">
+		<table class="table text-right align-middle">
+			<thead>
+				<tr>
+					<th>Номер</th>
+					<th>Дата</th>
+					<th class="text-nowrap">Сумма, руб.</th>
+					<th class="text-nowrap">Номер заказа</th>
+					<th class="text-nowrap">Срок действия</th>
+					<th style="width: 1%;"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3434</td>
+					<td><nobr>11.12.2022 12:45</nobr></td>
+					<td><nobr>23 1231</nobr></td>
+					<td><a href="#" class="link">#3434</a></td>
+					<td><nobr>14.12.2022 12:45</nobr></td>
+					<td>
+						<button class="btn btn-outline-primary px-4 ml-3" data-toggle="modal" data-target="#download-options">Скачать</button>
+					</td>
+				</tr>
+				<tr>
+					<td>3434</td>
+					<td><nobr>11.12.2022 12:45</nobr></td>
+					<td><nobr>1231</nobr></td>
+					<td><a href="#" class="link">#3434</a></td>
+					<td><nobr>14.12.2022 12:45</nobr></td>
+					<td>
+						<button class="btn btn-outline-primary px-4 ml-3" data-toggle="modal" data-target="#download-options">Скачать</button>
+					</td>
+				</tr>
+				<tr>
+					<td>3434</td>
+					<td><nobr>11.12.2022 12:45</nobr></td>
+					<td><nobr>3 1231</nobr></td>
+					<td><a href="#" class="link">#3434</a></td>
+					<td><nobr>14.12.2022 12:45</nobr></td>
+					<td>
+						<button class="btn btn-outline-primary px-4 ml-3" data-toggle="modal" data-target="#download-options">Скачать</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-add-kp" data-keyboard="false" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-sm">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h5 class="modal-title text-center" id="modal-msg-title">Добавить Счет?</h5>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-primary flex-grow-1" data-dismiss="modal">Нет</button>
+				<button type="button" class="btn btn-primary flex-grow-1" data-dismiss="modal">Да</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="download-options">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title download-options-title">Счет #3434</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="btn-group w-100">
+					<input type="radio" class="btn-check" name="download-options-format" id="download-options-format-1" checked="" data-toggle="collapse-change" data-target=".download-options-format-1">
+					<label class="btn btn-outline-primary" for="download-options-format-1"><i class="far fa-file-pdf mx-1"></i>PDF</label>
+
+					<input type="radio" class="btn-check" name="download-options-format" id="download-options-format-2" data-toggle="collapse-change" data-target=".download-options-format-2">
+					<label class="btn btn-outline-primary" for="download-options-format-2"><i class="far fa-file-excel mx-1"></i>Excel</label>
+
+					<input type="radio" class="btn-check" name="download-options-format" id="download-options-format-3" data-toggle="collapse-change" data-target=".download-options-format-3">
+					<label class="btn btn-outline-primary" for="download-options-format-3"><i class="far fa-file-word mx-1"></i>Word</label>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+				<button type="button" class="btn btn-primary px-4">Скачать</button>
+			</div>
+		</div>
+	</div>
+</div>

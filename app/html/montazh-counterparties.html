@@ -1,0 +1,525 @@
+<div class="container montazh-counterparty-page">
+
+<h1 class="h1 mb-4">Контрагенты</h1>
+
+<button class="btn btn-primary mb-3" data-toggle="modal" data-target="#modal-counterparty-new">
+	<i class="fa fa-plus mr-2"></i>Добавить контрагента
+</button>
+
+<div class="montazh-counterparty montazh-counterparty-wrp">
+
+	<div class="counterparty-item pt-3 border-top" data-id="1">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg-3 mb-3 text-break">
+				<small class="text-muted">Наименование</small>
+				<p class="mb-0">ООО "Прораб-24"</p>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">ИНН</small>
+				<p class="mb-0">1234567890987</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-primary montazh-counterparty-edit" data-toggle="modal" data-target="#modal-counterparty-edit-1">Заявка на изменение</button>
+			</div>
+		</div>
+		<form class="modal fade counterparty-edit" id="modal-counterparty-edit-1" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Редактировать контрагента</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="id" value="1"> 
+<!-- 					<div class="mb-3">
+						<label>Форма организации</label>
+						<select class="form-select" id="montazh-users-group">
+							<option value="1" selected>Юр. лицо</option>
+							<option value="2">ИП</option>
+							<option value="3">Физ. лицо</option>
+						</select>
+					</div> -->
+					<div class="mb-3">
+						<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-ogrn" disabled>
+					</div> 
+					<div class="mb-3">
+						<label>Наименование <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-name" disabled>
+					</div>
+					<div class="mb-3">
+						<label>ИНН <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-inn" disabled>
+					</div>
+					<div class="mb-3">
+						<label>КПП</label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-kpp" disabled>
+					</div>
+					<div class="mb-3">
+						<label>ОКПО</label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-okpo" disabled>
+					</div>
+					<div class="mb-3">
+						<label>Юридический адрес <span class="text-danger">*</span></label>
+						<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Фактический адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Почтовый адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Email</label>
+						<input type="email" class="form-control" name="counterparty-email">
+					</div>
+					<div class="mb-3">
+						<label>Телефон</label>
+						<input type="text" class="form-control" name="counterparty-phone">
+					</div>
+					<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
+					<div class="mb-3">
+						<label>БИК <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
+					</div>
+					<div class="mb-3">
+						<label>Название банка <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-bank-name" required>
+					</div>
+					<div class="mb-3">
+						<label>Кор. счет <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
+					</div>
+					<div class="mb-3">
+						<label>Расчетный счет организации <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
+					</div>
+					<div class="mb-3">
+						<label>Комментарий</label>
+						<textarea class="form-control" name="counterparty-comment" min-height="100" rows="3"></textarea>
+					</div>
+					<label class="good-checkbox">
+						<input name="counterparty-archive" type="checkbox" value="0">
+						<span class="good-checkbox-box"></span>
+						Архивировать
+					</label>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="submit" class="btn btn-primary">Отправить</button>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+	<div class="counterparty-item pt-3 border-top" data-id="2">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg-3 mb-3 text-break">
+				<small class="text-muted">Наименование</small>
+				<p class="mb-0">ООО "Прораб-24"</p>
+				<small class="text-info">На модерации</small>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">ИНН</small>
+				<p class="mb-0">1234567890987</p>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">Комментарий</small>
+				<p class="mb-0">Постоянный клиент.</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-primary montazh-counterparty-edit" data-toggle="modal" data-target="#modal-counterparty-edit-2">Заявка на изменение</button>
+			</div>
+		</div>
+		<form class="modal fade counterparty-edit" id="modal-counterparty-edit-2" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Редактировать контрагента</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="id" value="2">
+					<div class="mb-3">
+						<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-ogrn" disabled>
+					</div> 
+					<div class="mb-3">
+						<label>Наименование <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-name" disabled>
+					</div>
+					<div class="mb-3">
+						<label>ИНН <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-inn" disabled>
+					</div>
+					<div class="mb-3">
+						<label>КПП</label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-kpp" disabled>
+					</div>
+					<div class="mb-3">
+						<label>ОКПО</label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-okpo" disabled>
+					</div>
+					<div class="mb-3">
+						<label>Юридический адрес <span class="text-danger">*</span></label>
+						<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Фактический адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Почтовый адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Email</label>
+						<input type="email" class="form-control" name="counterparty-email">
+					</div>
+					<div class="mb-3">
+						<label>Телефон</label>
+						<input type="text" class="form-control" name="counterparty-phone">
+					</div>
+					<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
+					<div class="mb-3">
+						<label>БИК <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
+					</div>
+					<div class="mb-3">
+						<label>Название банка <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-bank-name" required>
+					</div>
+					<div class="mb-3">
+						<label>Кор. счет <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
+					</div>
+					<div class="mb-3">
+						<label>Расчетный счет организации <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
+					</div>
+					<div class="mb-3">
+						<label>Комментарий</label>
+						<textarea class="form-control" name="counterparty-comment" min-height="100" rows="3"></textarea>
+					</div>
+					<label class="good-checkbox">
+						<input name="counterparty-archive" type="checkbox" value="0">
+						<span class="good-checkbox-box"></span>
+						Архивировать
+					</label>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="submit" class="btn btn-primary">Отправить</button>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+	<div class="counterparty-item pt-3 border-top" data-id="3">
+		<div class="row flex-lg-nowrap">
+			<div class="col-lg-3 mb-3 text-break">
+				<small class="text-muted">Наименование</small>
+				<p class="mb-0">ООО "Прораб-24"</p>
+				<small class="text-danger">Архивировано</small>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">ИНН</small>
+				<p class="mb-0">1234567890987</p>
+			</div>
+			<div class="col-lg mb-3">
+				<small class="text-muted">Комментарий</small>
+				<p class="mb-0">Постоянный клиент. Далеко-далеко за словесными горами в стране гласных.</p>
+			</div>
+			<div class="col-auto mb-3 ml-lg-auto align-self-center">
+				<button class="btn btn-outline-primary montazh-counterparty-edit" data-toggle="modal" data-target="#modal-counterparty-edit-3">Заявка на изменение</button>
+			</div>
+		</div>
+		<form class="modal fade counterparty-edit" id="modal-counterparty-edit-3" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Редактировать контрагента</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+						
+					</button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="id" value="3">
+					<div class="mb-3">
+						<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-ogrn" disabled>
+					</div> 
+					<div class="mb-3">
+						<label>Наименование <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-name" disabled>
+					</div>
+					<div class="mb-3">
+						<label>ИНН <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-inn" disabled>
+					</div>
+					<div class="mb-3">
+						<label>КПП</label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-kpp" disabled>
+					</div>
+					<div class="mb-3">
+						<label>ОКПО</label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-okpo" disabled>
+					</div>
+					<div class="mb-3">
+						<label>Юридический адрес <span class="text-danger">*</span></label>
+						<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Фактический адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Почтовый адрес</label>
+						<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
+					</div>
+					<div class="mb-3">
+						<label>Email</label>
+						<input type="email" class="form-control" name="counterparty-email">
+					</div>
+					<div class="mb-3">
+						<label>Телефон</label>
+						<input type="text" class="form-control" name="counterparty-phone">
+					</div>
+					<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
+					<div class="mb-3">
+						<label>БИК <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
+					</div>
+					<div class="mb-3">
+						<label>Название банка <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" name="counterparty-bank-name" required>
+					</div>
+					<div class="mb-3">
+						<label>Кор. счет <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
+					</div>
+					<div class="mb-3">
+						<label>Расчетный счет организации <span class="text-danger">*</span></label>
+						<input type="tel" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
+					</div>
+					<div class="mb-3">
+						<label>Комментарий</label>
+						<textarea class="form-control" name="counterparty-comment" min-height="100" rows="3"></textarea>
+					</div>
+					<label class="good-checkbox">
+						<input name="counterparty-archive" type="checkbox" value="0">
+						<span class="good-checkbox-box"></span>
+						Архивировать
+					</label>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					<button type="submit" class="btn btn-primary">Отправить</button>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+
+	<button class="btn btn-primary counterparty-more w-100 mt-5">Показать ещё</button>
+	<nav>
+		<ul class="pagination justify-content-center mt-2">
+			<li class="page-item"><a class="page-link" href="#"><<</a></li>
+			<li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">>></a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="modal fade" id="modal-counterparty-new" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Добавить контрагента</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+
+				<div id="accordion-steps" class="accordion">
+					<div class="counterparty-step-1 collapse show" data-parent="#accordion-steps">
+						<!-- Для юр. лица шаг 1 -->
+						<div class="btn-group mb-3 counterparty-type w-100">
+							<input type="radio" value="1" class="btn-check" name="counterparty-type" id="counterparty-type-1" checked="" data-toggle="collapse-change" data-target=".counterparty-type-1">
+							<label class="btn btn-outline-primary" for="counterparty-type-1">Организация</label>
+
+							<input type="radio" value="2" class="btn-check" name="counterparty-type" id="counterparty-type-2" data-toggle="collapse-change" data-target=".counterparty-type-2">
+							<label class="btn btn-outline-primary" for="counterparty-type-2">Физ. лицо</label>
+						</div>
+
+						<div id="accordion-details" class="accordion">
+
+							<form action="counterparty-search.php" id="counterparty-search" class="counterparty-type-1 collapse show" data-parent="#accordion-details">
+								<!-- Для юр. лица -->
+								<div class="mb-3">
+									<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
+									<input type="tel" data-type="number" class="form-control" name="counterparty-ogrn" required minlength="13" maxlength="13">
+								</div>
+								<div class="text-center text-muted">
+									Реквизиты будут заполнены автоматически
+								</div>
+							</form>
+
+							<form id="counterparty-form-type-2" action="counterparty-new.php?type=2" class="counterparty-new counterparty-type-2 collapse" data-parent="#accordion-details">
+								<!-- Для физ. лица -->
+								<div class="mb-3">
+									<label>Фамилия <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="counterparty-fiz-name" required>
+								</div>
+								<div class="mb-3">
+									<label>Имя <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="counterparty-fiz-surname" required>
+								</div>
+								<div class="mb-3">
+									<label>Отчество <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="counterparty-fiz-patronymic" required>
+								</div>
+								<div class="mb-3">
+									<label>Телефон <span class="text-danger">*</span></label>
+									<input type="tel" data-type="number" class="form-control" name="counterparty-fiz-phone" required>
+								</div>
+								<div class="mb-3">
+									<label>Email <span class="text-danger">*</span></label>
+									<input type="email" class="form-control" name="counterparty-fiz-email" required>
+								</div>
+								<div class="mb-3">
+									<label>Почтовый индекс</label>
+									<input type="number" class="form-control" name="counterparty-fiz-index">
+								</div>
+								<div class="mb-3">
+									<label>Город</label>
+									<input type="text" class="form-control" name="counterparty-fiz-city">
+								</div>
+								<div class="mb-3">
+									<label>Почтовый адрес</label>
+									<textarea type="text" class="form-control" name="counterparty-fiz-mail-address"></textarea>
+								</div>
+								<div class="mb-3">
+									<label>Комментарий</label>
+									<textarea class="form-control" name="counterparty-fiz-comment" min-height="100" rows="3"></textarea>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<form id="counterparty-form-type-1" action="counterparty-new.php?type=1" class="counterparty-new counterparty-step-2 collapse loading" data-parent="#accordion-steps">
+						<!-- Для юр. лица шаг 2 -->
+						<div class="mb-3">
+							<label>Наименование <span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="counterparty-name" required>
+						</div>
+						<div class="mb-3">
+							<label>ИНН <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-inn" required minlength="10" maxlength="12">
+						</div>
+						<div class="mb-3">
+							<label>КПП</label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-kpp">
+						</div>
+						<div class="mb-3">
+							<label>ОКПО</label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-okpo">
+						</div>
+						<div class="mb-3">
+							<label>Юридический адрес <span class="text-danger">*</span></label>
+							<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
+						</div>
+						<div class="mb-3">
+							<label>Фактический адрес</label>
+							<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
+						</div>
+						<div class="mb-3">
+							<label>Почтовый адрес</label>
+							<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
+						</div>
+						<div class="mb-3">
+							<label>Email</label>
+							<input type="email" class="form-control" name="counterparty-email">
+						</div>
+						<div class="mb-3">
+							<label>Телефон</label>
+							<input type="text" class="form-control" name="counterparty-phone">
+						</div>
+						<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
+						<div class="mb-3">
+							<label>БИК <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
+						</div>
+						<div class="mb-3">
+							<label>Название банка <span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="counterparty-bank-name" required>
+						</div>
+						<div class="mb-3">
+							<label>Кор. счет <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
+						</div>
+						<div class="mb-3">
+							<label>Расчетный счет организации <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
+						</div>
+						<div class="mb-3">
+							<label>Комментарий</label>
+							<textarea class="form-control" name="counterparty-comment" min-height="100" rows="3"></textarea>
+						</div>
+					</form>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+
+				<div id="accordion-buttons" class="accordion">
+
+					<div class="counterparty-type-1 collapse collapse-no-animation show" data-parent="#accordion-buttons">
+						<div id="accordion-buttons-steps" class="accordion">
+
+							<div class="counterparty-step-1 collapse collapse-no-animation show" data-parent="#accordion-buttons-steps">
+								<!-- Для юр. лица шаг 1 -->
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+								<button type="submit" form="counterparty-search" class="btn btn-primary">Создать</button>
+							</div>
+
+							<div class="counterparty-step-2 collapse collapse-no-animation" data-parent="#accordion-buttons-steps">
+								<!-- Для юр. лица шаг 2 -->
+								<button type="button" class="btn btn-secondary"  data-toggle="collapse" data-target=".counterparty-step-1">Назад</button>
+								<button type="submit" form="counterparty-form-type-1" class="btn btn-primary">Сохранить</button> 
+							</div>
+
+						</div>
+					</div>
+
+					<div class="counterparty-type-2 collapse collapse-no-animation" data-parent="#accordion-buttons">
+						<!-- Для физ. лица -->
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="submit" form="counterparty-form-type-2" class="btn btn-primary">Сохранить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modal-new-counterparty-msg" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Заявка принята!</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">Ваша заявка на добавление/изменение контрагента отправлена вашему менеджеру. После внесения изменений ваш менеджер свяжется с вами и сообщит о возможности продолжить работу с новым или измененным контрагентом.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>

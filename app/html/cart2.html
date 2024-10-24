@@ -1,0 +1,648 @@
+<div class="container">
+
+	<h1 class="h1 mb-4">Оформление заказа</h1>
+
+	<form action="" id="cart-2">
+		
+		<div class="row">
+			<div class="col-12">
+				<a href="cart.html" class="font-500 mb-2 px-3 py-2 d-inline-block"><i class="fa fa-arrow-left mr-2"></i>Вернуться в корзину</a></a>
+			</div>
+			<div class="col-12 cart2-sum mb-3">
+				<div class="cart-block h-100">
+					<div class="row gx-lg-5 gy-1 cart2-info">
+						<div class="col-12 col-lg-auto">
+							Позиций в списке:<span id="cart-counter" class="ml-3 font-500">7</span>
+						</div>
+						<div class="col-12 col-lg-auto">
+							Итого:<span class="rub ml-3 font-500" id="cart-sum" data-total-amount="230618.64">230 618,64</span>
+						</div>
+						<div class="col-12 col-lg-auto">
+							Экономия:<span id="cart-eco" class="ml-3 font-500">9,1% (<span class="rub">20 618,64</span>)</span>
+						</div>
+						<div class="col-12 col-xxl-auto ml-xxl-auto">
+							<div class="row gx-2 mt-3 mt-xxl-0">
+								<div class="col-6 col-sm-auto">
+									<button type="button" class="btn btn-outline-primary px-sm-4 w-100" data-toggle="modal" data-target="#modal-bonus">Баллы</button>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button type="button" class="btn btn-outline-primary px-sm-4 w-100" data-toggle="modal" data-target="#modal-promocode">Промокод</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- 	<div class="row gx-2 mt-4">
+						<div class="col-12 col-sm-auto">
+							<button type="button" class="btn btn-outline-primary px-sm-4 w-100" data-toggle="modal" data-target="#modal-bonus">Баллы</button>
+						</div>
+						<div class="col-12 col-sm-auto">
+							<button type="button" class="btn btn-outline-primary px-sm-4 w-100 mt-2 mt-sm-0" data-toggle="modal" data-target="#modal-promocode">Промокод</button>
+						</div>
+					</div> -->
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="cart-block mb-3">
+					<p class="display-4 text-primary mb-4">Покупатель</p>
+					<div class="btn-group client-type">
+						<input type="radio" class="btn-check" name="client-type" id="client-type-1" checked="" data-toggle="collapse-change" data-target=".client-type-1">
+						<label class="btn btn-outline-primary" for="client-type-1">Физическое лицо</label>
+
+						<input type="radio" class="btn-check" name="client-type" id="client-type-2" data-toggle="collapse-change" data-target=".client-type-2">
+						<label class="btn btn-outline-primary" for="client-type-2">Юридическое лицо</label>
+					</div>
+
+
+					<div id="accordion-counterparty" class="accordion">
+
+						<div class="client-type-1 collapse show" data-parent="#accordion-counterparty">
+						</div>
+
+						<div class="client-type-2 collapse" data-parent="#accordion-counterparty">
+							<p class="display-4 text-primary mb-4 mt-5">Контрагент</p>
+							<div class="row">
+								<div class="col-12 col-md-auto">
+									<select name="counterparty" class="form-select mb-3 mb-md-0">
+										<option value="">ООО "Прораб 24"</option>
+										<option value="1">ООО "Прораб 25"</option>
+										<option value="2">Дюйм</option>
+										<option value="3">TООО "Прораб 25"ООО "Прораб 25"hree</option>
+									</select>
+								</div>
+								<!-- <div class="col-12 col-md-auto">
+									<button class="btn btn-outline-primary w-100" type="button" data-toggle="modal" data-target="#modal-counterparty-new"><i class="fa fa-plus mr-2"></i>Добавить нового контрагента</button>
+								</div> -->
+							</div>
+						</div>
+					</div>
+
+
+					<p class="display-4 text-primary mb-4 mt-5">Получатель</p>
+
+					<div class="row">
+						<div class="col-12 col-xxl-4 col-lg-6">
+							<select name="recipient" class="form-select mb-3">
+								<option value="1">Иванов Иван Иванович</option>
+								<option value="2">Коля Николай</option>
+								<option value="0">Новый получатель</option>
+							</select>
+							<div class="input-group mb-2">
+								<span class="input-group-text input-group-icon bg-white"><i class="far fa-user"></i></span>
+								<input type="text" name="recipient-name" class="form-control" placeholder="ФИО получателя">
+							</div>
+							<div class="input-group mb-2">
+								<span class="input-group-text input-group-icon bg-white"><i class="fa fa-mobile-alt"></i></span>
+								<input type="tel" data-type="number" name="recipient-phone" class="form-control" placeholder="Телефон" required="" minlength="7">
+							</div>
+
+							<div id="accordion-is-director" class="accordion">
+
+								<div class="client-type-1 collapse show" data-parent="#accordion-is-director"></div>
+
+								<div class="client-type-2 collapse" data-parent="#accordion-is-director">
+									<div class="form-check mb-4">
+										<input class="form-check-input" type="checkbox" value="" id="is-director" name="is-director">
+										<label class="form-check-label" for="is-director">
+											Генеральный директор
+										</label>
+									</div>
+									<button class="btn btn-outline-primary w-100" type="button" data-toggle="modal" data-target="#modal-power-of-attorney"><i class="far fa-file-alt mr-2"></i>Скачать доверенность</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+<!-- 			<div class="col-12">
+				<div id="accordion-otdel" class="accordion">
+
+					<div class="client-type-1 collapse show" data-parent="#accordion-otdel">
+					</div>
+
+					<div class="client-type-2 collapse" data-parent="#accordion-otdel">
+						<div class="cart-block mb-3">
+							<p class="display-4 text-primary mb-4">Магазин</p>
+
+							<div class="btn-group opt-type">
+								<input type="radio" class="btn-check" name="opt-type" id="opt-type-1" checked="" data-toggle="collapse-change" data-target=".opt-type-1">
+								<label class="btn btn-outline-primary" for="opt-type-1">Интернет-магазин</label>
+
+								<input type="radio" class="btn-check" name="opt-type" id="opt-type-2" data-toggle="collapse-change" data-target=".opt-type-2">
+								<label class="btn btn-outline-primary" for="opt-type-2">Оптовый отдел</label>
+							</div>
+
+							<div id="accordion-opt" class="accordion">
+								<div class="opt-type-1 collapse show" data-parent="#accordion-opt">
+								</div>
+
+								<div class="opt-type-2 collapse" data-parent="#accordion-opt">
+									<div class="mt-2 text-success">Если вы уже являетесь клиентом нашего оптового отдела, укажите своего менеджера, чтобы заказ получил именно он.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="col-12">
+				<div class="cart-block mb-3">
+					<p class="display-4 text-primary mb-4">Доставка</p>
+
+					<div class="btn-group mb-4 delivery-choice">
+						<input type="radio" class="btn-check" name="delivery-type" id="delivery-type-1" checked="" data-toggle="collapse-change" data-target=".delivery-type-1">
+						<label class="btn btn-outline-primary" for="delivery-type-1">Адрес доставки</label>
+
+						<input type="radio" class="btn-check" name="delivery-type" id="delivery-type-2" data-toggle="collapse-change" data-target=".delivery-type-2">
+						<label class="btn btn-outline-primary" for="delivery-type-2">Пункты выдачи</label>
+					</div>
+
+					<div id="accordion-delivery" class="accordion">
+						<div class="delivery-type-1 collapse collapse-no-animation show" data-parent="#accordion-delivery">
+							<div class="row">
+								<div class="col-12">
+									<div class="row">
+										<div class="col-12 col-md-auto">
+											<select name="delivery-address" class="form-select mb-3">
+												<option value="1">
+													Россия, Москва, Зеленоград, к1824, 123кв., домофон 123, подъезд 4, этаж 5.
+												</option>
+												<option value="2">
+													Россия, Московская область, Химки, Молодёжная улица, 123кв., домофон 123, подъезд 4, этаж 5.
+												</option>
+												<option value="0">Новый адрес</option>
+											</select>
+										</div>
+										<div class="w-100"></div>
+										<div class="col-12 col-xxl-6 col-lg-9">
+											<div class="mb-3">
+												<label>Адрес</label>
+												<input type="text" class="form-control" name="address-main" required="">
+											</div>
+											<div class="row gx-3">
+												<div class="mb-3 col-6 col-md-3">
+													<label>Подъезд</label>
+													<input type="number" class="form-control" name="address-podiezd">
+												</div>
+												<div class="mb-3 col-6 col-md-3">
+													<label>Этаж</label>
+													<input type="number" class="form-control" name="address-etazh">
+												</div>
+												<div class="mb-3 col-6 col-md-3">
+													<label>Квартира / офис</label>
+													<input type="number" class="form-control" name="address-kv">
+												</div>
+												<div class="mb-3 col-6 col-md-3">
+													<label>Домофон</label>
+													<input type="number" class="form-control" name="address-domofon">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="display-5 text-muted text-center mt-4 mb-3">Для расчёта суммы доставки выберите адрес</div>
+									<!-- <div class="h4 text-primary text-center mb-3">Стоимость доставки: <span class="rub">490</span></div> -->
+								</div>
+								<div class="col-12">
+									<div id="map-address" class="map-address"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="delivery-type-2 collapse collapse-no-animation" data-parent="#accordion-delivery">
+							<p>Выберите адрес самовывоза<br />
+							На пункте выдачи товар будет доступен не более 10 дней с момента оформления заказа. Мы оставляем за собой право отозвать заказ по истечении указанного срока.</p>
+							<div id="map-samovivoz" class="map-samovivoz"></div>
+						</div>
+
+						<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+						<script src="js/cartaddress.map.js" type="text/javascript"></script>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="cart-block mb-3">
+					<p class="display-4 text-primary mb-4">Дата и время
+						<span id="accordion-delivery-text" class="accordion">
+							<span class="delivery-type-1 collapse collapse-no-animation show" data-parent="#accordion-delivery-text">доставки</span>
+							<span class="delivery-type-2 collapse collapse-no-animation" data-parent="#accordion-delivery-text">самовывоза</span>
+						</span>
+					</p>
+					<div class="row g-2 delivery-datatime">
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime" id="delivery-datatime-1" checked="">
+							<label class="btn btn-outline-primary" for="delivery-datatime-1">
+								24 ноября<br />
+								<span>Вторник</span>
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime" id="delivery-datatime-2">
+							<label class="btn btn-outline-primary" for="delivery-datatime-2">
+								25 ноября<br />
+								<span>Среда</span>
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime" id="delivery-datatime-3">
+							<label class="btn btn-outline-primary" for="delivery-datatime-3">
+								26 ноября<br />
+								<span>Четверг</span>
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime" id="delivery-datatime-4">
+							<label class="btn btn-outline-primary" for="delivery-datatime-4">
+								27 ноября<br />
+								<span>Пятница</span>
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime" id="delivery-datatime-5">
+							<label class="btn btn-outline-primary" for="delivery-datatime-5">
+								29 ноября<br />
+								<span>Воскресенье</span>
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime" id="delivery-datatime-0">
+							<label class="btn btn-outline-primary" for="delivery-datatime-0">
+								Другое
+							</label>
+						</div>
+						<div class="w-100"></div>
+						<div class="col-auto">
+							<select name="time" class="form-select form-select-lg">
+								<option>9:00</option>
+								<option>18:00</option>
+								<option>9:00</option>
+								<option>18:00</option>
+								<option>9:00</option>
+								<option>18:00</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="cart-block mb-3">
+					<p class="display-4 text-primary mb-4">Дата и время 
+						<span id="accordion-delivery-text" class="accordion">
+							<span class="delivery-type-1 collapse collapse-no-animation show" data-parent="#accordion-delivery-text">доставки</span>
+							<span class="delivery-type-2 collapse collapse-no-animation" data-parent="#accordion-delivery-text">самовывоза</span>
+						</span>
+						(монтажникам)
+					</p>
+					<div class="row g-2 delivery-datatime">
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime-m-" id="delivery-datatime-m--1" checked="">
+							<label class="btn btn-outline-primary" for="delivery-datatime-m--1">
+								24 ноября<br />
+								<span>Вторник</span><br />
+								Бесплатно
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime-m-" id="delivery-datatime-m--2">
+							<label class="btn btn-outline-primary" for="delivery-datatime-m--2">
+								25 ноября<br />
+								<span>Среда</span><br />
+								300р.
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime-m-" id="delivery-datatime-m--3">
+							<label class="btn btn-outline-primary" for="delivery-datatime-m--3">
+								26 ноября<br />
+								<span>Четверг</span><br />
+								Бесплатно
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime-m-" id="delivery-datatime-m--4">
+							<label class="btn btn-outline-primary" for="delivery-datatime-m--4">
+								27 ноября<br />
+								<span>Пятница</span><br />
+								500р.
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime-m-" id="delivery-datatime-m--5">
+							<label class="btn btn-outline-primary" for="delivery-datatime-m--5">
+								29 ноября<br />
+								<span>Воскресенье</span><br />
+								Бесплатно
+							</label>
+						</div>
+						<div class="col-6 col-sm-4 col-md-auto">
+							<input type="radio" class="btn-check" name="delivery-datatime-m-" id="delivery-datatime-m--0">
+							<label class="btn btn-outline-primary" for="delivery-datatime-m--0">
+								Другое
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="cart-block mb-3 fs-1-25">
+					<p class="display-4 text-primary mb-4">Оплата</p>
+					<div class="form-check mb-2">
+						<input class="form-check-input mr-1" type="radio" name="payment-method" id="payment-method-1" checked="" data-toggle="collapse-change" data-target=".payment-method-1">
+						<label class="form-check-label" for="payment-method-1">Оплатить онлайн</label>
+					</div>
+					<div class="form-check mb-2">
+						<input class="form-check-input mr-1" type="radio" name="payment-method" id="payment-method-2" data-toggle="collapse-change" data-target=".payment-method-2">
+						<label class="form-check-label" for="payment-method-2">Наличными</label>
+					</div>
+					<div class="form-check mb-2">
+						<input class="form-check-input mr-1" type="radio" name="payment-method" id="payment-method-3" data-toggle="collapse-change" data-target=".payment-method-2">
+						<label class="form-check-label" for="payment-method-3">Банковской картой при получении</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input mr-1" type="radio" name="payment-method" id="payment-method-4" data-toggle="collapse-change" data-target=".payment-method-3">
+						<label class="form-check-label" for="payment-method-4">Выставить счет</label>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="cart-block">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="agreement-1">
+						<label class="form-check-label" for="agreement-1">
+							Я согласен со всеми положениями <a href="#">Соглашения на обработку и хранение личных данных</a>
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="agreement-2">
+						<label class="form-check-label" for="agreement-2">
+							Я согласен с <a href="#">Офертой</a>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-lg btn-success btn-important mt-4 m-auto w-100">
+			<span id="accordion-order-button" class="accordion">
+				<span class="payment-method-1 collapse collapse-no-animation show" data-parent="#accordion-order-button">Оплатить</span>
+				<span class="payment-method-2 collapse collapse-no-animation" data-parent="#accordion-order-button">Заказать</span>
+				<span class="payment-method-3 collapse collapse-no-animation" data-parent="#accordion-order-button">Получить счет</span>
+			</span>
+		</button>
+	</form>
+
+</div>
+
+<form class="modal fade" id="modal-power-of-attorney" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title flex-grow-1 text-center">Данные для доверенности</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p class="text-muted small">Для вашего удобства здесь вы можете сформировать шаблон доверенности. На текущее оформление заказа введенная информация не повлияет.</p>
+				<select name="recipient" class="form-select mb-3">
+					<option value="1">Иванов Иван Иванович</option>
+					<option value="2">Коля Николай</option>
+				</select>
+				<div class="mb-2">
+					<label>ФИО получателя</label>
+					<input type="text" name="recipient-name" class="form-control" placeholder="">
+				</div>
+				<div class="mb-2">
+					<label>Должность получателя</label>
+					<input type="text" name="recipient-position" class="form-control" placeholder="">
+				</div>
+				<div class="mb-2">
+					<label>Серия и номер паспорта</label>
+					<input type="text" name="recipient-pasport-number" class="form-control" placeholder="">
+				</div>
+				<div class="mb-2">
+					<label>Кем и когда выдан паспорт</label>
+					<input type="text" name="recipient-pasport-get" class="form-control" placeholder="">
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+				<button type="submit" class="btn btn-primary">Скачать доверенность</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<form class="modal fade" id="modal-bonus" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header border-bottom-0">
+				<p class="display-4 text-primary mb-0">У вас 500 баллов</p>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body pt-0">
+				<div class="row gx-2 align-items-center diapazon">
+					<div class="col-12">
+						<div class="position-relative">
+							<input type="range" class="form-range d-block bonus-points-range" min="0" max="500" value="500" step="1">
+							<span class="range-fill"></span>
+						</div>
+					</div>
+					<div class="col-12 col-sm-auto ml-auto mt-3">
+						<div class="input-group">
+							<input type="number" name="bonus-points" class="form-control form-control bonus-points" value="500" min="0" max="500" >
+							<button type="button" class="btn btn-outline-primary px-4">Списать</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+<form class="modal fade" id="modal-promocode" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header border-bottom-0">
+				<p class="display-4 text-primary mb-0">Промокод</p>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body pt-0">
+				<div class="input-group">
+					<input type="text" name="promocode" class="form-control promocode">
+					<button type="button" class="btn btn-outline-primary">Применить</button>
+				</div>	
+			</div>
+		</div>
+	</div>
+</form>
+
+<div class="modal fade" id="modal-counterparty-new" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Добавить контрагента</h5>
+				<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+
+				<div id="accordion-steps" class="accordion">
+					<div class="counterparty-step-1 collapse show" data-parent="#accordion-steps">
+						<!-- Для юр. лица шаг 1 -->
+						<div class="btn-group mb-3 counterparty-type w-100">
+							<input type="radio" value="1" class="btn-check" name="counterparty-type" id="counterparty-type-1" checked="" data-toggle="collapse-change" data-target=".counterparty-type-1">
+							<label class="btn btn-outline-primary" for="counterparty-type-1">Организация</label>
+
+							<input type="radio" value="2" class="btn-check" name="counterparty-type" id="counterparty-type-2" data-toggle="collapse-change" data-target=".counterparty-type-2">
+							<label class="btn btn-outline-primary" for="counterparty-type-2">Физ. лицо</label>
+						</div>
+
+						<div id="accordion-details" class="accordion">
+
+							<form action="counterparty-search.php" id="counterparty-search" class="counterparty-type-1 collapse show" data-parent="#accordion-details">
+								<!-- Для юр. лица -->
+								<div class="mb-3">
+									<label>ОГРН / ОГРН ИП <span class="text-danger">*</span></label>
+									<input type="tel" data-type="number" class="form-control" name="counterparty-ogrn" required minlength="13" maxlength="13">
+								</div>
+								<div class="text-center text-muted">
+									Реквизиты будут заполнены автоматически
+								</div>
+							</form>
+
+							<form id="counterparty-form-type-2" action="counterparty-new.php?type=2" class="counterparty-new counterparty-type-2 collapse" data-parent="#accordion-details">
+								<!-- Для физ. лица -->
+								<div class="mb-3">
+									<label>Фамилия <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="counterparty-fiz-name" required>
+								</div>
+								<div class="mb-3">
+									<label>Имя <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="counterparty-fiz-surname" required>
+								</div>
+								<div class="mb-3">
+									<label>Отчество <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="counterparty-fiz-patronymic" required>
+								</div>
+								<div class="mb-3">
+									<label>Телефон <span class="text-danger">*</span></label>
+									<input type="tel" data-type="number" class="form-control" name="counterparty-fiz-phone" required>
+								</div>
+								<div class="mb-3">
+									<label>Email <span class="text-danger">*</span></label>
+									<input type="email" class="form-control" name="counterparty-fiz-email" required>
+								</div>
+								<div class="mb-3">
+									<label>Почтовый индекс</label>
+									<input type="number" class="form-control" name="counterparty-fiz-index" required>
+								</div>
+								<div class="mb-3">
+									<label>Город</label>
+									<input type="text" class="form-control" name="counterparty-fiz-city" required>
+								</div>
+								<div class="mb-3">
+									<label>Почтовый адрес</label>
+									<textarea type="text" class="form-control" name="counterparty-fiz-mail-address"></textarea>
+								</div>
+								<div class="mb-3">
+									<label>Комментарий</label>
+									<textarea class="form-control" name="counterparty-fiz-comment" min-height="100" rows="3"></textarea>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<form id="counterparty-form-type-1" action="counterparty-new.php?type=1" class="counterparty-new counterparty-step-2 collapse loading" data-parent="#accordion-steps">
+						<!-- Для юр. лица шаг 2 -->
+						<div class="mb-3">
+							<label>Наименование <span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="counterparty-name" required>
+						</div>
+						<div class="mb-3">
+							<label>ИНН <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-inn" required minlength="10" maxlength="12">
+						</div>
+						<div class="mb-3">
+							<label>КПП</label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-kpp">
+						</div>
+						<div class="mb-3">
+							<label>ОКПО</label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-okpo">
+						</div>
+						<div class="mb-3">
+							<label>Юридический адрес <span class="text-danger">*</span></label>
+							<textarea type="text" class="form-control" name="counterparty-yr-address" required></textarea>
+						</div>
+						<div class="mb-3">
+							<label>Фактический адрес</label>
+							<textarea type="text" class="form-control" name="counterparty-fakt-address"></textarea>
+						</div>
+						<div class="mb-3">
+							<label>Почтовый адрес</label>
+							<textarea type="text" class="form-control" name="counterparty-mail-address"></textarea>
+						</div>
+						<div class="mb-3">
+							<label>Email</label>
+							<input type="email" class="form-control" name="counterparty-email">
+						</div>
+						<div class="mb-3">
+							<label>Телефон</label>
+							<input type="text" class="form-control" name="counterparty-phone">
+						</div>
+						<h5 class="h5 mt-5 mb-3">Банковские реквизиты</h5>
+						<div class="mb-3">
+							<label>БИК <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-bik" required minlength="9" maxlength="9">
+						</div>
+						<div class="mb-3">
+							<label>Название банка <span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="counterparty-bank-name" required>
+						</div>
+						<div class="mb-3">
+							<label>Кор. счет <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-kor-schet" required minlength="20" maxlength="20">
+						</div>
+						<div class="mb-3">
+							<label>Расчетный счет организации <span class="text-danger">*</span></label>
+							<input type="tel" data-type="number" class="form-control" name="counterparty-rasch-schet" required minlength="20" maxlength="20">
+						</div>
+						<div class="mb-3">
+							<label>Комментарий</label>
+							<textarea class="form-control" name="counterparty-comment" min-height="100" rows="3"></textarea>
+						</div>
+					</form>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+
+				<div id="accordion-buttons" class="accordion">
+
+					<div class="counterparty-type-1 collapse collapse-no-animation show" data-parent="#accordion-buttons">
+						<div id="accordion-buttons-steps" class="accordion">
+
+							<div class="counterparty-step-1 collapse collapse-no-animation show" data-parent="#accordion-buttons-steps">
+								<!-- Для юр. лица шаг 1 -->
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+								<button type="submit" form="counterparty-search" class="btn btn-primary">Создать</button>
+							</div>
+
+							<div class="counterparty-step-2 collapse collapse-no-animation" data-parent="#accordion-buttons-steps">
+								<!-- Для юр. лица шаг 2 -->
+								<button type="button" class="btn btn-secondary"  data-toggle="collapse" data-target=".counterparty-step-1">Назад</button>
+								<button type="submit" form="counterparty-form-type-1" class="btn btn-primary">Сохранить</button> 
+							</div>
+
+						</div>
+					</div>
+
+					<div class="counterparty-type-2 collapse collapse-no-animation" data-parent="#accordion-buttons">
+						<!-- Для физ. лица -->
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="submit" form="counterparty-form-type-2" class="btn btn-primary">Сохранить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
